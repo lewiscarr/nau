@@ -1,0 +1,341 @@
+.courses .coursebox.even, .courses .coursebox {
+	background: #ffffff !important;
+	border-radius: 6px;
+}
+
+.courses .coursebox.even {
+	background: #ffffff !important;
+}
+
+.coursebox > .info > .coursename a {
+	font-weight: normal;
+	font-size: 80%;
+}
+
+.coursebox > .info > h3.name, .course_category_tree .category > .info .name {
+    font-size: 120%;
+    font-weight: normal;
+    margin: 0;
+}
+
+.coursebox .content {
+	clear: none;
+}
+
+.coursebox {
+	padding: 0 0;
+	border: 0px;
+	border-radius: 0px;
+}
+
+#page .course-content ul li.section.main {
+	border: 1px solid #e8eaeb;
+	margin-bottom: 20px;
+}
+
+.site-topic ul.section, .course-content ul.section {
+	margin: 0em 1em;
+}
+
+#newdiscussionform {
+	text-align: center;
+}
+
+#searchforums {
+	margin: 5px 0px 5px 5px;
+}
+
+
+
+.path-mod-forum .forumheaderlist thead .header {
+   font-family: dearjoe3;
+    background: #272f38;
+    color:#fff;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.forumpost .subject {
+    font-family: dearjoe3;
+}
+
+#page-mod-forum-discuss .forumpost .row .options .commands a {
+ background: #272f38;   
+    color:#fff;
+}
+
+#page-mod-forum-discuss .forumpost .row .options .commands {
+    color: #fff;
+   
+}
+
+
+body#page-mod-forum-view img.userpicture.defaultuserpic {
+    border-radius: 150%;
+    border: 3px solid #fff;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    width: 25px;
+    height: 25px;
+    margin-top: 3px;
+}
+
+td.topic.starter {
+    padding-top: 8px;
+    padding-bottom: 10px;
+}
+
+td.topic.starter a:before {
+   font-family: FontAwesome;
+    content:"\f0e5";
+    padding-right: 10px;
+    padding-left:10px;
+    font-size:30px;
+}
+
+td.lastpost {
+    font-size: 0.8em;
+}
+
+td.author {
+    
+    padding-top: 9px;
+}
+
+td.replies {
+    
+    padding-top: 9px;
+}
+
+td.replies a {
+    border: 3px solid #fff;
+    border-radius: 150%;
+    padding-left: 6px;
+    padding-right: 6px;
+    background: #000;
+    color: #fff;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.course-content .current {
+    background-color: transparent;
+    border-left: 0px solid #ccc;
+    border-right: 0px dashed #ccc;
+    margin-top: 0px !important;
+}
+
+.panel-body {
+	overflow: hidden;
+}
+
+.panel-body .courseimage img {
+    float: right;
+    margin-bottom: 10px;
+    max-width: 60px;
+    margin-left: 5px;
+}
+/*
+.panel .summary {
+	position: relative;
+}
+*/
+.course-content ul li.section .side {
+	display: none;
+}
+
+.editing .course-content ul li.section .side {
+	display: inherit;
+}
+
+.course-content ul.topics li.section .content, .course-content ul.weeks li.section .content {
+	margin: 0 0;
+}
+
+.editing .course-content ul.topics li.section .content, .editing .course-content ul.weeks li.section .content {
+	margin: 0px 20px;
+}
+
+.course-content ul li.section.main {
+	margin: 0 0;
+	padding-top: 12px;
+}
+
+h3.sectionname {
+    background: #fff;
+    color: #5f588a;
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: -12px;
+    padding: 20px;
+}
+
+.section .activity .mod-indent-outer {
+    padding-left: 23px;
+}
+
+.path-course-view .completionprogress {
+    color: #666;
+    float: none;
+    font-size: 90%;
+    padding: 0 0 10px;
+}
+
+#gridshadebox_content .content .summary, #gridshadebox_content .content ul.section {padding: 0 20px;}
+
+
+.courseheaderbg {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    height: 100px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #5bc1d1;
+}
+
+
+.courseheaderinner {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.courseheaderinner h1{
+    font-family: dearjoe3;
+    color:#fff;
+    background:rgba(39, 44, 44, 0.6);
+    padding:15px 0px 5px 10px;
+    width:40%;
+}
+
+
+.glossaryexplain {
+    text-align: center;
+    font-weight: bold;
+    color:#000;
+}
+
+
+.glossarydisplay a {
+    border: 1px solid #000;
+    padding: 3px 6px 3px 6px;
+    border-radius: 7px;
+    line-height: 30px;
+    background:#272f38;
+    color:#fff;
+    font-weight:bold;
+    
+}
+
+.glossarydisplay  {
+   color:#fff;
+}
+
+
+body#page-mod-glossary-view td.entry {
+   color:#000;
+   
+}
+
+body#page-mod-glossary-view td.entry a{
+   color:#000;
+    background:none;
+    border-radius: 0px;
+}
+
+body#page-mod-glossary-view td.entry a{
+    border:none;
+}
+
+body#page-mod-glossary-view td.icons a {
+    background: none;
+    border: none;
+}
+
+.glossarycontrol {
+    display: none;
+}
+
+
+.entrybox hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #fff;
+    
+    background: #fff url([[pix:theme|footerborder]]) repeat-x;
+    margin: 10px 0px 0;
+    text-align: left;
+    border-top: 0px;
+    font-size: 110%;
+    height:20px;
+}
+
+#page-mod-glossary-view table.glossarycategoryheader {
+   
+    color: #000;
+}
+
+#page-mod-glossary-view table.glossarycategoryheader h3 {
+    font-size: 24px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 7px;
+}
+
+
+
+.path-calendar .maincalendar .calendar-controls .current {
+    
+   font-family: 'dearjoe3';
+}
+
+
+.course_category_tree .category>.info {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background: none;
+    border: 0px solid #fff;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    min-height: 0;
+    padding: 0;
+    margin: 3px 0;
+    margin-bottom: 3px;
+    clear: both;
+}
+
+
+.courses .coursebox.collapsed {
+    border: none;
+    padding: 12px;
+    background: none;
+    margin-bottom: 6px;
+}
+
+
+.courses .coursebox.even, .courses .coursebox {
+    background: none;
+    border-radius: 0px;
+}
+
+
+.courses .coursebox {
+    background: none;
+    border-radius: 0px;
+}
+
