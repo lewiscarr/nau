@@ -23,14 +23,28 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
  */
+$fixedheader = true;
+require_once(dirname(__FILE__) . '/includes/header.php');
+$left = theme_nau_get_block_side();
+?>
 
-defined('MOODLE_INTERNAL') || die;
+<div class="container outercont">
+    <div id="page-content" class="row-fluid">
+        <div id="page-navbar" class="span12">
+            <?php echo $OUTPUT->navbar(); ?>
+        </div>
+        <?php
+            echo $OUTPUT->blocks('side-post', 'span3 desktop-first-column');
+        ?>
+        <section id="region-main" class="span9 <?php if ($left) { echo ' '; } else { echo 'desktop-first-column'; } ?> ">
+            <?php
+            echo $OUTPUT->course_content_header();
+            echo $OUTPUT->main_content();
+            echo $OUTPUT->course_content_footer();
+            ?>
+        </section>
+    </div>
+</div>
 
-$plugin->version   = 2016072002;
-$plugin->requires  = 2014050800;
-$plugin->component = 'theme_nau';
-$plugin->release = '1.3.1';
-$plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = array(
-    'block_course_overview' => ANY_VERSION
-);
+    <?php
+    require_once(dirname(__FILE__) . '/includes/footer.php');

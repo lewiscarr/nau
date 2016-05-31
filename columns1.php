@@ -24,13 +24,24 @@
  *
  */
 
-defined('MOODLE_INTERNAL') || die;
+require_once(dirname(__FILE__) . '/includes/header.php');
 
-$plugin->version   = 2016072002;
-$plugin->requires  = 2014050800;
-$plugin->component = 'theme_nau';
-$plugin->release = '1.3.1';
-$plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = array(
-    'block_course_overview' => ANY_VERSION
-);
+?>
+
+<div class="container outercont">
+    <div id="page-content" class="row-fluid">
+        <div id="page-navbar" class="span12">
+            <nav class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></nav>
+            <?php echo $OUTPUT->navbar(); ?>
+        </div>
+        <section id="region-main" class="span12">
+            <?php
+            echo $OUTPUT->course_content_header();
+            echo $OUTPUT->main_content();
+            echo $OUTPUT->course_content_footer();
+            ?>
+        </section>
+    </div>
+</div>
+<?php
+require_once(dirname(__FILE__) . '/includes/footer.php');

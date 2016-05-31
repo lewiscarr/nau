@@ -23,14 +23,12 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
  */
-
-defined('MOODLE_INTERNAL') || die;
-
-$plugin->version   = 2016072002;
-$plugin->requires  = 2014050800;
-$plugin->component = 'theme_nau';
-$plugin->release = '1.3.1';
-$plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = array(
-    'block_course_overview' => ANY_VERSION
-);
+if($PAGE->pagetype=='grade-report-grader-index') {
+    if($CFG->version <= 2014111000) {
+        require_once(dirname(__FILE__) .'/columns2.php');
+    } else {
+        require_once(dirname(__FILE__) .'/grader.php');
+    }
+} else {
+    require_once(dirname(__FILE__) .'/columns2.php');
+}

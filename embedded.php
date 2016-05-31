@@ -24,13 +24,25 @@
  *
  */
 
-defined('MOODLE_INTERNAL') || die;
+echo $OUTPUT->doctype() ?>
+<html <?php echo $OUTPUT->htmlattributes(); ?>>
+<head>
+    <title><?php echo $OUTPUT->page_title(); ?></title>
+    <link rel="shortcut icon" href="<?php echo $OUTPUT->favicon(); ?>" />
+    <?php echo $OUTPUT->standard_head_html() ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-$plugin->version   = 2016072002;
-$plugin->requires  = 2014050800;
-$plugin->component = 'theme_nau';
-$plugin->release = '1.3.1';
-$plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = array(
-    'block_course_overview' => ANY_VERSION
-);
+<body <?php echo $OUTPUT->body_attributes(); ?>>
+<?php echo $OUTPUT->standard_top_of_body_html() ?>
+<div id="page">
+    <div id="page-content" class="clearfix">
+        <?php echo $OUTPUT->main_content(); ?>
+    </div>
+</div>
+<?php echo $OUTPUT->standard_end_of_body_html() ?>
+<script type="text/javascript">
+    <?php echo $PAGE->theme->settings->jssection;?>
+</script>
+</body>
+</html>

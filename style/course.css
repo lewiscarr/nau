@@ -190,7 +190,7 @@ h3.sectionname {
 .courseheaderbg {
     padding-top: 15px;
     padding-bottom: 5px;
-    height: 100px;
+    height: 130px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -211,7 +211,14 @@ h3.sectionname {
     color:#fff;
     background:rgba(39, 44, 44, 0.6);
     padding:15px 0px 5px 10px;
-    width:40%;
+    
+}
+
+
+.headinnerwrap {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -339,3 +346,348 @@ body#page-mod-glossary-view td.icons a {
     border-radius: 0px;
 }
 
+/* Choice Activity multichoice radio buttons */
+
+body#page-mod-choice-view input[type="radio"]:empty {
+    display: none
+}
+body#page-mod-choice-view input[type="radio"]~label {
+    position: relative;
+    line-height: 3.5em;
+    cursor: pointer;
+    padding-left: 30px;
+    font-weight: bold;
+}
+body#page-mod-choice-view input[type="radio"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 10;
+    height: 45px;
+    content: '';
+    width: 2.5em;
+    background: #fff;
+    border: 1px dashed #cdcdcd;
+    margin-left: -25px;
+}
+body#page-mod-choice-view input[type="radio"]:checked ~ label:before {
+    content: '✔';
+    text-indent: .9em;
+    color: #fff;
+    background-color: #272f38;
+    margin-left: -25px;
+}
+/* Choice Activity multichoice check list buttons for when more than one answer can be selected*/
+
+body#page-mod-choice-view input[type="checkbox"]:empty {
+    display: none
+}
+body#page-mod-choice-view input[type="checkbox"]~label {
+    position: relative;
+    line-height: 3.5em;
+    cursor: pointer;
+    padding-left: 30px;
+    font-weight: bold;
+}
+body#page-mod-choice-view input[type="checkbox"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 10;
+    height: 45px;
+    content: '';
+    width: 2.5em;
+    background: #fff;
+    border: 1px dashed #cdcdcd;
+    margin-left: -25px;
+}
+body#page-mod-choice-view input[type="checkbox"]:checked ~ label:before {
+    content: '✔';
+    text-indent: .9em;
+    color: #fff;
+    background-color: #272f38;
+    margin-left: -25px;
+}
+body#page-mod-choice-view.path-mod-choice .horizontal .choices .option {
+    display: block
+}
+/* Choice Activity teacher results link now looks like a button */
+
+body#page-mod-choice-view .reportlink a {
+    background: #272f38;
+    text-shadow: none;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    box-shadow: none;
+}
+/* Choice Activity submit now matches all other buttons */
+
+body#page-mod-choice-view input[type=submit] {
+    background: #272f38;
+    text-shadow: none;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    box-shadow: none;
+}
+/* Choice Activity results user pic is rounded */
+
+body#page-mod-choice-view .userpicture {
+    border-radius: 150px
+}
+body#page-mod-choice-view #region-main h2 {
+    padding: 20px
+}
+body#page-mod-choice-view #region-main h3 {
+    font-size: 1.4em;
+    margin-top: 40px;
+    display: block;
+    margin-bottom: 40px;
+    padding-left: 100px;
+}
+body#page-mod-choice-view #region-main h3:before {
+    font-family: FontAwesome;
+    content: "\f140";
+    font-size: 50px;
+    position: absolute;
+    margin-left: -60px;
+}
+#yourselection {
+    display: none
+}
+
+
+
+
+
+/* Quiz CSS -----*/
+/* The main nav block used witihn quiz questions */
+
+div#mod_quiz_navblock {
+    background: #fff;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+/* The header for the quiz nav block */
+
+div#mod_quiz_navblock .header h2 {
+    font-size: 25px;
+    line-height: 50px;
+}
+/* Adds the icon to the quiz nav block */
+
+div#mod_quiz_navblock .header h2:before {
+    font-family: FontAwesome;
+    content: "\f0dd";
+    font-size: 40px;
+    margin-right: 13px;
+}
+/* Quiz attempts shown as a funky round button */
+
+#page-mod-quiz-view .quizattemptcounts,
+.dir-rtl #page-mod-quiz-view .quizattemptcounts {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    border: 1px solid #000;
+    max-width: 200px;
+    text-align: center;
+    border-radius: 150px;
+    height: 110px;
+    vertical-align: middle;
+    padding-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Quiz timer shown as a funky round button */
+
+#quiz-timer {
+    margin-top: 1em;
+    border: 1px solid #000;
+    text-align: center;
+    border: 1px solid #000;
+    max-width: 200px;
+    text-align: center;
+    border-radius: 150px;
+    height: 130px;
+    vertical-align: middle;
+    padding-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 30px;
+}
+#page-mod-quiz-edit li.activity.page:before {
+    display: none;
+}
+/* The info panel next to the quiz questions during a quiz */
+
+.que .info {
+    background: none;
+    border-right: 1px solid #dcdcdc;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+/* Question number in quiz  */
+
+.que h3.no {
+    font-size: 1.3em;
+    font-weight: normal;
+}
+.que .formulation {
+    background: none;
+    border: none;
+    color: #3a87ad;
+    color: #666;
+    border-radius: 0px;
+}
+.que .qtext {
+    font-size: 1.8em;
+    line-height: 30px;
+}
+.prompt {
+    margin-bottom: 15px
+}
+.path-mod-quiz .othernav a {
+    display: none
+}
+.path-mod-quiz .qnbutton {
+    font-weight: normal;
+    text-decoration: none;
+    background: #fff;
+    font-size: 1.6em;
+}
+.path-mod-quiz .qnbutton.thispage .thispageholder {
+    border: none
+}
+.path-mod-quiz .qnbutton.notanswered,
+.path-mod-quiz .qnbutton.incorrect {
+    background-color: #f76c59;
+    color: #fff;
+}
+.path-mod-quiz .qnbutton.notanswered a,
+.path-mod-quiz .qnbutton.incorrect a {
+    color: #fff
+}
+.path-mod-quiz .qnbutton.answered,
+.path-mod-quiz .qnbutton.correct {
+    background-color: #5cb85c;
+    color: #fff;
+}
+.path-mod-quiz .qnbutton.answered a,
+.path-mod-quiz .qnbutton.correct a {
+    color: #fff
+}
+/* Shows answered/unanswered */
+
+.state {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+}
+table.quizreviewsummary th.cell {
+    padding: 10px;
+    font-weight: normal;
+    text-align: left;
+    border: none;
+    background: none;
+}
+table.quizreviewsummary td.cell {
+    text-align: left;
+    background: none;
+    border: none;
+}
+table.quizreviewsummary tbody>tr:nth-child(odd)>th {
+    background: none
+}
+table.quizreviewsummary tbody>tr:nth-child(odd)>td {
+    background: none
+}
+.path-mod-quiz .othernav input {
+    display: block;
+    background: #272f38;
+    font-size: 1.6em;
+    padding: 15px;
+    color: #fff;
+    text-shadow: none;
+    width: 100%;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+#page-mod-quiz-attempt .submitbtns input[type="submit"],
+#page-mod-quiz-review .submitbtns input[type="submit"] {
+    display: block;
+    background: #272f38;
+    font-size: 1.6em;
+    padding: 15px 0px 15px 0px;
+    color: #fff;
+    text-shadow: none;
+    width: 100%;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+/* Confirmation message for quiz */
+
+.moodle-dialogue-confirm .confirmation-message {
+    margin: .5em 1em;
+    border: 1px solid #cdcdcd;
+    padding: 50px;
+    font-size: 1.3em;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+/* Adds new multi-choice style similar to choice activity - tick boxes on radio buttons */
+/* First we hide the label */
+
+body#page-mod-quiz-attempt input[type="radio"]:empty {
+    display: none
+}
+/* Then we make some room for the new check box */
+
+body#page-mod-quiz-attempt input[type="radio"]~label {
+    position: relative;
+    line-height: 3.5em;
+    cursor: pointer;
+    padding-left: 75px;
+    font-weight: bold;
+}
+/* This is the radio box when not selected */
+
+body#page-mod-quiz-attempt input[type="radio"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 10;
+    height: 45px;
+    content: '';
+    width: 2.5em;
+    background: #fff;
+    border: 1px dashed #cdcdcd;
+    margin-left: 0px;
+}
+/* The radio box when selected */
+
+body#page-mod-quiz-attempt input[type="radio"]:checked ~ label:before {
+    content: '✔';
+    text-indent: .9em;
+    color: #fff;
+    background-color: #272f38;
+    margin-left: 0px;
+}
