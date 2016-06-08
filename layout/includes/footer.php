@@ -35,28 +35,28 @@
             <div class="left-col span3" id="contactdetails">
                 <h3 title="<?php $OUTPUT->get_setting('footer1header', 'format_text'); ?>"><?php echo $OUTPUT->get_setting('footer1header', 'format_text'); ?></h3>
                 <?php echo $OUTPUT->get_setting('footer1content', 'format_html'); ?>
-                footer 1
+                
             </div>
             <?php } ?>
             <?php if (!empty($PAGE->theme->settings->footer2content)) { ?>
             <div class="left-col span3" id="footer-faculties">
                 <h3 title="<?php $OUTPUT->get_setting('footer2header', 'format_text'); ?>"><?php echo $OUTPUT->get_setting('footer2header', 'format_text'); ?></h3>
                 <?php echo $OUTPUT->get_setting('footer2content', 'format_html'); ?>
-                Footer 2
+               
             </div>
             <?php } ?>
             <?php if (!empty($PAGE->theme->settings->footer3content)) { ?>
             <div class="left-col span3" id="social-connect">
                 <h3 title="<?php $OUTPUT->get_setting('footer3header', 'format_text'); ?>"><?php echo $OUTPUT->get_setting('footer3header', 'format_text'); ?></h3>
                 <?php echo $OUTPUT->get_setting('footer3content', 'format_html'); ?>
-                footer 3
+                
             </div>
             <?php } ?>
             <?php if (!empty($PAGE->theme->settings->footer4content)) { ?>
             <div class="left-col span3">
                 <h3 title="<?php $OUTPUT->get_setting('footer4header', 'format_text'); ?>"><?php echo $OUTPUT->get_setting('footer4header', 'format_text'); ?></h3>
                 <?php echo $OUTPUT->get_setting('footer4content', 'format_html'); ?>
-                footer 4
+               
             </div>
             <?php } ?>
         </div>
@@ -70,7 +70,7 @@
                     <?php echo $html->footnote; ?>
                 </div>
                 <div class="span6 helplink">
-                    <?php echo $OUTPUT->page_doc_link(); ?>
+                    <?php // echo $OUTPUT->page_doc_link(); ?>
                 </div>
                 <div class="span3">
                     <?php echo $OUTPUT->standard_footer_html(); ?>

@@ -162,3 +162,5 @@ $THEME->blockrtlmanipulations = array(
     'side-pre' => 'side-post',
     'side-post' => 'side-pre'
 );
+
+

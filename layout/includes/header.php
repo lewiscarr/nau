@@ -65,17 +65,39 @@ echo $OUTPUT->doctype();
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 <div id="page" class="container-fluid <?php echo "$setfull"; ?>">
     
+<?php if (core\session\manager::is_loggedinas()) { ?>
+<div class="customalert">
+<div class="container">
+<?php echo $OUTPUT->login_info(); ?>
+</div>
+</div>
 
+<?php
+} else if (!empty($PAGE->theme->settings->alertbox)) {
+?>
+<div class="customalert">
+<div class="container">
+<?php echo $OUTPUT->get_setting('alertbox', 'format_html');; ?>
+</div>
+</div>
+<?php
+}
+?>
 
+    
+    
 
-
-<header id="page-header-wrapper" <?php if($fixedheader) { ?> style="position: fixed;" <?php } ?>>
     
     
     
     
     
-    <div id="page-header" class="clearfix container">
+    
+    
+    
+<header id="page-header-wrapper">
+   
+    <div id="page-header" >
         <?php if ($haslogo) { ?>
             <a href="<?php p($CFG->wwwroot) ?>"><?php echo "<img src='".$PAGE->theme->setting_file_url('logo', 'logo')."' alt='logo' id='logo' />"; echo "</a>";
         } else { ?>
@@ -83,328 +105,220 @@ echo $OUTPUT->doctype();
         <?php } ?>
      
    
-    <?php
-    if (isset($PAGE) && !$PAGE->theme->settings->sitetitle) {
-        $header = theme_nau_remove_site_fullname($PAGE->heading);
-        $PAGE->set_heading($header);
-    }
-    ?>
+   
      
-           <div id="above-header2">
-        <div class="clearfix">
-           
-            <div class="headermenu row">
-                
-                <?php if (!isloggedin() || isguestuser()) { ?>
-                  <div class="headerlogin"><a href="<?php p($CFG->wwwroot) ?>/login"> <button type="button" class="btn btn-default"> Login </button></a></div>
-                <?php } else { ?>
-                <div class="headermenucontainer"> 
-                <div class="headermenuimg">
-                  <?php if (isloggedin() || isguestuser()) { ?>
+     
+        <div class="searchbox">
+         
+              <?php if (!isloggedin() || isguestuser()) { 
+                echo  '<div class="headerlogin"><a href="'.$CFG->wwwroot.'/login"> <button type="button" class="btn btn-default"> Login </button></a></div>'; } ?>
+            
+       
+            <?php if (isloggedin() || isguestuser()) { ?>
+ <?php global $USER,$PAGE, $user ?>
 
-
+            <ul>
+  <li class="first">
+    <?php echo $USER->firstname; ?> <?php echo $USER->lastname; ?>
+    <ul>
+       <?php if (!empty($PAGE->theme->settings->enablemy  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/my"><li>Dashboard</li></a> <?php } ?>
+      <?php if (!empty($PAGE->theme->settings->enableprofile  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/user/profile.php"><li>View Profile</li></a> <?php } ?>
+      <?php if (!empty($PAGE->theme->settings->enableeditprofile  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/user/edit.php"><li>Edit Profile</li></a> <?php } ?>
+      <?php if (!empty($PAGE->theme->settings->enablebadges  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/badges/mybadges.php"><li>Badges</li></a> <?php } ?>
+    <?php if (!empty($PAGE->theme->settings->enablecalendar  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/calendar/view.php"><li>Calendar</li></a> <?php } ?>
+         <?php if (!empty($PAGE->theme->settings->enableprivatefiles   )) { ?><a href="<?php echo $CFG->wwwroot; ?>/user/files.php"> <li>Private Files</li> </a><?php } ?>
+      <a href="<?php echo $CFG->wwwroot; ?>/login/logout.php"><li>Logout</li></a>
+    </ul>
+  </li>
+ 
+</ul>
+            
 
         <?php global $USER,$PAGE; $user_picture=new user_picture($USER); $src=$user_picture->get_url($PAGE); echo '
         <a href="'.$CFG->wwwroot.'/user/profile.php "><img src="'.$src.'">
-        </a>'; ?>
+        </a>'; 
+                                                      
+                                                      
+            
+          
+            
+            ?>
 
 
 
-        <?php } ?> </div>
-                    <div class="headermenubox">
-                <div class="dropdown secondone">
-                        <a class="dropdown-toggle usermendrop" data-toggle="dropdown" data-target=".secondone"><span class="fa fa-user"></span><?php echo fullname($USER) ?> <span class="fa fa-angle-down"></span></a>
-                        <ul class="dropdown-menu usermen" role="menu">
-                            <?php if (!empty($PAGE->theme->settings->enablemy)) { ?>
-                                <li><a href="<?php p($CFG->wwwroot) ?>/my" title="My Dashboard"><i class="fa fa-dashboard"></i><?php echo get_string('myhome') ?></a></li>
-                            <?php } ?>
-                            <?php if (!empty($PAGE->theme->settings->enableprofile)) { ?>
-                                <li><a href="<?php p($CFG->wwwroot) ?>/user/profile.php" title="View profile"><i class="fa fa-user"></i><?php echo get_string('viewprofile') ?></a></li>
-                            <?php } ?>
-                            <?php if (!empty($PAGE->theme->settings->enableeditprofile)) { ?>
-                                <li><a href="<?php p($CFG->wwwroot) ?>/user/edit.php" title="Edit profile"><i class="fa fa-cog"></i><?php echo get_string('editmyprofile') ?></a></li>
-                            <?php } ?>
-                            <?php if (!empty($PAGE->theme->settings->enableprivatefiles)) { ?>
-                                <li><a href="<?php p($CFG->wwwroot) ?>/user/files.php" title="private files"><i class="fa fa-file"></i><?php echo get_string('privatefiles', 'block_private_files') ?></a></li>
-                            <?php } ?>
-                            <?php  if (!empty($PAGE->theme->settings->enablebadges)) { ?>
-                                <li><a href="<?php p($CFG->wwwroot) ?>/badges/mybadges.php" title="badges"><i class="fa fa-certificate"></i><?php echo get_string('badges') ?></a></li>
-                            <?php } ?>
-                            <?php if (!empty($PAGE->theme->settings->enablecalendar)) { ?>
-                                <li><a href="<?php p($CFG->wwwroot) ?>/calendar/view.php" title="Calendar"><i class="fa fa-calendar"></i><?php echo get_string('pluginname', 'block_calendar_month') ?></a></li>
-                            <?php } ?>
-                            <li><a href="<?php p($CFG->wwwroot) ?>/login/logout.php" title="Log out"><i class="fa fa-lock"></i><?php echo get_string('logout') ?></a></li>
-                        </ul>
-                    </div>
-                <?php } ?>
-            </div>  </div>  </div>  
-        </div>
-    </div>
-       
+        <?php } ?>
+                
+                 
+                </div>
+                
+                
+                
                   
         <div id="course-header">
             <?php echo $OUTPUT->course_header(); ?>
-            
-               <div class="container yambar">
-      
-    
-
-    
-      
-      <!-- Misc components -->
-      <div class="navbar yamm">
-        <div class="navbar-inner">
-          <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav3">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-             <a class="brand" href="#"> </a>
-            <div class="nav-collapse collapse" id="nav3">
-              <ul class="nav">
-              
-                  <!-- First Drop down  -->
-           
-                  <?php if (!empty($PAGE->theme->settings->menu1title )) { ?>
-                  <li class="dropdown yamm-fullwidth">
-                  <a href="<?php if (empty($PAGE->theme->settings->menu1url )) {
-                           echo '#'; } else { echo $PAGE->theme->settings->menu1url;}
-                           ?>" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $PAGE->theme->settings->menu1title; ?>  </a>
-                  
-                        <?php if (!empty($PAGE->theme->settings->menu1content )) { ?>
-                      <ul class="dropdown-menu ">
-                    <li>
-                      <div class="yamm-content">
-                       <?php echo $PAGE->theme->settings->menu1content; ?>
-                      </div>
-                    </li>
-                  </ul><?php } ?>
-                </li><?php } ?>
-                  
-                  
-                  
-                  
-                <!-- Second Drop down  -->
-           
-                   <?php if (!empty($PAGE->theme->settings->menu2title )) { ?>
-                  <li class="dropdown yamm-fullwidth">
-                  <a href="<?php if (empty($PAGE->theme->settings->menu2url )) {
-                           echo '#'; } else { echo $PAGE->theme->settings->menu2url;}
-                           ?>" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $PAGE->theme->settings->menu2title; ?>  </a>
-                  
-                        <?php if (!empty($PAGE->theme->settings->menu2content )) { ?>
-                      <ul class="dropdown-menu ">
-                    <li>
-                      <div class="yamm-content">
-                       <?php echo $PAGE->theme->settings->menu2content; ?>
-                      </div>
-                    </li>
-                  </ul><?php } ?>
-                </li><?php } ?>
-                  
-                  
-                  
-                  
-                <!-- Third Drop down  -->
-           
-                   <?php if (!empty($PAGE->theme->settings->menu3title )) { ?>
-                  <li class="dropdown yamm-fullwidth">
-                  <a href="<?php if (empty($PAGE->theme->settings->menu3url )) {
-                           echo '#'; } else { echo $PAGE->theme->settings->menu3url;}
-                           ?>" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $PAGE->theme->settings->menu3title; ?>  </a>
-                  
-                        <?php if (!empty($PAGE->theme->settings->menu3content )) { ?>
-                      <ul class="dropdown-menu ">
-                    <li>
-                      <div class="yamm-content">
-                       <?php echo $PAGE->theme->settings->menu3content; ?>
-                      </div>
-                    </li>
-                  </ul><?php } ?>
-                </li><?php } ?>
-                  
-                   
-                  
-                  <!-- Fourth Drop down  -->
-           
-                  <?php if (!empty($PAGE->theme->settings->menu4title )) { ?>
-                  <li class="dropdown yamm-fullwidth">
-                  <a href="<?php if (empty($PAGE->theme->settings->menu4url )) {
-                           echo '#'; } else { echo $PAGE->theme->settings->menu4url;}
-                           ?>" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $PAGE->theme->settings->menu4title; ?>  </a>
-                  
-                        <?php if (!empty($PAGE->theme->settings->menu4content )) { ?>
-                      <ul class="dropdown-menu ">
-                    <li>
-                      <div class="yamm-content">
-                       <?php echo $PAGE->theme->settings->menu4content; ?>
-                      </div>
-                    </li>
-                  </ul><?php } ?>
-                </li><?php } ?>
-                  
-                  
-                    <!-- Fifth Drop down  -->
-           
-                   <?php if (!empty($PAGE->theme->settings->menu5title )) { ?>
-                  <li class="dropdown yamm-fullwidth">
-                  <a href="<?php if (empty($PAGE->theme->settings->menu5url )) {
-                           echo '#'; } else { echo $PAGE->theme->settings->menu5url;}
-                           ?>" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $PAGE->theme->settings->menu5title; ?>  </a>
-                  
-                        <?php if (!empty($PAGE->theme->settings->menu5content )) { ?>
-                      <ul class="dropdown-menu ">
-                    <li>
-                      <div class="yamm-content">
-                       <?php echo $PAGE->theme->settings->menu5content; ?>
-                      </div>
-                    </li>
-                  </ul><?php } ?>
-                </li><?php } ?>
-                  
-                  
-                  
-                    <!-- Sixth Drop down  -->
-           
-                   <?php if (!empty($PAGE->theme->settings->menu6title )) { ?>
-                  <li class="dropdown yamm-fullwidth">
-                  <a href="<?php if (empty($PAGE->theme->settings->menu6url )) {
-                           echo '#'; } else { echo $PAGE->theme->settings->menu6url;}
-                           ?>" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $PAGE->theme->settings->menu6title; ?>  </a>
-                  
-                        <?php if (!empty($PAGE->theme->settings->menu6content )) { ?>
-                      <ul class="dropdown-menu ">
-                    <li>
-                      <div class="yamm-content">
-                       <?php echo $PAGE->theme->settings->menu6content; ?>
-                      </div>
-                    </li>
-                  </ul><?php } ?>
-                </li><?php } ?>
-                  
-                  
-                    <!-- Seventh Drop down  -->
-           
-                  <?php if (!empty($PAGE->theme->settings->menu7title )) { ?>
-                  <li class="dropdown yamm-fullwidth">
-                  <a href="<?php if (empty($PAGE->theme->settings->menu7url )) {
-                           echo '#'; } else { echo $PAGE->theme->settings->menu7url;}
-                           ?>" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $PAGE->theme->settings->menu7title; ?>  </a>
-                  
-                        <?php if (!empty($PAGE->theme->settings->menu7content )) { ?>
-                      <ul class="dropdown-menu ">
-                    <li>
-                      <div class="yamm-content">
-                       <?php echo $PAGE->theme->settings->menu7content; ?>
-                      </div>
-                    </li>
-                  </ul><?php } ?>
-                </li><?php } ?>
-                  
-                  
-                    <!-- Eighth Drop down  -->
-           
-                  <?php if (!empty($PAGE->theme->settings->menu8title )) { ?>
-                  <li class="dropdown yamm-fullwidth">
-                  <a href="<?php if (empty($PAGE->theme->settings->menu8url )) {
-                           echo '#'; } else { echo $PAGE->theme->settings->menu8url;}
-                           ?>" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $PAGE->theme->settings->menu8title; ?>  </a>
-                  
-                        <?php if (!empty($PAGE->theme->settings->menu8content )) { ?>
-                      <ul class="dropdown-menu ">
-                    <li>
-                      <div class="yamm-content">
-                       <?php echo $PAGE->theme->settings->menu8content; ?>
-                      </div>
-                    </li>
-                  </ul><?php } ?>
-                </li><?php } ?>
-                  
-                  
-                  
-                    <!-- Ninth Drop down  -->
-           
-                   <?php if (!empty($PAGE->theme->settings->menu9title )) { ?>
-                  <li class="dropdown yamm-fullwidth">
-                  <a href="<?php if (empty($PAGE->theme->settings->menu9url )) {
-                           echo '#'; } else { echo $PAGE->theme->settings->menu9url;}
-                           ?>" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $PAGE->theme->settings->menu9title; ?>  </a>
-                  
-                        <?php if (!empty($PAGE->theme->settings->menu9content )) { ?>
-                      <ul class="dropdown-menu ">
-                    <li>
-                      <div class="yamm-content">
-                       <?php echo $PAGE->theme->settings->menu9content; ?>
-                      </div>
-                    </li>
-                  </ul><?php } ?>
-                </li><?php } ?>
-                  
-                    <!-- Tenth Drop down  -->
-           
-                   <?php if (!empty($PAGE->theme->settings->menu10title )) { ?>
-                  <li class="dropdown yamm-fullwidth">
-                  <a href="<?php if (empty($PAGE->theme->settings->menu10url )) {
-                           echo '#'; } else { echo $PAGE->theme->settings->menu10url;}
-                           ?>" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $PAGE->theme->settings->menu10title; ?>  </a>
-                  
-                        <?php if (!empty($PAGE->theme->settings->menu10content )) { ?>
-                      <ul class="dropdown-menu ">
-                    <li>
-                      <div class="yamm-content">
-                       <?php echo $PAGE->theme->settings->menu10content; ?>
-                      </div>
-                    </li>
-                  </ul><?php } ?>
-                </li><?php } ?>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-
-              </ul>
-              <ul class="nav pull-right">
-                <!-- Forms -->
-                <li class="dropdown">
+        </div>
                 
-            <form action="<?php p($CFG->wwwroot) ?>/course/search.php">
+                
+                
+                
+                
+                
+    </div>
+
+
+         <div id="navwrap">
+        <div class="container3">
+            <div class="navbar">
+                <nav role="navigation" class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <div class="nav-collapse collapse ">
+                           
+                             <nav class="navigation">
+                            <ul class="nav shadow clearfix nojs" id="menu">
+                              
+                                
+                                
+                               <?php if (!empty($PAGE->theme->settings->menu1title )) { ?>
+                                <li><a href="<?php if (!empty($PAGE->theme->settings->menu1url )) { 
+                                echo $PAGE->theme->settings->menu1url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu1title; ?></a> 
+                                    <?php if (!empty($PAGE->theme->settings->menu1content )) { ?>
+                                    <div class="container-2">
+                                     <?php echo $PAGE->theme->settings->menu1content; ?>
+                                      </div>	<?php } ?>
+                                </li>
+                                
+                                <?php } ?>
+                                
+                                
+   <?php if (!empty($PAGE->theme->settings->menu2title )) { ?>
+                                <li><a href="<?php if (!empty($PAGE->theme->settings->menu2url )) { 
+                                echo $PAGE->theme->settings->menu2url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu2title; ?></a> 
+                                    <?php if (!empty($PAGE->theme->settings->menu2content )) { ?>
+                                    <div class="container-2">
+                                     <?php echo $PAGE->theme->settings->menu2content; ?>
+                                      </div>	<?php } ?>
+                                </li>
+                                
+                                <?php } ?>
+                                
+                                  <?php if (!empty($PAGE->theme->settings->menu3title )) { ?>
+                                <li><a href="<?php if (!empty($PAGE->theme->settings->menu3url )) { 
+                                echo $PAGE->theme->settings->menu3url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu3title; ?></a> 
+                                    <?php if (!empty($PAGE->theme->settings->menu3content )) { ?>
+                                    <div class="container-2">
+                                     <?php echo $PAGE->theme->settings->menu3content; ?>
+                                      </div>	<?php } ?>
+                                </li>
+                                
+                                <?php } ?>
+                                
+                                  <?php if (!empty($PAGE->theme->settings->menu4title )) { ?>
+                                <li><a href="<?php if (!empty($PAGE->theme->settings->menu4url )) { 
+                                echo $PAGE->theme->settings->menu4url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu4title; ?></a> 
+                                    <?php if (!empty($PAGE->theme->settings->menu4content )) { ?>
+                                    <div class="container-2">
+                                     <?php echo $PAGE->theme->settings->menu4content; ?>
+                                      </div>	<?php } ?>
+                                </li>
+                                
+                                <?php } ?>
+                                
+                                
+                                  <?php if (!empty($PAGE->theme->settings->menu5title )) { ?>
+                                <li><a href="<?php if (!empty($PAGE->theme->settings->menu5url )) { 
+                                echo $PAGE->theme->settings->menu5url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu5title; ?></a> 
+                                    <?php if (!empty($PAGE->theme->settings->menu5content )) { ?>
+                                    <div class="container-2">
+                                     <?php echo $PAGE->theme->settings->menu5content; ?>
+                                      </div>	<?php } ?>
+                                </li>
+                                
+                                <?php } ?>
+                                
+                                  <?php if (!empty($PAGE->theme->settings->menu6title )) { ?>
+                                <li><a href="<?php if (!empty($PAGE->theme->settings->menu6url )) { 
+                                echo $PAGE->theme->settings->menu6url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu6title; ?></a> 
+                                    <?php if (!empty($PAGE->theme->settings->menu6content )) { ?>
+                                    <div class="container-2">
+                                     <?php echo $PAGE->theme->settings->menu6content; ?>
+                                      </div>	<?php } ?>
+                                </li>
+                                
+                                <?php } ?>
+                                
+                                
+                                  <?php if (!empty($PAGE->theme->settings->menu7title )) { ?>
+                                <li><a href="<?php if (!empty($PAGE->theme->settings->menu7url )) { 
+                                echo $PAGE->theme->settings->menu7url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu7title; ?></a> 
+                                    <?php if (!empty($PAGE->theme->settings->menu7content )) { ?>
+                                    <div class="container-2">
+                                     <?php echo $PAGE->theme->settings->menu7content; ?>
+                                      </div>	<?php } ?>
+                                </li>
+                                
+                                <?php } ?>
+                                
+                                
+                                  <?php if (!empty($PAGE->theme->settings->menu8title )) { ?>
+                                <li><a href="<?php if (!empty($PAGE->theme->settings->menu8url )) { 
+                                echo $PAGE->theme->settings->menu8url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu8title; ?></a> 
+                                    <?php if (!empty($PAGE->theme->settings->menu8content )) { ?>
+                                    <div class="container-2">
+                                     <?php echo $PAGE->theme->settings->menu8content; ?>
+                                      </div>	<?php } ?>
+                                </li>
+                                
+                                <?php } ?>
+                                
+                                
+                                  <?php if (!empty($PAGE->theme->settings->menu9title )) { ?>
+                                <li><a href="<?php if (!empty($PAGE->theme->settings->menu9url )) { 
+                                echo $PAGE->theme->settings->menu9url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu9title; ?></a> 
+                                    <?php if (!empty($PAGE->theme->settings->menu9content )) { ?>
+                                    <div class="container-2">
+                                     <?php echo $PAGE->theme->settings->menu9content; ?>
+                                      </div>	<?php } ?>
+                                </li>
+                                
+                                <?php } ?>
+                                
+                                  <?php if (!empty($PAGE->theme->settings->menu10title )) { ?>
+                                <li><a href="<?php if (!empty($PAGE->theme->settings->menu10url )) { 
+                                echo $PAGE->theme->settings->menu10url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu10title; ?></a> 
+                                    <?php if (!empty($PAGE->theme->settings->menu10content )) { ?>
+                                    <div class="container-2">
+                                     <?php echo $PAGE->theme->settings->menu10content; ?>
+                                      </div>	<?php } ?>
+                                </li>
+                                
+                                <?php } ?>
+                                
+                                <li class="nav-right">  <form action="<?php p($CFG->wwwroot) ?>/course/search.php">
                 <label class="hidden" for="search-1" style="display: none;">Search Courses</label>
                 <div class="nav_search_box">
                     <input placeholder="<?php echo get_string("searchcourses")?>" accesskey="6" type="text" name="search" id="search-1" autocomplete="off">
                     <button type="submit" ><abbr class="fa fa-search"></abbr></button>
                
-            </form>
-        </div>
-                  
-                </li>                
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div>
-        </div>
-      </div>
-     
-
-    
-
-    </div>
-
- 
- 
-            
-            
-            
-            
-            
-       
-            
-            
+            </form></li>   
+                        </ul>     
+            </nav>
+        
+                     
+                            
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
     </div>
-
-
-    
+        
+   
 </header>
+    
+    
+     

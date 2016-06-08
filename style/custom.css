@@ -51,8 +51,12 @@ a:focus {
 }
 
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
-    background-color: #FFF;
-    background-image: none;
+    background-color:#4dc3cf;
+    color: #fff;
+    background: #4dc3cf url([[pix:theme|menuselector]]) no-repeat 100% 0; 
+    background-position: center top;
+    color: #fff;
+    text-decoration:none;
 }
 /* Custom CSS
 -------------------------*/
@@ -142,7 +146,7 @@ body#page-login-index .headerlogin {
 #logo {
     float: left;
     margin-bottom: 2px;
-    margin-left: 0px;
+    margin-left: 20px;
     margin-top: 0px;
     max-width: 250px;
 }
@@ -771,7 +775,7 @@ span2.mceEditor iframe, table.mceLayout2 iframe {
     background-color: #722975;
     color: #fff;
     margin: 0;
-    padding: 25px 25px 25px 30px;
+    padding: 5px 3px 0px 15px;
     position: absolute;
     top: 30px;
     left: 20px;
@@ -825,13 +829,18 @@ a.carousel-control {
 
 /*alert message */
 .customalert {
-	background: #fbf3bb;
-	font-weight: 600;
-	padding: 8px 0px;
-	font-size: 13px;
-	color: #be1e2d;
-	border-bottom: 1px solid #f2b535;
-	text-align: center;
+    background: #4dc3cf;
+    font-weight: 600;
+    padding: 8px 0px;
+    font-size: 13px;
+    color: #be1e2d;
+    border-bottom: 1px solid #272f38;
+    text-align: center;
+    color: #fff;
+}
+
+.customalert a {
+	color:#fff;
 }
 
 .customalert p {
@@ -865,7 +874,7 @@ body#page-my-index #page-navbar {
 
 
 .nav-tabs > li > a {
-  color: #555555;
+  color: #ffffff;
   padding-top: 8px;
   padding-bottom: 8px;
   line-height: @baseLineHeight;
@@ -880,9 +889,9 @@ body#page-my-index #page-navbar {
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
-  color: #001E3C;
-  background-color: #ddd;
-  border: 1px solid #B4BBBF;
+  color: #fff;
+  background-color: #4dc3cf;
+  border: 1px solid #4dc3cf;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -986,8 +995,88 @@ div.no-overflow, .yui3-datatable {
 
 .searchbox {
 	float: right;
-	padding-top: 32px;
+	padding-top: 0px;
+   text-align:center;
+    padding-right: 20px;
 }
+
+.searchbox a {
+ text-decoration: none;   
+}
+
+.searchbox img {
+    border-radius: 150%;
+    border: 3px solid #fff;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.searchbox ul li.first:hover {
+    background: #fff;
+    color: #000;
+}
+
+.searchbox ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+ 
+}
+.searchbox ul li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.searchbox ul li:hover {
+  background: #4dc3cf;
+  color: #fff;
+}
+.searchbox ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+.searchbox ul li ul li { 
+  background: #272f38; 
+  display: block; 
+  color: #fff;
+  
+     z-index:9999;
+}
+.searchbox ul li ul li:hover { background: #4dc3cf; }
+.searchbox ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
 
 .greybox {
 	border: 1px solid #ccc;
@@ -1093,9 +1182,7 @@ div.no-overflow, .yui3-datatable {
     }
 }
 
-#navwrap {
-    background: #FFF;
-}
+
 
 div.questionbankwindow.block {
 	overflow: auto;
@@ -1532,6 +1619,427 @@ body#page-calendar-view .calendarmonth th {
    background: #49c7db;
    
 }
+
+
+.paging {
+    
+    color: #000;
+}
+
+.paging a {
+    background: none;
+    color:##272f38;
+    border:none;
+}
+
+span.helptooltip a {
+    background: none;
+    border: none;
+}
+
+label {
+    color: #000;
+}
+
+
+th.entryheader {
+    color: #000;
+}
+
+.path-mod-glossary .glossarypost td.picture a {
+    background: none;
+    border: none;
+}
+
+img.userpicture.defaultuserpic {
+     
+    border-radius: 150%;
+    border: 3px solid #fff;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    width:25px;
+    height:25px;
+
+}
+    
+    img.userpicture {
+    border-radius: 150%;
+    border: 3px solid #fff;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    width:25px;
+    height:25px;
+}
+
+.jsenabled .comment-link {
+    
+    color: #000;
+}
+
+.comment-area .fd a {
+    
+    color: #000;
+}
+
+
+
+
+.nav {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  background: #272f38;
+
+}
+/* line 38, ../sass/Megadropdown.scss */
+.nav.shadow {
+ 
+}
+/* line 44, ../sass/Megadropdown.scss */
+.nav li {
+  list-style: none;
+}
+/* line 46, ../sass/Megadropdown.scss */
+.nav li.nav-right {
+  float: right;
+}
+/* line 50, ../sass/Megadropdown.scss */
+.nav > li {
+  padding: 0;
+  float: left;
+  position: relative;
+}
+/* line 52, ../sass/Megadropdown.scss */
+.nav > li > a {
+  float: left;
+  color: #fff;
+
+  text-decoration: none;
+  
+
+  margin-right: 1px;
+ 
+ 
+}
+/* line 64, ../sass/Megadropdown.scss */
+.nav > li > a:last-of-type {
+  margin-right: 0;
+}
+
+/* the mega menu contianer div for each item */
+.nav > li > div {
+  position: absolute;
+  left: 0;
+  top: 56px;
+  display: none;
+  background: #4dc3cf;
+  padding: 10px;
+  color:#fff;
+  overflow: hidden;
+  z-index: 99999;
+}
+
+
+
+/* line 79, ../sass/Megadropdown.scss */
+.nav > li > div ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 82, ../sass/Megadropdown.scss */
+.nav > li > div ul li a {
+  font-weight:bold;
+  color: #FFF;
+  text-decoration: none;
+  padding: 9px 12px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  display: block;
+}
+/* line 93, ../sass/Megadropdown.scss */
+.nav > li > div ul li a:hover {
+  background: #4fb7c7;
+  color: #fff;
+    text-decoration: none;
+}
+/* line 102, ../sass/Megadropdown.scss */
+.nav > li > div p {
+  color: #fff;
+}
+/* line 103, ../sass/Megadropdown.scss */
+.nav > li > div .right {
+  right: 0;
+  left: auto;
+}
+/* line 108, ../sass/Megadropdown.scss */
+.nav > li:hover > a {
+  background: white;
+  color: black;
+ 
+  background-size: 100%;
+ 
+}
+/* line 125, ../sass/Megadropdown.scss */
+.nav > li:first-child > a {
+  border-left: 0;
+}
+/* line 128, ../sass/Megadropdown.scss */
+.nav > li:last-child > a {
+  border-right: 0;
+}
+
+/* line 138, ../sass/Megadropdown.scss */
+.nav.nojs > li:hover > a {
+  background: #f8f8f8;
+  color: #222;
+ 
+  background-size: 100%;
+  
+}
+/* line 154, ../sass/Megadropdown.scss */
+.nav.nojs > li:hover div[class^="container-"] {
+  display: block !important;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 163, ../sass/Megadropdown.scss */
+.navvisfix {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+}
+
+/* MEGA DROP DOWN */
+/* line 172, ../sass/Megadropdown.scss */
+
+
+
+
+.container-1 {
+  width: 160px;
+  
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-1 .col1 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+
+/* line 172, ../sass/Megadropdown.scss */
+.container-2 {
+  width: 350px;
+}
+
+
+@media (max-width: 979px) {
+.container-2 {
+  width: 100%;
+}
+    
+}
+
+.container-2 a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* line 179, ../sass/Megadropdown.scss */
+.container-2 .col1 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 50%;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-2 .col2 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+
+/* line 172, ../sass/Megadropdown.scss */
+.container-3 {
+  width: 480px;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-3 .col1 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 33.33333%;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-3 .col2 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 66.66667%;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-3 .col3 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+
+/* line 172, ../sass/Megadropdown.scss */
+.container-4 {
+  width: 640px;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-4 .col1 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 25%;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-4 .col2 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 50%;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-4 .col3 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 75%;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-4 .col4 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+
+/* line 172, ../sass/Megadropdown.scss */
+.container-5 {
+  width: 800px;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-5 .col1 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 20%;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-5 .col2 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 40%;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-5 .col3 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 60%;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-5 .col4 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 80%;
+}
+/* line 179, ../sass/Megadropdown.scss */
+.container-5 .col5 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+
+nav.navigation {
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+   nav.navigation {
+    margin-left: 0px;
+} 
+}
+
+
+
+div#dock {
+    background: #272f38;
+    width:39px;
+}
+
+#dock .dockedtitle {
+    
+ border:none;
+    background: none;
+    color:#fff;
+    border-radius: 0px;
+    box-shadow: none;
+    text-shadow: none;
+    
+}
+
+#dock .dockedtitle:hover {
+ background:#4dc3cf; 
+    color:#fff;
+}
+
+
+#dock .dockeditem_container {
+    margin-top: 0px;
+}
+
+
+#dockeditempanel .dockeditempanel_content {
+    background-color: #f5f5f5;
+    width: 384px;
+    border: 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    margin-left: -5px;
+    
+}
+
+
+#dockeditempanel .dockeditempanel_hd h2 {
+    display: block;
+    padding: 3px 15px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #999;
+    text-shadow: none;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    padding: 20px 0px 0px 0px;
+    margin: 0;
+    font-family: 'dearjoe3';
+    color: #002f67;
+}
+
+body.has_dock #page {
+    padding-left: 40px;
+    padding-right: 0px; 
+}
+
+
 
 /* Custom CSS Settings
 -------------------------*/
