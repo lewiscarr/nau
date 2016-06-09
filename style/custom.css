@@ -764,7 +764,7 @@ span2.mceEditor iframe, table.mceLayout2 iframe {
 
 
 
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
 #search-1 {
     
     width: 120px;
@@ -1140,7 +1140,7 @@ div.no-overflow, .yui3-datatable {
 
 @media (max-width: 979px) {
 	.searchbox {
-            padding-bottom: 5px;
+          
 	}
 	.search-box, .searchbox {
             width: 100%;
@@ -1539,6 +1539,7 @@ box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 @media (max-width: 979px) {
 .navbar .nav-collapse.in {
     border-top: none;
+    overflow:visible;
 }
 }
 
@@ -1850,6 +1851,10 @@ img.userpicture.defaultuserpic {
     text-decoration: underline;
 }
 
+.container-2 h1,h2,h3 {
+    font-family: 'dearjoe3';
+}
+
 /* line 179, ../sass/Megadropdown.scss */
 .container-2 .col1 {
   margin: 0;
@@ -2038,6 +2043,189 @@ body.has_dock #page {
     padding-left: 40px;
     padding-right: 0px; 
 }
+
+@media (max-width: 979px) {
+   .mobhide {
+   display:none;
+} 
+}
+
+@media (max-width: 979px) {
+.headerlogin {
+   
+    margin-left: 80px;
+}
+}
+
+
+@media (max-width: 979px)
+.nav_search_box {
+   
+    margin-right: 40px;
+}
+
+body#page-my-index .courseheaderbg {
+   
+    height: 300px;
+   
+}
+
+body#page-my-index #page-content {
+    
+    margin-top: -160px;
+    background: #fff;
+}
+
+
+h1.cyan {
+    background: url([[pix:theme|cyan]]) no-repeat 100% 0; 
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    font-family: 'dearjoe3';
+    text-align: center;
+    min-height: 100px;
+    color: #fff;
+    padding-top: 80px;
+    font-size: 3em;
+    line-height:60px;
+}
+
+@media (max-width: 980px) {
+ h1.cyan {
+   font-size: 1.9em;  
+ }
+}
+
+
+
+h1.orange {
+    background: url([[pix:theme|orange]]) no-repeat 100% 0; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    font-family: 'dearjoe3';
+    text-align: center;
+    min-height: 100px;
+    color: #fff;
+    padding-top: 80px;
+    font-size: 3em;
+     line-height:60px;
+}
+
+@media (max-width: 980px) {
+ h1.orange {
+   font-size: 1.9em;  
+ }
+}
+
+
+h1.red {
+    background: url([[pix:theme|red]]) no-repeat 100% 0; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    font-family: 'dearjoe3';
+    text-align: center;
+    min-height: 100px;
+    color: #fff;
+    padding-top: 80px;
+    font-size: 3em;
+     line-height:60px;
+}
+
+@media (max-width: 980px) {
+ h1.red {
+   font-size: 1.9em;  
+ }
+}
+
+h1.purple {
+    background: url([[pix:theme|purple]]) no-repeat 100% 0; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    font-family: 'dearjoe3';
+    text-align: center;
+    min-height: 100px;
+    color: #fff;
+    padding-top: 80px;
+    font-size: 3em;
+     line-height:60px;
+}
+
+@media (max-width: 980px) {
+ h1.purple {
+   font-size: 1.9em;  
+ }
+}
+
+h1.yellow {
+    background: url([[pix:theme|yellow]]) no-repeat 100% 0; 
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    font-family: 'dearjoe3';
+    text-align: center;
+    min-height: 100px;
+    color: #fff;
+    padding-top: 80px;
+    font-size: 3em;
+     line-height:60px;
+}
+
+@media (max-width: 980px) {
+ h1.yellow {
+   font-size: 1.9em;  
+ }
+}
+
+h1.blue {
+    background: url([[pix:theme|blue]]) no-repeat 100% 0; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    font-family: 'dearjoe3';
+    text-align: center;
+    min-height: 100px;
+    color: #fff;
+    padding-top: 80px;
+    font-size: 3em;
+     line-height:60px;
+}
+
+@media (max-width: 980px) {
+ h1.blue {
+   font-size: 1.9em;  
+ }
+}
+
+
+body#page-login-index #page {
+   
+    background: url([[pix:theme|grass]]) no-repeat 100% 0; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body#page-login-index .loginpanel {
+    background: rgba(255, 255, 255, 0.7);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+}
+
+
+
 
 
 

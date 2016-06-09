@@ -163,6 +163,7 @@ if (!empty($PAGE->theme->settings->infobox2)) {
             <?php
             echo $OUTPUT->course_content_header();
             echo $OUTPUT->main_content();
+            echo $OUTPUT->blocks('middle');
             echo $OUTPUT->course_content_footer();
             ?>
         </section>

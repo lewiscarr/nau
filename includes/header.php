@@ -109,10 +109,10 @@ echo $OUTPUT->doctype();
      
      
         <div class="searchbox">
-         
+        
               <?php if (!isloggedin() || isguestuser()) { 
                 echo  '<div class="headerlogin"><a href="'.$CFG->wwwroot.'/login"> <button type="button" class="btn btn-default"> Login </button></a></div>'; } ?>
-            
+             <div class="mobhide">
        
             <?php if (isloggedin() || isguestuser()) { ?>
  <?php global $USER,$PAGE, $user ?>
@@ -148,7 +148,7 @@ echo $OUTPUT->doctype();
 
         <?php } ?>
                 
-                 
+                 </div>
                 </div>
                 
                 

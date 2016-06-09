@@ -112,3 +112,12 @@ html[xmlns] .slides {display: block;}
     font-size: 90% !important;
     margin-top: -25px;
 } }
+
+
+@media (max-width: 700px) {
+.flexslider .slides img {
+    width: inherit;
+    display: block;
+    height: 200px;
+}
+}

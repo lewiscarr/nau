@@ -428,6 +428,7 @@ body#page-mod-choice-view input[type=submit] {
     border: none;
     padding: 15px;
     box-shadow: none;
+    margin-left: -15px;
 }
 /* Choice Activity results user pic is rounded */
 

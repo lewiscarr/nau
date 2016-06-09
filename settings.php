@@ -794,6 +794,14 @@ if (is_siteadmin()) {
             1 => get_string('leftblocks', 'theme_nau'),
         ));
     $temp->add($setting);
+    
+    
+    $name = 'theme_nau/loginbg';
+    $title = get_string('loginbg', 'theme_nau');
+    $description = get_string('loginbgdesc', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'loginbg');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
 
     $ADMIN->add('theme_nau', $temp);
 
