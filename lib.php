@@ -59,6 +59,12 @@ function theme_nau_process_css($css, $theme) {
         '[[setting:navbarhover]]' => '#3C469C',
         '[[setting:breadcrumb]]' => '#b4bbbf',
         '[[setting:activebreadcrumb]]' => '#e8eaeb',
+        '[[setting:frontpageblockheadercolor]]' => '#272f38',
+        '[[setting:frontpageblocktextcolor]]' => '#fff',
+        '[[setting:frontpageblockhovercolor]]' => '#272f38',
+        '[[setting:megamenuhoverbgcolor]]' => '#4dc3cf',
+        '[[setting:megamenuhoverlicolor]]' => '#3da0aa',
+        '[[setting:customalertbg]]' => '#4fb7c7',
     );
 
     // Get all the defined settings for the theme and replace defaults.

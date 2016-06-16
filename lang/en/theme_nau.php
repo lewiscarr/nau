@@ -108,16 +108,34 @@ $string['pageheader'] = 'Header Image';
 $string['pageheaderdesc'] = 'The default page headr whe na course summar yfile is not used). A wide image works best.';
 
 $string['linkcolor'] = 'Link Color';
-$string['linkcolordesc'] = 'Set the color of links in the theme, use html hex code.';
+$string['linkcolordesc'] = 'Set the color of all the body text hyperlinks across Moodle.';
 
 $string['linkhover'] = 'Link Hover Color';
-$string['linkhoverdesc'] = 'Set the color of links (on hover) in the theme, use html hex code.';
+$string['linkhoverdesc'] = 'Set the hovber color of all the body links across Moodle.';
 
 $string['backcolor'] = 'Background Color';
 $string['backcolordesc'] = 'Set the background color.';
 
-$string['maincolor'] = 'Main color';
-$string['maincolordesc'] = 'Main color for blocks and footer.';
+$string['frontpageblockheadercolor'] = 'Frontpage Block Background Color';
+$string['frontpageblockheadercolordesc'] = 'Set the background color of the titles in the frontpage course blocks.';
+
+$string['frontpageblocktextcolor'] = 'Frontpage Block Text Color';
+$string['frontpageblocktextcolordesc'] = 'Set the text color of the titles in the frontpage course blocks.';
+
+$string['frontpageblockhovercolor'] = 'Frontpage Block Hover Color';
+$string['frontpageblockhovercolordesc'] = 'Set the hover color of the tile when mouse rolls over the block.';
+
+$string['megamenuhoverbgcolor'] = 'Background Color of mega menu on rolliver/hover';
+$string['megamenuhoverbgcolordesc'] = 'Set the hover color of the mega menu.';
+
+$string['megamenuhoverlicolor'] = 'Background Color of hover of li objects inside mega menu';
+$string['megamenuhoverlicolordesc'] = 'Set the hover color of the li links within mega menu.';
+
+$string['customalertbg'] = 'Background Color of the custom alerts box';
+$string['customalertbgdesc'] = 'Set the background color of the custom alert box.';
+
+$string['maincolor'] = 'Main Primary color';
+$string['maincolordesc'] = 'The main primary colour used on the site.';
 
 $string['footnote'] = 'Footnote';
 $string['footnotedesc'] = 'Add text to the footer.';
@@ -143,15 +161,146 @@ $string['enableprivatefilesdesc'] = 'Display a link to the users private files';
 $string['market1'] = 'Marketing Block 1';
 $string['market1desc'] = 'Add html for marketing block 1 (see the readme file for additional info and hints).';
 
+$string['market1bg'] = 'Marketing Block 1 Background Image';
+$string['market1bgdesc'] = 'Add a background image for marketing block 1.';
+
+$string['market1url'] = 'Marketing Block 1 URL';
+$string['market1urldesc'] = 'Add URL for link.';
+
+$string['market1content'] = 'Content for rollover in block 1';
+$string['market1contentdesc'] = 'Add content for the rollover (i.e a summary).';
+
 $string['market2'] = 'Marketing Block 2';
 $string['market2desc'] = 'Add html for marketing block 2 (see the readme file for additional info and hints).';
+
+$string['market2bg'] = 'Marketing Block 2 Background Image';
+$string['market2bgdesc'] = 'Add a background image for marketing block 2.';
+
+$string['market2url'] = 'Marketing Block 2 URL';
+$string['market2urldesc'] = 'Add URL for link.';
+
+$string['market2content'] = 'Content for rollover in block 2';
+$string['market2contentdesc'] = 'Add content for the rollover (i.e a summary).';
 
 $string['market3'] = 'Marketing Block 3';
 $string['market3desc'] = 'Add html for marketing block 3 (see the readme file for additional info and hints).';
 
+$string['market3bg'] = 'Marketing Block 3 Background Image';
+$string['market3bgdesc'] = 'Add a background image for marketing block 3.';
+
+$string['market3url'] = 'Marketing Block 3 URL';
+$string['market3urldesc'] = 'Add URL for link.';
+
+$string['market3content'] = 'Content for rollover in block 3';
+$string['market3contentdesc'] = 'Add content for the rollover (i.e a summary).';
+
 $string['market4'] = 'Marketing Block 4';
 $string['market4desc'] = 'Add html for marketing block 4 (see the readme file for additional info and hints).';
 
+$string['market4bg'] = 'Marketing Block 4 Background Image';
+$string['market4bgdesc'] = 'Add a background image for marketing block 4.';
+
+$string['market4url'] = 'Marketing Block 4 URL';
+$string['market4urldesc'] = 'Add URL for link.';
+
+$string['market4content'] = 'Content for rollover in block 4';
+$string['market4contentdesc'] = 'Add content for the rollover (i.e a summary).';
+
+$string['market5'] = 'Marketing Block 5';
+$string['market5desc'] = 'Add html for marketing block 5 (see the readme file for additional info and hints).';
+
+$string['market5bg'] = 'Marketing Block 5 Background Image';
+$string['market5bgdesc'] = 'Add a background image for marketing block 5.';
+
+$string['market5url'] = 'Marketing Block 5 URL';
+$string['market5urldesc'] = 'Add URL for link.';
+
+$string['market5content'] = 'Content for rollover in block 5';
+$string['market5contentdesc'] = 'Add content for the rollover (i.e a summary).';
+
+$string['market6'] = 'Marketing Block 6';
+$string['market6desc'] = 'Add html for marketing block 6 (see the readme file for additional info and hints).';
+
+$string['market6bg'] = 'Marketing Block 6 Background Image';
+$string['market6bgdesc'] = 'Add a background image for marketing block 6.';
+
+$string['market6url'] = 'Marketing Block 6 URL';
+$string['market6urldesc'] = 'Add URL for link.';
+
+$string['market6content'] = 'Content for rollover in block 6';
+$string['market6contentdesc'] = 'Add content for the rollover (i.e a summary).';
+
+$string['market7'] = 'Marketing Block 7';
+$string['market7desc'] = 'Add html for marketing block 7 (see the readme file for additional info and hints).';
+
+$string['market7bg'] = 'Marketing Block 7 Background Image';
+$string['market7bgdesc'] = 'Add a background image for marketing block 7.';
+
+$string['market7url'] = 'Marketing Block 7 URL';
+$string['market7urldesc'] = 'Add URL for link.';
+
+$string['market7content'] = 'Content for rollover in block 7';
+$string['market7contentdesc'] = 'Add content for the rollover (i.e a summary).';
+
+$string['market8'] = 'Marketing Block 8';
+$string['market8desc'] = 'Add html for marketing block 8 (see the readme file for additional info and hints).';
+
+$string['market8bg'] = 'Marketing Block 8 Background Image';
+$string['market8bgdesc'] = 'Add a background image for marketing block 8.';
+
+$string['market8url'] = 'Marketing Block 8 URL';
+$string['market8urldesc'] = 'Add URL for link.';
+
+$string['market8content'] = 'Content for rollover in block 8';
+$string['market8contentdesc'] = 'Add content for the rollover (i.e a summary).';
+
+$string['market9'] = 'Marketing Block 9';
+$string['market9desc'] = 'Add html for marketing block 9 (see the readme file for additional info and hints).';
+
+$string['market9bg'] = 'Marketing Block 9 Background Image';
+$string['market9bgdesc'] = 'Add a background image for marketing block 9.';
+
+$string['market9url'] = 'Marketing Block 9 URL';
+$string['market9urldesc'] = 'Add URL for link.';
+
+$string['market9content'] = 'Content for rollover in block 9';
+$string['market9contentdesc'] = 'Add content for the rollover (i.e a summary).';
+
+$string['market10'] = 'Marketing Block 10';
+$string['market10desc'] = 'Add html for marketing block 10 (see the readme file for additional info and hints).';
+
+$string['market10bg'] = 'Marketing Block 10 Background Image';
+$string['market10bgdesc'] = 'Add a background image for marketing block 10.';
+
+$string['market10url'] = 'Marketing Block 10 URL';
+$string['market10urldesc'] = 'Add URL for link.';
+
+$string['market10content'] = 'Content for rollover in block 10';
+$string['market10contentdesc'] = 'Add content for the rollover (i.e a summary).';
+
+$string['market11'] = 'Marketing Block 11';
+$string['market11desc'] = 'Add html for marketing block 11 (see the readme file for additional info and hints).';
+
+$string['market11bg'] = 'Marketing Block 11 Background Image';
+$string['market11bgdesc'] = 'Add a background image for marketing block 11.';
+
+$string['market11url'] = 'Marketing Block 11 URL';
+$string['market11urldesc'] = 'Add URL for link.';
+
+$string['market11content'] = 'Content for rollover in block 11';
+$string['market11contentdesc'] = 'Add content for the rollover (i.e a summary).';
+
+$string['market12'] = 'Marketing Block 12';
+$string['market12desc'] = 'Add html for marketing block 12 (see the readme file for additional info and hints).';
+
+$string['market12bg'] = 'Marketing Block 12 Background Image';
+$string['market12bgdesc'] = 'Add a background image for marketing block 12.';
+
+$string['market12url'] = 'Marketing Block 12 URL';
+$string['market12urldesc'] = 'Add URL for link.';
+
+$string['market12content'] = 'Content for rollover in block 12';
+$string['market12contentdesc'] = 'Add content for the rollover (i.e a summary).';
 
 $string['infobox'] = 'Frontpage Info Box';
 $string['infoboxdesc'] = 'Frontpage info block HTML (see the readme file for additional info and hints).';
@@ -218,7 +367,10 @@ $string['headerdesc'] = 'Display alert boxes to warn users of actions, or provid
 
 $string['thiscourse'] = 'This course';
 $string['megamenu'] = 'Mega Menu';
-$string['frontpageblocksettings'] = 'Frontpage Blocks';
+$string['frontpageblocksettings'] = 'Frontpage Blocks Row 1';
+$string['frontpageblocksettings2'] = 'Frontpage Blocks Row 2';
+$string['frontpageblocksettings3'] = 'Frontpage Blocks Row 3';
+$string['frontpageblocksettings4'] = 'Frontpage Blocks Row 4';
 $string['frontpageslidersettings'] = 'Frontpage Slider';
 $string['frontpagecoursesettings'] = 'Frontpage Courses';
 $string['frontpagesettingsheading'] = 'Frontpage rendering';

@@ -87,8 +87,7 @@ echo $OUTPUT->doctype();
     
     
 
-    
-    
+ 
     
     
     
@@ -319,6 +318,8 @@ echo $OUTPUT->doctype();
         
    
 </header>
+    
+    
     
     
      

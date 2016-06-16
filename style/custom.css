@@ -51,9 +51,9 @@ a:focus {
 }
 
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
-    background-color:#4dc3cf;
+    background: [[setting:megamenuhoverbgcolor]];
     color: #fff;
-    background: #4dc3cf url([[pix:theme|menuselector]]) no-repeat 100% 0; 
+    background: [[setting:megamenuhoverbgcolor]] url([[pix:theme|menuselector]]) no-repeat 100% 0; 
     background-position: center top;
     color: #fff;
     text-decoration:none;
@@ -104,7 +104,7 @@ a:focus {
         height: 20px;
         padding-top: 5px;
         padding-bottom: 5px;
-    background: #272f38;
+    background: [[setting:maincolor]];
 }
 
 #above-header .container {
@@ -248,10 +248,16 @@ a.usermendrop {
     top: -3px;
 }
 
+
+
+
+
 .slidewrap {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
+
+
 
 .container.slidewrap {
    
@@ -681,6 +687,10 @@ span2.mceEditor iframe, table.mceLayout2 iframe {
     #logo {
         margin-bottom: 10px;
     }
+    
+    
+    
+    
 
     .headermenu2 {
         float: none;
@@ -829,7 +839,7 @@ a.carousel-control {
 
 /*alert message */
 .customalert {
-    background: #4dc3cf;
+    background: [[setting:customalertbg]];
     font-weight: 600;
     padding: 8px 0px;
     font-size: 13px;
@@ -890,8 +900,8 @@ body#page-my-index #page-navbar {
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
   color: #fff;
-  background-color: #4dc3cf;
-  border: 1px solid #4dc3cf;
+  background-color: [[setting:megamenuhoverbgcolor]];
+  border: 1px solid [[setting:megamenuhoverbgcolor]];
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -920,7 +930,7 @@ body#page-my-index #page-navbar {
 }
 
 .dropdown-menu {
-    z-index: 1001;
+    z-index: 9000;
 }
 
 #gridshadebox_content {
@@ -1040,7 +1050,7 @@ div.no-overflow, .yui3-datatable {
   transition: all 0.2s;
 }
 .searchbox ul li:hover {
-  background: #4dc3cf;
+  background: [[setting:megamenuhoverbgcolor]];
   color: #fff;
 }
 .searchbox ul li ul {
@@ -1062,13 +1072,13 @@ div.no-overflow, .yui3-datatable {
   -transition: opacity 0.2s;
 }
 .searchbox ul li ul li { 
-  background: #272f38; 
+  background: [[setting:maincolor]]; 
   display: block; 
   color: #fff;
   
      z-index:9999;
 }
-.searchbox ul li ul li:hover { background: #4dc3cf; }
+.searchbox ul li ul li:hover { background: [[setting:megamenuhoverbgcolor]]; }
 .searchbox ul li:hover ul {
   display: block;
   opacity: 1;
@@ -1359,7 +1369,7 @@ display:none;
     font-family: verdana;
     text-align: center;
     font-size: 0.8em;
-    background: #272f38;
+   background: [[setting:maincolor]];
     margin: 0px;
     color: #fff;
     line-height: 15px;
@@ -1446,12 +1456,12 @@ display:none;
 }
 
 	.navbar.yamm {
-    background: #272f38;
+   background: [[setting:maincolor]];
 }
 
 .container.yambar {
     
-    background: #272f38;
+   background: [[setting:maincolor]];
     margin-top: 15px;
     width: 100%;
     
@@ -1460,7 +1470,7 @@ display:none;
 .yamm-content {
     padding: 15px;
     min-width:250px;
-    background:#4dc3cf;
+    background:[[setting:megamenuhoverbgcolor]];
     color:#fff;
 }
 
@@ -1554,7 +1564,7 @@ box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 
 
 body#page-calendar-view .calendarmonth th {
-    background: #272f38;
+   background: [[setting:maincolor]];
     color:#fff;
     padding-top:5px;
     padding-bottom:5px;
@@ -1613,7 +1623,7 @@ body#page-calendar-view .calendarmonth th {
     padding:10px;    
     display:block;
    color:#fff;
-     background: #4fb7c7;
+     background: [[setting:megamenuhoverbgcolor]];
 }
 
 .yamm-content a:hover {
@@ -1629,7 +1639,7 @@ body#page-calendar-view .calendarmonth th {
 
 .paging a {
     background: none;
-    color:##272f38;
+   color: [[setting:maincolor]];
     border:none;
 }
 
@@ -1692,7 +1702,7 @@ img.userpicture.defaultuserpic {
   width: 100%;
   padding: 0;
   margin: 0 auto;
-  background: #272f38;
+  background: [[setting:maincolor]];
 
 }
 /* line 38, ../sass/Megadropdown.scss */
@@ -1707,6 +1717,15 @@ img.userpicture.defaultuserpic {
 .nav li.nav-right {
   float: right;
 }
+
+
+@media (max-width: 980px) {
+.nav li.nav-right {
+ padding-right:30px;
+}
+}
+
+
 /* line 50, ../sass/Megadropdown.scss */
 .nav > li {
   padding: 0;
@@ -1736,7 +1755,7 @@ img.userpicture.defaultuserpic {
   left: 0;
   top: 56px;
   display: none;
-  background: #4dc3cf;
+  background: [[setting:megamenuhoverbgcolor]];
   padding: 10px;
   color:#fff;
   overflow: hidden;
@@ -1762,7 +1781,7 @@ img.userpicture.defaultuserpic {
 }
 /* line 93, ../sass/Megadropdown.scss */
 .nav > li > div ul li a:hover {
-  background: #4fb7c7;
+  background: [[setting:megamenuhoverlicolor]];
   color: #fff;
     text-decoration: none;
 }
@@ -1838,9 +1857,19 @@ img.userpicture.defaultuserpic {
 }
 
 
+
 @media (max-width: 979px) {
 .container-2 {
   width: 100%;
+    z-index:9000;
+}
+    
+}
+
+@media (max-width: 480px) {
+.container-2 {
+  
+    z-index:10000;
 }
     
 }
@@ -1982,7 +2011,7 @@ nav.navigation {
 
 
 div#dock {
-    background: #272f38;
+    background: [[setting:maincolor]];
     width:39px;
 }
 
@@ -1998,7 +2027,7 @@ div#dock {
 }
 
 #dock .dockedtitle:hover {
- background:#4dc3cf; 
+ background: [[setting:megamenuhoverbgcolor]];
     color:#fff;
 }
 
@@ -2095,6 +2124,7 @@ h1.cyan {
 @media (max-width: 980px) {
  h1.cyan {
    font-size: 1.9em;  
+     padding-top:30px
  }
 }
 
@@ -2118,6 +2148,7 @@ h1.orange {
 @media (max-width: 980px) {
  h1.orange {
    font-size: 1.9em;  
+     padding-top:30px
  }
 }
 
@@ -2140,6 +2171,7 @@ h1.red {
 @media (max-width: 980px) {
  h1.red {
    font-size: 1.9em;  
+     padding-top:30px
  }
 }
 
@@ -2161,6 +2193,7 @@ h1.purple {
 @media (max-width: 980px) {
  h1.purple {
    font-size: 1.9em;  
+     padding-top:30px
  }
 }
 
@@ -2182,6 +2215,7 @@ h1.yellow {
 @media (max-width: 980px) {
  h1.yellow {
    font-size: 1.9em;  
+     padding-top:30px
  }
 }
 
@@ -2203,6 +2237,7 @@ h1.blue {
 @media (max-width: 980px) {
  h1.blue {
    font-size: 1.9em;  
+     padding-top:30px
  }
 }
 
@@ -2225,7 +2260,99 @@ body#page-login-index .loginpanel {
 }
 
 
+div#titlewrap {
+    min-height:250px; 
+    border:1px solid #000;
+    
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
+.tileheader {
+ background: [[setting:frontpageblockheadercolor]];
+     color: [[setting:frontpageblocktextcolor]];
+   
+    padding-top:12px;
+    padding-bottom:12px;
+    text-align:center;
+}
+
+
+#tilewrap {
+height: 250px;
+    max-height: 250px;
+}
+
+
+
+#tilesummary {
+    opacity: 0;
+    -webkit-transition: none;
+    height:203px;
+     background: [[setting:frontpageblockhovercolor]];
+    color:#fff;
+    text-align:center;
+    padding:5px;
+}
+
+#tilesummary:hover {
+    opacity: 0.8;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+
+
+@media (max-width: 480px) {
+  #tilewrap {
+    height: 40px;
+    max-height: 40px;
+}  
+    #tilesummary {
+     display:none;   
+    }
+    
+    .tileheader:hover{
+    height: 40px;
+    max-height: 40px;
+        background: [[setting:megamenuhoverbgcolor]];
+}  
+    
+    #marketblocks {
+    margin-bottom: 10px;
+     margin-left: 10px;
+    margin-right: 10px;
+   
+}
+    
+    #navwrap {
+   
+    margin-bottom: 10px;
+}
+    
+}
+
+@media (max-width: 768px) {
+#marketblocks {
+    
+    margin-top: -10px;
+ 
+}
+}
+
+@media (max-width: 768px) {
+.container.slidewrap {
+    
+    margin-top: -10px;
+}
+}
+
+@media (max-width: 480px) {
+.container.slidewrap {
+    display: none;
+}
+}
 
 
 

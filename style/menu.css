@@ -54,12 +54,12 @@
 }
 
 .navbar .btn-navbar, .navbar .btn-navbar:hover, .navbar .btn-navbar:active {
-    background: #4dc3cf;
+    background: [[setting:megamenuhoverbgcolor]];
     
 }
 
 .nav_search_box input[type="text"]+button {
-    background: #4dc3cf;
+    background: [[setting:megamenuhoverbgcolor]];
 }
 
 .nav-collapse.active {
@@ -105,9 +105,9 @@
 
 
 .navbar .nav > li > a:hover {
-    background-color:#4dc3cf;
+    background-color:[[setting:megamenuhoverbgcolor]];
     color: #fff;
-    background: #4dc3cf url([[pix:theme|menuselector]]) no-repeat 100% 0; 
+    background: [[setting:megamenuhoverbgcolor]] url([[pix:theme|menuselector]]) no-repeat 100% 0; 
     background-position: center top;
     color: #fff;
 }
@@ -280,9 +280,9 @@ button.btn.btn-navbar {
 .no-touch .cbp-hsmenu > li > a:hover,
 .no-touch .cbp-hsmenu > li > a:focus,
 .cbp-hsmenu > li.cbp-hsitem-open > a {
-	background-color:#4dc3cf;
+	background-color:[[setting:megamenuhoverbgcolor]];
     color: #fff;
-    background: #4dc3cf url([[pix:theme|menuselector]]) no-repeat 100% 0; 
+    background: [[setting:megamenuhoverbgcolor]] url([[pix:theme|menuselector]]) no-repeat 100% 0; 
     background-position: center top;
     color: #fff;
     text-decoration:none;
@@ -513,9 +513,9 @@ button.btn.btn-navbar {
 
 
 .nav.nojs > li:hover > a {
- background-color:#4dc3cf;
+ background-color:[[setting:megamenuhoverbgcolor]];
     color: #fff;
-    background: #4dc3cf url([[pix:theme|menuselector]]) no-repeat 100% 0; 
+    background: [[setting:megamenuhoverbgcolor]] url([[pix:theme|menuselector]]) no-repeat 100% 0; 
     background-position: center top;
     color: #fff;
 }
@@ -534,9 +534,9 @@ button.btn.btn-navbar {
     
     
     .nav.nojs > li:hover > a {
- background-color:#4dc3cf;
+ background-color:[[setting:megamenuhoverbgcolor]];
     color: #fff;
-    background: #4dc3cf; 
+    background: [[setting:megamenuhoverbgcolor]];
     background-position: center top;
     color: #fff;
     border-radius: 0px;

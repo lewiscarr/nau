@@ -49,6 +49,16 @@ $hasmarket2 = (!empty($PAGE->theme->settings->market2));
 $hasmarket3 = (!empty($PAGE->theme->settings->market3));
 $hasmarket4 = (!empty($PAGE->theme->settings->market4));
 
+$hasmarket5 = (!empty($PAGE->theme->settings->market5));
+$hasmarket6 = (!empty($PAGE->theme->settings->market6));
+$hasmarket7 = (!empty($PAGE->theme->settings->market7));
+$hasmarket8 = (!empty($PAGE->theme->settings->market8));
+
+$hasmarket9 = (!empty($PAGE->theme->settings->market9));
+$hasmarket10 = (!empty($PAGE->theme->settings->market10));
+$hasmarket11 = (!empty($PAGE->theme->settings->market11));
+$hasmarket12 = (!empty($PAGE->theme->settings->market12));
+
 if ($hasp1 || $hasp2 || $hasp3 || $hasp4 || $hasp5) { 
 
 require_once(dirname(__FILE__) . '/includes/slider.php');
@@ -57,15 +67,7 @@ require_once(dirname(__FILE__) . '/includes/slider.php');
 
 <?php } ?>
 
-<?php if (!empty($PAGE->theme->settings->infobox)) { ?>
-    <div id="theinfo" class="container">
-        <div id="theinfo-internal">
-            <div class="row-fluid">
-                <?php echo $OUTPUT->get_setting('infobox', 'format_html'); ?>
-            </div>
-        </div>
-    </div>
-<?php } ?>
+
 
 <div id="marketblocks" class="container">
 <div class="row-fluid"> 
@@ -87,62 +89,187 @@ if ($hasmarket1 && $hasmarket2 && $hasmarket3 && $hasmarket4) {
 	$marketclass = "span3";
 }
 ?>  
-    <?php if ($hasmarket1) { ?> 
-    <div class="<?php echo "$marketclass";?> first">
    
-	<?php echo $OUTPUT->get_setting('market1', 'format_html');?>
+    <?php if ($hasmarket1) { ?> 
+  
+    <div onclick="location.href='<?php echo $PAGE->theme->settings->market1url;?>'" style="cursor:pointer;" class="<?php echo "$marketclass";?> first" >
+    <div id="tilewrap" style="background: url('<?php echo $PAGE->theme->setting_file_url('market1bg', 'market1bg'); ?>'); width: 100%;background-size: cover;background-repeat: no-repeat;background-position: center center;max-height: 250px;">
+    <div class="tileheader"><?php echo $OUTPUT->get_setting('market1', 'format_html');?></div>
     
-    </div>
+        <div id="tilesummary"><?php echo $OUTPUT->get_setting('market1content', 'format_html');?> </div></div></div>
     <?php } ?>
     
      
-     <?php if ($hasmarket2) { ?> 
-    <div class="<?php echo "$marketclass";?> first">
-
-	<?php echo $OUTPUT->get_setting('market2', 'format_html');?>
-
-    </div>
-     <?php } ?>
+  <?php if ($hasmarket2) { ?> 
+  
+    <div onclick="location.href='<?php echo $PAGE->theme->settings->market2url;?>'" style="cursor:pointer;" class="<?php echo "$marketclass";?> first" >
+    <div id="tilewrap" style="background: url('<?php echo $PAGE->theme->setting_file_url('market2bg', 'market2bg'); ?>'); width: 100%;background-size: cover;background-repeat: no-repeat;background-position: center center;max-height: 250px;">
+    <div class="tileheader"><?php echo $OUTPUT->get_setting('market2', 'format_html');?></div>
+    <div id="tilesummary"><?php echo $OUTPUT->get_setting('market2content', 'format_html');?> </div></div></div>
+    <?php } ?>
   
      
-<?php
-if ($hasmarket3) {
-?> 
-    <div class="<?php echo "$marketclass";?> first">
-        <?php echo $OUTPUT->get_setting('market3', 'format_html');?>
-    </div>
-<?php
-}
-?>
+   <?php if ($hasmarket3) { ?> 
+  
+    <div onclick="location.href='<?php echo $PAGE->theme->settings->market3url;?>'" style="cursor:pointer;" class="<?php echo "$marketclass";?> first" >
+    <div id="tilewrap" style="background: url('<?php echo $PAGE->theme->setting_file_url('market3bg', 'market3bg'); ?>'); width: 100%;background-size: cover;background-repeat: no-repeat;background-position: center center;max-height: 250px;">
+    <div class="tileheader"><?php echo $OUTPUT->get_setting('market3', 'format_html');?></div>
+    <div id="tilesummary"><?php echo $OUTPUT->get_setting('market3content', 'format_html');?> </div></div></div>
+    <?php } ?>
 
     
-<?php
-if ($hasmarket4) {
-?> 
-    <div class="<?php echo "$marketclass";?> first">
-	   <?php echo $OUTPUT->get_setting('market4', 'format_html');?>
-    </div>
-<?php
-}
-?>
+  <?php if ($hasmarket4) { ?> 
+  
+    <div onclick="location.href='<?php echo $PAGE->theme->settings->market4url;?>'" style="cursor:pointer;" class="<?php echo "$marketclass";?> first" >
+    <div id="tilewrap" style="background: url('<?php echo $PAGE->theme->setting_file_url('market4bg', 'market4bg'); ?>'); width: 100%;background-size: cover;background-repeat: no-repeat;background-position: center center;max-height: 250px;">
+    <div class="tileheader"><?php echo $OUTPUT->get_setting('market4', 'format_html');?></div>
+    <div id="tilesummary"><?php echo $OUTPUT->get_setting('market4content', 'format_html');?> </div></div></div>
+    <?php } ?>
  
     
  </div>      
  </div>
  
+
+
+
+
+
+
+
+
+<div id="marketblocks" class="container">
+<div class="row-fluid"> 
 <?php
-if (!empty($PAGE->theme->settings->infobox2)) {
-?>
- <div id="themessage" class="container">
-	<div id="themessage-internal"><div class="row-fluid">
-	
-		<?php echo $OUTPUT->get_setting('infobox2', 'format_html');; ?>
-		
-	</div></div>
-</div>
-<?php
+$marketclass = " ";
+if ($hasmarket5 && !$hasmarket6 && !$hasmarket7 && !$hasmarket8) {
+	$marketclass = "span12";
 }
-?>
+
+if ($hasmarket5 && $hasmarket6 && !$hasmarket7 && !$hasmarket8) {
+	$marketclass = "span6";
+}
+
+if ($hasmarket5 && $hasmarket6 && $hasmarket7 && !$hasmarket8) {
+	$marketclass = "span4";
+}
+
+if ($hasmarket5 && $hasmarket6 && $hasmarket7 && $hasmarket8) {
+	$marketclass = "span3";
+}
+?>  
+   
+    <?php if ($hasmarket5) { ?> 
+  
+    <div onclick="location.href='<?php echo $PAGE->theme->settings->market5url;?>'" style="cursor:pointer;" class="<?php echo "$marketclass";?> first" >
+    <div id="tilewrap" style="background: url('<?php echo $PAGE->theme->setting_file_url('market5bg', 'market5bg'); ?>'); width: 100%;background-size: cover;background-repeat: no-repeat;background-position: center center;max-height: 250px;">
+    <div class="tileheader"><?php echo $OUTPUT->get_setting('market5', 'format_html');?></div>
+    <div id="tilesummary"><?php echo $OUTPUT->get_setting('market5content', 'format_html');?> </div></div></div>
+    <?php } ?>
+    
+     
+  <?php if ($hasmarket6) { ?> 
+  
+    <div onclick="location.href='<?php echo $PAGE->theme->settings->market6url;?>'" style="cursor:pointer;" class="<?php echo "$marketclass";?> first" >
+    <div id="tilewrap" style="background: url('<?php echo $PAGE->theme->setting_file_url('market6bg', 'market6bg'); ?>'); width: 100%;background-size: cover;background-repeat: no-repeat;background-position: center center;max-height: 250px;">
+    <div class="tileheader"><?php echo $OUTPUT->get_setting('market6', 'format_html');?></div>
+    <div id="tilesummary"><?php echo $OUTPUT->get_setting('market6content', 'format_html');?> </div></div></div>
+    <?php } ?>
+  
+     
+   <?php if ($hasmarket7) { ?> 
+  
+    <div onclick="location.href='<?php echo $PAGE->theme->settings->market7url;?>'" style="cursor:pointer;" class="<?php echo "$marketclass";?> first" >
+    <div id="tilewrap" style="background: url('<?php echo $PAGE->theme->setting_file_url('market7bg', 'market7bg'); ?>'); width: 100%;background-size: cover;background-repeat: no-repeat;background-position: center center;max-height: 250px;">
+    <div class="tileheader"><?php echo $OUTPUT->get_setting('market7', 'format_html');?></div>
+    <div id="tilesummary"><?php echo $OUTPUT->get_setting('market7content', 'format_html');?> </div></div></div>
+    <?php } ?>
+
+    
+  <?php if ($hasmarket8) { ?> 
+  
+    <div onclick="location.href='<?php echo $PAGE->theme->settings->market8url;?>'" style="cursor:pointer;" class="<?php echo "$marketclass";?> first" >
+    <div id="tilewrap" style="background: url('<?php echo $PAGE->theme->setting_file_url('market8bg', 'market8bg'); ?>'); width: 100%;background-size: cover;background-repeat: no-repeat;background-position: center center;max-height: 250px;">
+    <div class="tileheader"><?php echo $OUTPUT->get_setting('market8', 'format_html');?></div>
+    <div id="tilesummary"><?php echo $OUTPUT->get_setting('market8content', 'format_html');?> </div></div></div>
+    <?php } ?>
+ 
+    
+ </div>      
+ </div>
+ 
+
+
+<div id="marketblocks" class="container">
+<div class="row-fluid"> 
+<?php
+$marketclass = " ";
+if ($hasmarket9 && !$hasmarket10 && !$hasmarket11 && !$hasmarket12) {
+	$marketclass = "span12";
+}
+
+if ($hasmarket9 && $hasmarket10 && !$hasmarket11 && !$hasmarket12) {
+	$marketclass = "span10";
+}
+
+if ($hasmarket9 && $hasmarket10 && $hasmarket11 && !$hasmarket12) {
+	$marketclass = "span4";
+}
+
+if ($hasmarket9 && $hasmarket10 && $hasmarket11 && $hasmarket12) {
+	$marketclass = "span3";
+}
+?>  
+   
+    <?php if ($hasmarket9) { ?> 
+  
+    <div onclick="location.href='<?php echo $PAGE->theme->settings->market9url;?>'" style="cursor:pointer;" class="<?php echo "$marketclass";?> first" >
+    <div id="tilewrap" style="background: url('<?php echo $PAGE->theme->setting_file_url('market9bg', 'market9bg'); ?>'); width: 100%;background-size: cover;background-repeat: no-repeat;background-position: center center;max-height: 290px;">
+    <div class="tileheader"><?php echo $OUTPUT->get_setting('market9', 'format_html');?></div>
+    <div id="tilesummary"><?php echo $OUTPUT->get_setting('market9content', 'format_html');?> </div></div></div>
+    <?php } ?>
+    
+     
+  <?php if ($hasmarket10) { ?> 
+  
+    <div onclick="location.href='<?php echo $PAGE->theme->settings->market10url;?>'" style="cursor:pointer;" class="<?php echo "$marketclass";?> first" >
+    <div id="tilewrap" style="background: url('<?php echo $PAGE->theme->setting_file_url('market10bg', 'market10bg'); ?>'); width: 100%;background-size: cover;background-repeat: no-repeat;background-position: center center;max-height: 290px;">
+    <div class="tileheader"><?php echo $OUTPUT->get_setting('market10', 'format_html');?></div>
+    <div id="tilesummary"><?php echo $OUTPUT->get_setting('market10content', 'format_html');?> </div></div></div>
+    <?php } ?>
+  
+     
+   <?php if ($hasmarket11) { ?> 
+  
+    <div onclick="location.href='<?php echo $PAGE->theme->settings->market11url;?>'" style="cursor:pointer;" class="<?php echo "$marketclass";?> first" >
+    <div id="tilewrap" style="background: url('<?php echo $PAGE->theme->setting_file_url('market11bg', 'market11bg'); ?>'); width: 100%;background-size: cover;background-repeat: no-repeat;background-position: center center;max-height: 290px;">
+    <div class="tileheader"><?php echo $OUTPUT->get_setting('market11', 'format_html');?></div>
+    <div id="tilesummary"><?php echo $OUTPUT->get_setting('market11content', 'format_html');?> </div></div></div>
+    <?php } ?>
+
+    
+  <?php if ($hasmarket12) { ?> 
+  
+    <div onclick="location.href='<?php echo $PAGE->theme->settings->market12url;?>'" style="cursor:pointer;" class="<?php echo "$marketclass";?> first" >
+    <div id="tilewrap" style="background: url('<?php echo $PAGE->theme->setting_file_url('market12bg', 'market12bg'); ?>'); width: 100%;background-size: cover;background-repeat: no-repeat;background-position: center center;max-height: 290px;">
+    <div class="tileheader"><?php echo $OUTPUT->get_setting('market12', 'format_html');?></div>
+    <div id="tilesummary"><?php echo $OUTPUT->get_setting('market12content', 'format_html');?> </div></div></div>
+    <?php } ?>
+ 
+    
+ </div>      
+ </div>
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -154,6 +281,15 @@ if (!empty($PAGE->theme->settings->infobox2)) {
             <nav class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></nav>
             <?php echo $OUTPUT->navbar(); ?>
     </div>
+        
+        
+        
+        
+     
+        
+        
+        
+        
         <?php
         if($left == 1) {
             echo $OUTPUT->blocks('side-post', 'span3 desktop-first-column');

@@ -84,29 +84,37 @@ if (is_siteadmin()) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 
-    $name = 'theme_nau/rendereroverlaycolour';
-    $title = get_string('rendereroverlaycolour', 'theme_nau');
-    $description = get_string('rendereroverlaycolourdesc', 'theme_nau');
+    
+   
+    
+    $name = 'theme_nau/frontpageblockheadercolor';
+    $title = get_string('frontpageblockheadercolor', 'theme_nau');
+    $description = get_string('frontpageblockheadercolordesc', 'theme_nau');
     $previewconfig = null;
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#001E3C', $previewconfig);
+    $default = '#272f38';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#272f38', $previewconfig);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/frontpageblocktextcolor';
+    $title = get_string('frontpageblocktextcolor', 'theme_nau');
+    $description = get_string('frontpageblocktextcolordesc', 'theme_nau');
+    $previewconfig = null;
+    $default = '#fff';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#fff', $previewconfig);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/frontpageblockhovercolor';
+    $title = get_string('frontpageblockhovercolor', 'theme_nau');
+    $description = get_string('frontpageblockhovercolordesc', 'theme_nau');
+    $previewconfig = null;
+    $default = '#272f38';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#272f38', $previewconfig);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 
-    $name = 'theme_nau/rendereroverlayfontcolour';
-    $title = get_string('rendereroverlayfontcolour', 'theme_nau');
-    $description = get_string('rendereroverlayfontcolourdesc', 'theme_nau');
-    $previewconfig = null;
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#FFF', $previewconfig);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $temp->add($setting);
-
-    $name = 'theme_nau/dividingline';
-    $title = get_string('dividingline', 'theme_nau');
-    $description = get_string('dividinglinedesc', 'theme_nau');
-    $previewconfig = null;
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#B7B3EF', $previewconfig);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $temp->add($setting);
+   
 
     $name = 'theme_nau/navbarborder';
     $title = get_string('navbarborder', 'theme_nau');
@@ -137,6 +145,33 @@ if (is_siteadmin()) {
     $description = get_string('activebreadcrumbdesc', 'theme_nau');
     $previewconfig = null;
     $setting = new admin_setting_configcolourpicker($name, $title, $description, '#e8eaeb', $previewconfig);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/megamenuhoverbgcolor';
+    $title = get_string('megamenuhoverbgcolor', 'theme_nau');
+    $description = get_string('megamenuhoverbgcolordesc', 'theme_nau');
+    $previewconfig = null;
+    $default ='#4dc3cf';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#4dc3cf', $previewconfig);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/megamenuhoverlicolor';
+    $title = get_string('megamenuhoverlicolor', 'theme_nau');
+    $description = get_string('megamenuhoverlicolordesc', 'theme_nau');
+    $previewconfig = null;
+    $default ='#4fb7c7';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#4fb7c7', $previewconfig);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/customalertbg';
+    $title = get_string('customalertbg', 'theme_nau');
+    $description = get_string('customalertbgdesc', 'theme_nau');
+    $previewconfig = null;
+    $default ='#4fb7c7';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#4fb7c7', $previewconfig);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 
@@ -583,19 +618,7 @@ if (is_siteadmin()) {
 
     $temp = new admin_settingpage('theme_nau_frontpage_blocks', get_string('frontpageblocksettings', 'theme_nau'));
 
-    $name = 'theme_nau/infobox';
-    $title = get_string('infobox', 'theme_nau');
-    $description = get_string('infoboxdesc', 'theme_nau');
-    $default = '';
-    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
-    $temp->add($setting);
-
-    $name = 'theme_nau/infobox2';
-    $title = get_string('infobox2', 'theme_nau');
-    $description = get_string('infobox2desc', 'theme_nau');
-    $default = '';
-    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
-    $temp->add($setting);
+   
 
     $temp->add(new admin_setting_heading('theme_nau_marketing', get_string('marketingsettingsheading', 'theme_nau'),
         format_text(get_string('marketingdesc', 'theme_nau'), FORMAT_MARKDOWN)));
@@ -604,28 +627,361 @@ if (is_siteadmin()) {
     $title = get_string('market1', 'theme_nau');
     $description = get_string('market1desc', 'theme_nau');
     $default = '';
-    $setting = new nau_setting_confightmleditor($name, $title, $description, $default);
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_RAW);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
+    
+    $name = 'theme_nau/market1content';
+    $title = get_string('market1content', 'theme_nau');
+    $description = get_string('market1contentdesc', 'theme_nau');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '', PARAM_RAW, '50', '10');
+     $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market1url';
+    $title = get_string('market1url', 'theme_nau');
+    $description = get_string('market1urldesc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market1bg';
+    $title = get_string('market1bg', 'theme_nau');
+    $description = get_string('market1bg', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'market1bg');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
 
     $name = 'theme_nau/market2';
     $title = get_string('market2', 'theme_nau');
     $description = get_string('market2desc', 'theme_nau');
-    $setting = new nau_setting_confightmleditor($name, $title, $description, $default);
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market2content';
+    $title = get_string('market2content', 'theme_nau');
+    $description = get_string('market2contentdesc', 'theme_nau');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '', PARAM_RAW, '50', '10');
+     $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market2url';
+    $title = get_string('market2url', 'theme_nau');
+    $description = get_string('market2urldesc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market2bg';
+    $title = get_string('market2bg', 'theme_nau');
+    $description = get_string('market2bg', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'market2bg');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 
     $name = 'theme_nau/market3';
     $title = get_string('market3', 'theme_nau');
     $description = get_string('market3desc', 'theme_nau');
-    $setting = new nau_setting_confightmleditor($name, $title, $description, $default);
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market3content';
+    $title = get_string('market3content', 'theme_nau');
+    $description = get_string('market3contentdesc', 'theme_nau');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '', PARAM_RAW, '50', '10');
+     $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market3url';
+    $title = get_string('market3url', 'theme_nau');
+    $description = get_string('market3urldesc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market3bg';
+    $title = get_string('market3bg', 'theme_nau');
+    $description = get_string('market3bg', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'market3bg');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 
     $name = 'theme_nau/market4';
     $title = get_string('market4', 'theme_nau');
     $description = get_string('market4desc', 'theme_nau');
-    $setting = new nau_setting_confightmleditor($name, $title, $description, $default);
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market4content';
+    $title = get_string('market4content', 'theme_nau');
+    $description = get_string('market4contentdesc', 'theme_nau');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '', PARAM_RAW, '50', '10');
+     $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market4url';
+    $title = get_string('market4url', 'theme_nau');
+    $description = get_string('market4urldesc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market4bg';
+    $title = get_string('market4bg', 'theme_nau');
+    $description = get_string('market4bg', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'market4bg');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    $ADMIN->add('theme_nau', $temp);
+    
+    
+    
+    $temp = new admin_settingpage('theme_nau_frontpage_blocks2', get_string('frontpageblocksettings2', 'theme_nau'));
+
+   
+
+    $temp->add(new admin_setting_heading('theme_nau_marketing', get_string('marketingsettingsheading', 'theme_nau'),
+        format_text(get_string('marketingdesc', 'theme_nau'), FORMAT_MARKDOWN)));
+
+    $name = 'theme_nau/market5';
+    $title = get_string('market5', 'theme_nau');
+    $description = get_string('market5desc', 'theme_nau');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market5content';
+    $title = get_string('market5content', 'theme_nau');
+    $description = get_string('market1contentdesc', 'theme_nau');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '', PARAM_RAW, '50', '10');
+     $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market5url';
+    $title = get_string('market1url', 'theme_nau');
+    $description = get_string('market5urldesc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market5bg';
+    $title = get_string('market1bg', 'theme_nau');
+    $description = get_string('market5bg', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'market5bg');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+
+    $name = 'theme_nau/market6';
+    $title = get_string('market6', 'theme_nau');
+    $description = get_string('market6desc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market6content';
+    $title = get_string('market6content', 'theme_nau');
+    $description = get_string('market6contentdesc', 'theme_nau');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '', PARAM_RAW, '50', '10');
+     $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market6url';
+    $title = get_string('market6url', 'theme_nau');
+    $description = get_string('market6urldesc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market6bg';
+    $title = get_string('market6bg', 'theme_nau');
+    $description = get_string('market6bg', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'market6bg');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    $name = 'theme_nau/market7';
+    $title = get_string('market7', 'theme_nau');
+    $description = get_string('market7desc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market7content';
+    $title = get_string('market7content', 'theme_nau');
+    $description = get_string('market7contentdesc', 'theme_nau');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '', PARAM_RAW, '50', '10');
+     $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market7url';
+    $title = get_string('market7url', 'theme_nau');
+    $description = get_string('market7urldesc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market7bg';
+    $title = get_string('market7bg', 'theme_nau');
+    $description = get_string('market7bg', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'market7bg');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    $name = 'theme_nau/market8';
+    $title = get_string('market8', 'theme_nau');
+    $description = get_string('market8desc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market8content';
+    $title = get_string('market8content', 'theme_nau');
+    $description = get_string('market8contentdesc', 'theme_nau');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '', PARAM_RAW, '50', '10');
+     $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market8url';
+    $title = get_string('market8url', 'theme_nau');
+    $description = get_string('market8urldesc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market8bg';
+    $title = get_string('market8bg', 'theme_nau');
+    $description = get_string('market8bg', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'market8bg');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    $ADMIN->add('theme_nau', $temp);
+    
+    $temp = new admin_settingpage('theme_nau_frontpage_blocks3', get_string('frontpageblocksettings3', 'theme_nau'));
+
+   
+
+    $temp->add(new admin_setting_heading('theme_nau_marketing', get_string('marketingsettingsheading', 'theme_nau'),
+        format_text(get_string('marketingdesc', 'theme_nau'), FORMAT_MARKDOWN)));
+
+    $name = 'theme_nau/market9';
+    $title = get_string('market9', 'theme_nau');
+    $description = get_string('market9desc', 'theme_nau');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market9content';
+    $title = get_string('market9content', 'theme_nau');
+    $description = get_string('market1contentdesc', 'theme_nau');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '', PARAM_RAW, '90', '10');
+     $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market9url';
+    $title = get_string('market1url', 'theme_nau');
+    $description = get_string('market9urldesc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market9bg';
+    $title = get_string('market1bg', 'theme_nau');
+    $description = get_string('market9bg', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'market9bg');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+
+    $name = 'theme_nau/market10';
+    $title = get_string('market10', 'theme_nau');
+    $description = get_string('market10desc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market10content';
+    $title = get_string('market10content', 'theme_nau');
+    $description = get_string('market10contentdesc', 'theme_nau');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '', PARAM_RAW, '90', '10');
+     $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market10url';
+    $title = get_string('market10url', 'theme_nau');
+    $description = get_string('market10urldesc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market10bg';
+    $title = get_string('market10bg', 'theme_nau');
+    $description = get_string('market10bg', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'market10bg');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    $name = 'theme_nau/market11';
+    $title = get_string('market11', 'theme_nau');
+    $description = get_string('market11desc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market11content';
+    $title = get_string('market11content', 'theme_nau');
+    $description = get_string('market11contentdesc', 'theme_nau');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '', PARAM_RAW, '90', '10');
+     $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market11url';
+    $title = get_string('market11url', 'theme_nau');
+    $description = get_string('market11urldesc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market11bg';
+    $title = get_string('market11bg', 'theme_nau');
+    $description = get_string('market11bg', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'market11bg');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    $name = 'theme_nau/market12';
+    $title = get_string('market12', 'theme_nau');
+    $description = get_string('market12desc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/market12content';
+    $title = get_string('market12content', 'theme_nau');
+    $description = get_string('market12contentdesc', 'theme_nau');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '', PARAM_RAW, '90', '10');
+     $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market12url';
+    $title = get_string('market12url', 'theme_nau');
+    $description = get_string('market12urldesc', 'theme_nau');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+     $name = 'theme_nau/market12bg';
+    $title = get_string('market12bg', 'theme_nau');
+    $description = get_string('market12bg', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'market12bg');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 
