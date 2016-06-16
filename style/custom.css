@@ -498,7 +498,7 @@ div#intro:after {
 
 
 #page-navbar {
-	background: [[setting:activebreadcrumb]];
+	background: none;
 	margin: 10px 0px;
 }
 
@@ -513,7 +513,7 @@ div#intro:after {
 }
 
 .breadcrumb li.lastli {
-    background: [[setting:activebreadcrumb]];
+    background: none;
 }
 
 .breadcrumb li.lastli a span {
@@ -2242,14 +2242,144 @@ h1.blue {
 }
 
 
-body#page-login-index #page {
-   
-    background: url([[pix:theme|grass]]) no-repeat 100% 0; 
+
+.cyan {
+    background: url([[pix:theme|cyan]]) no-repeat 100% 0; 
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    font-family: 'dearjoe3';
+    text-align: center;
+    min-height: 100px;
+    color: #fff;
+    padding-top: 80px;
+    font-size: 3em;
+    line-height:60px;
+}
+
+@media (max-width: 980px) {
+ .cyan {
+   font-size: 1.9em;  
+     padding-top:30px
+ }
+}
+
+
+
+.orange {
+    background: url([[pix:theme|orange]]) no-repeat 100% 0; 
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+    font-family: 'dearjoe3';
+    text-align: center;
+    min-height: 100px;
+    color: #fff;
+    padding-top: 80px;
+    font-size: 3em;
+     line-height:60px;
 }
+
+@media (max-width: 980px) {
+ .orange {
+   font-size: 1.9em;  
+     padding-top:30px
+ }
+}
+
+
+.red {
+    background: url([[pix:theme|red]]) no-repeat 100% 0; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    font-family: 'dearjoe3';
+    text-align: center;
+    min-height: 100px;
+    color: #fff;
+    padding-top: 80px;
+    font-size: 3em;
+     line-height:60px;
+}
+
+@media (max-width: 980px) {
+ .red {
+   font-size: 1.9em;  
+     padding-top:30px
+ }
+}
+
+.purple {
+    background: url([[pix:theme|purple]]) no-repeat 100% 0; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    font-family: 'dearjoe3';
+    text-align: center;
+    min-height: 100px;
+    color: #fff;
+    padding-top: 80px;
+    font-size: 3em;
+     line-height:60px;
+}
+
+@media (max-width: 980px) {
+ .purple {
+   font-size: 1.9em;  
+     padding-top:30px
+ }
+}
+
+.yellow {
+    background: url([[pix:theme|yellow]]) no-repeat 100% 0; 
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    font-family: 'dearjoe3';
+    text-align: center;
+    min-height: 100px;
+    color: #fff;
+    padding-top: 80px;
+    font-size: 3em;
+     line-height:60px;
+}
+
+@media (max-width: 980px) {
+ .yellow {
+   font-size: 1.9em;  
+     padding-top:30px
+ }
+}
+
+.blue {
+    background: url([[pix:theme|blue]]) no-repeat 100% 0; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    font-family: 'dearjoe3';
+    text-align: center;
+    min-height: 100px;
+    color: #fff;
+    padding-top: 80px;
+    font-size: 3em;
+     line-height:60px;
+}
+
+@media (max-width: 980px) {
+ .blue {
+   font-size: 1.9em;  
+     padding-top:30px
+ }
+}
+
+
+
 
 body#page-login-index .loginpanel {
     background: rgba(255, 255, 255, 0.7);
@@ -2273,7 +2403,8 @@ div#titlewrap {
 .tileheader {
  background: [[setting:frontpageblockheadercolor]];
      color: [[setting:frontpageblocktextcolor]];
-   
+   padding-left:2px;
+    padding-right:2px;
     padding-top:12px;
     padding-bottom:12px;
     text-align:center;
@@ -2354,6 +2485,17 @@ height: 250px;
 }
 }
 
+.row {
+    background-color: #fff;
+}
+
+
+.backgroundimg {
+     -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 
 /* Custom CSS Settings

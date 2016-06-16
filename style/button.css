@@ -75,3 +75,30 @@ input.form-submit:hover, input#id_submitbutton:hover, input#id_submitbutton2:hov
     background-color: [[setting:buttonhovercolour]];
     color: #fff;
 }
+
+
+.btn.btn-primary {
+    background:#337ab7;
+}
+
+
+
+.btn.btn-success {
+    background:#5cb85c;
+}
+
+.btn.btn-info {
+    background:#5bc0de;
+}
+
+.btn.btn-warning {
+    background:#f0ad4e;
+}
+
+.btn.btn-warning {
+    background:#f0ad4e;
+}
+
+.btn.btn-danger {
+    background:#d9534f;
+}

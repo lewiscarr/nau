@@ -140,13 +140,7 @@ if (is_siteadmin()) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
     
-    $name = 'theme_nau/activebreadcrumb';
-    $title = get_string('activebreadcrumb', 'theme_nau');
-    $description = get_string('activebreadcrumbdesc', 'theme_nau');
-    $previewconfig = null;
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#e8eaeb', $previewconfig);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $temp->add($setting);
+    
     
     $name = 'theme_nau/megamenuhoverbgcolor';
     $title = get_string('megamenuhoverbgcolor', 'theme_nau');
