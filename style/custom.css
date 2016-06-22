@@ -1,6 +1,19 @@
 @font-face{
-    font-family:dearjoe3;src:url([[font:theme|dearjoe3.eot]]);
-    src:url([[font:theme|dearjoe3.eot]]) format('embedded-opentype'),url([[font:theme|dearjoe3.woff2]]) format('woff2'),url([[font:theme|dearjoe3.woff]]) format('woff'),url([[font:theme|dearjoe3.ttf]]) format('truetype'),url([[font:theme|dearjoe3.svg]]) format('svg');
+    
+    
+   
+    
+    
+    
+    
+    
+    font-family:dearjoe3;
+    src:url([[font:theme|dearjoe3.eot]]);
+    src:url([[font:theme|dearjoe3.eot]]) format('embedded-opentype'),
+        url([[font:theme|dearjoe3.woff2]]) format('woff2'),
+        url([[font:theme|dearjoe3.woff]]) format('woff'),
+        url([[font:theme|dearjoe3.ttf]]) format('truetype'),
+        url([[font:theme|dearjoe3.svg]]) format('svg');
     }
 
 html,body {
@@ -476,7 +489,7 @@ span.fa-chevron-right.fa {
 }
 
 div#intro div.no-overflow{
-    background-color: #722975;
+    background-color: [[setting:calloutbgcolor]];
     color: #fff;
     padding:20px;
 }
@@ -782,7 +795,7 @@ span2.mceEditor iframe, table.mceLayout2 iframe {
 }
     
    .flex-caption {
-    background-color: #722975;
+    background-color: [[setting:calloutbgcolor]];
     color: #fff;
     margin: 0;
     padding: 5px 3px 0px 15px;
@@ -1575,7 +1588,7 @@ body#page-calendar-view .calendarmonth th {
 
 #page-course-index-category .generalbox.info div.no-overflow {
 
-    background-color: #722975;
+    background-color: [[setting:calloutbgcolor]];
     color: #fff;
     padding: 20px;
 }
@@ -2106,19 +2119,25 @@ body#page-my-index #page-content {
 }
 
 
+
+
 h1.cyan {
-    background: url([[pix:theme|cyan]]) no-repeat 100% 0; 
-   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+   background: url([[pix:theme|cyan]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
-    min-height: 100px;
     color: #fff;
     padding-top: 80px;
     font-size: 3em;
-    line-height:60px;
+    line-height: 60px;
+    background-size: 100%;
+    height: 110px;
+}
+
+@media (max-width: 1200px) {
+ h1.cyan {
+   font-size: 1.9em;  
+     padding-top:40px
+ }
 }
 
 @media (max-width: 980px) {
@@ -2128,21 +2147,38 @@ h1.cyan {
  }
 }
 
+@media (max-width: 520px) {
+ h1.cyan {
+   font-size: 1.9em;  
+     padding-top:20px
+ }
+}
+
+@media (max-width: 440px) {
+ h1.cyan {
+   font-size: 1.7em;  
+     padding-top:10px
+ }
+}
 
 
 h1.orange {
-    background: url([[pix:theme|orange]]) no-repeat 100% 0; 
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url([[pix:theme|orange]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
-    min-height: 100px;
     color: #fff;
     padding-top: 80px;
     font-size: 3em;
-     line-height:60px;
+    line-height: 60px;
+    background-size: 100%;
+    height: 110px;
+}
+
+@media (max-width: 1200px) {
+ h1.orange {
+   font-size: 1.9em;  
+     padding-top:40px
+ }
 }
 
 @media (max-width: 980px) {
@@ -2152,20 +2188,38 @@ h1.orange {
  }
 }
 
+@media (max-width: 520px) {
+ h1.orange {
+   font-size: 1.9em;  
+     padding-top:20px
+ }
+}
+
+@media (max-width: 440px) {
+ h1.orange {
+   font-size: 1.7em;  
+     padding-top:10px
+ }
+}
+
 
 h1.red {
-    background: url([[pix:theme|red]]) no-repeat 100% 0; 
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+   background: url([[pix:theme|red]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
-    min-height: 100px;
     color: #fff;
     padding-top: 80px;
     font-size: 3em;
-     line-height:60px;
+    line-height: 60px;
+    background-size: 100%;
+    height: 110px;
+}
+
+@media (max-width: 1200px) {
+ h1.red {
+   font-size: 1.9em;  
+     padding-top:40px
+ }
 }
 
 @media (max-width: 980px) {
@@ -2175,19 +2229,37 @@ h1.red {
  }
 }
 
+@media (max-width: 520px) {
+ h1.red {
+   font-size: 1.9em;  
+     padding-top:20px
+ }
+}
+
+@media (max-width: 440px) {
+ h1.red {
+   font-size: 1.7em;  
+     padding-top:10px
+ }
+}
+
 h1.purple {
-    background: url([[pix:theme|purple]]) no-repeat 100% 0; 
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+   background: url([[pix:theme|purple]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
-    min-height: 100px;
     color: #fff;
     padding-top: 80px;
     font-size: 3em;
-     line-height:60px;
+    line-height: 60px;
+    background-size: 100%;
+    height: 110px;
+}
+
+@media (max-width: 1200px) {
+ h1.purple {
+   font-size: 1.9em;  
+     padding-top:40px
+ }
 }
 
 @media (max-width: 980px) {
@@ -2197,19 +2269,37 @@ h1.purple {
  }
 }
 
+@media (max-width: 520px) {
+ h1.purple {
+   font-size: 1.9em;  
+     padding-top:20px
+ }
+}
+
+@media (max-width: 440px) {
+ h1.purple {
+   font-size: 1.7em;  
+     padding-top:10px
+ }
+}
+
 h1.yellow {
-    background: url([[pix:theme|yellow]]) no-repeat 100% 0; 
-   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url([[pix:theme|yellow]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
-    min-height: 100px;
     color: #fff;
     padding-top: 80px;
     font-size: 3em;
-     line-height:60px;
+    line-height: 60px;
+    background-size: 100%;
+    height: 110px;
+}
+
+@media (max-width: 1200px) {
+ h1.yellow {
+   font-size: 1.9em;  
+     padding-top:40px
+ }
 }
 
 @media (max-width: 980px) {
@@ -2219,43 +2309,79 @@ h1.yellow {
  }
 }
 
+@media (max-width: 520px) {
+ h1.yellow {
+   font-size: 1.9em;  
+     padding-top:20px
+ }
+}
+
+@media (max-width: 440px) {
+ h1.yellow {
+   font-size: 1.7em;  
+     padding-top:10px
+ }
+}
+
 h1.blue {
-    background: url([[pix:theme|blue]]) no-repeat 100% 0; 
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+   background: url([[pix:theme|blue]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
-    min-height: 100px;
     color: #fff;
     padding-top: 80px;
     font-size: 3em;
-     line-height:60px;
+    line-height: 60px;
+    background-size: 100%;
+    height: 110px;
+}
+
+@media (max-width: 1200px) {
+ h1.blue {
+   font-size: 1.9em;  
+     padding-top:40px
+ }
 }
 
 @media (max-width: 980px) {
- h1.blue {
+ h1.blie {
    font-size: 1.9em;  
      padding-top:30px
+ }
+}
+
+@media (max-width: 520px) {
+ h1.blue {
+   font-size: 1.9em;  
+     padding-top:20px
+ }
+}
+
+@media (max-width: 440px) {
+ h1.blue {
+   font-size: 1.7em;  
+     padding-top:10px
  }
 }
 
 
 
 .cyan {
-    background: url([[pix:theme|cyan]]) no-repeat 100% 0; 
-   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+   background: url([[pix:theme|cyan]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
-    min-height: 100px;
     color: #fff;
     padding-top: 80px;
     font-size: 3em;
-    line-height:60px;
+    line-height: 60px;
+    background-size: 100%;
+    height: 110px;
+}
+
+@media (max-width: 1200px) {
+ .cyan {
+   font-size: 1.9em;  
+     padding-top:40px
+ }
 }
 
 @media (max-width: 980px) {
@@ -2265,21 +2391,39 @@ h1.blue {
  }
 }
 
+@media (max-width: 520px) {
+ .cyan {
+   font-size: 1.9em;  
+     padding-top:20px
+ }
+}
+
+@media (max-width: 440px) {
+ .cyan {
+   font-size: 1.7em;  
+     padding-top:10px
+ }
+}
+
 
 
 .orange {
-    background: url([[pix:theme|orange]]) no-repeat 100% 0; 
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url([[pix:theme|orange]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
-    min-height: 100px;
     color: #fff;
     padding-top: 80px;
     font-size: 3em;
-     line-height:60px;
+    line-height: 60px;
+    background-size: 100%;
+    height: 110px;
+}
+
+@media (max-width: 1200px) {
+ .orange {
+   font-size: 1.9em;  
+     padding-top:40px
+ }
 }
 
 @media (max-width: 980px) {
@@ -2289,20 +2433,38 @@ h1.blue {
  }
 }
 
+@media (max-width: 520px) {
+ .orange {
+   font-size: 1.9em;  
+     padding-top:20px
+ }
+}
+
+@media (max-width: 440px) {
+ .orange {
+   font-size: 1.7em;  
+     padding-top:10px
+ }
+}
+
 
 .red {
-    background: url([[pix:theme|red]]) no-repeat 100% 0; 
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+   background: url([[pix:theme|red]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
-    min-height: 100px;
     color: #fff;
     padding-top: 80px;
     font-size: 3em;
-     line-height:60px;
+    line-height: 60px;
+    background-size: 100%;
+    height: 110px;
+}
+
+@media (max-width: 1200px) {
+ .red {
+   font-size: 1.9em;  
+     padding-top:40px
+ }
 }
 
 @media (max-width: 980px) {
@@ -2312,19 +2474,37 @@ h1.blue {
  }
 }
 
+@media (max-width: 520px) {
+ .red {
+   font-size: 1.9em;  
+     padding-top:20px
+ }
+}
+
+@media (max-width: 440px) {
+ .red {
+   font-size: 1.7em;  
+     padding-top:10px
+ }
+}
+
 .purple {
-    background: url([[pix:theme|purple]]) no-repeat 100% 0; 
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+   background: url([[pix:theme|purple]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
-    min-height: 100px;
     color: #fff;
     padding-top: 80px;
     font-size: 3em;
-     line-height:60px;
+    line-height: 60px;
+    background-size: 100%;
+    height: 110px;
+}
+
+@media (max-width: 1200px) {
+ .purple {
+   font-size: 1.9em;  
+     padding-top:40px
+ }
 }
 
 @media (max-width: 980px) {
@@ -2334,19 +2514,37 @@ h1.blue {
  }
 }
 
+@media (max-width: 520px) {
+ .purple {
+   font-size: 1.9em;  
+     padding-top:20px
+ }
+}
+
+@media (max-width: 440px) {
+ .purple {
+   font-size: 1.7em;  
+     padding-top:10px
+ }
+}
+
 .yellow {
-    background: url([[pix:theme|yellow]]) no-repeat 100% 0; 
-   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url([[pix:theme|yellow]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
-    min-height: 100px;
     color: #fff;
     padding-top: 80px;
     font-size: 3em;
-     line-height:60px;
+    line-height: 60px;
+    background-size: 100%;
+    height: 110px;
+}
+
+@media (max-width: 1200px) {
+.yellow {
+   font-size: 1.9em;  
+     padding-top:40px
+ }
 }
 
 @media (max-width: 980px) {
@@ -2356,25 +2554,57 @@ h1.blue {
  }
 }
 
+@media (max-width: 520px) {
+ .yellow {
+   font-size: 1.9em;  
+     padding-top:20px
+ }
+}
+
+@media (max-width: 440px) {
+ .yellow {
+   font-size: 1.7em;  
+     padding-top:10px
+ }
+}
+
 .blue {
-    background: url([[pix:theme|blue]]) no-repeat 100% 0; 
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+   background: url([[pix:theme|blue]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
-    min-height: 100px;
     color: #fff;
     padding-top: 80px;
     font-size: 3em;
-     line-height:60px;
+    line-height: 60px;
+    background-size: 100%;
+    height: 110px;
+}
+
+@media (max-width: 1200px) {
+ .blue {
+   font-size: 1.9em;  
+     padding-top:40px
+ }
 }
 
 @media (max-width: 980px) {
  .blue {
    font-size: 1.9em;  
      padding-top:30px
+ }
+}
+
+@media (max-width: 520px) {
+ .blue {
+   font-size: 1.9em;  
+     padding-top:20px
+ }
+}
+
+@media (max-width: 440px) {
+ .blue {
+   font-size: 1.7em;  
+     padding-top:10px
  }
 }
 
@@ -2497,6 +2727,96 @@ height: 250px;
   background-size: cover;
 }
 
+body#page-grade-report-grader-index aside#block-region-side-post {
+    display: none;
+}
+
+div#page-content .nav {
+    background: #fff;
+}
+
+div#page-content .nav>li>a {
+    float: left;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1px;
+    background: [[setting:maincolor]];
+    
+}
+
+
+div#page-content .nav>li>a:hover {
+   background: [[setting:megamenuhoverbgcolor]];
+}
+
+
+div#page-content ul.nav.nav-tabs {
+    margin-bottom: 20px;
+}
+
+div#page-content .nav-tabs>.active>a, div#page-content .nav-tabs>.active>a:hover, div#page-content .nav-tabs>.active>a:focus {
+    border: 1px solid [[setting:megamenuhoverbgcolor]];
+    background: [[setting:megamenuhoverbgcolor]];
+}
+
+
+body#page-mod-forum-search div#intro {
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+body#page-mod-forum-search div#intro:after {
+   display: none;
+}
+
+.block .header {
+    padding: 0px;
+   
+}
+
+body#page-badges-mybadges .box.noticebox {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+body#page-badges-mybadges .box.boxwidthwide.boxaligncenter {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.btn.btn-cyan {
+    background: #4bc4cd;
+}
+
+.btn.btn-orange {
+    background: #f26a34;
+}
+
+.btn.btn-red {
+    background: #ee2c54;
+}
+
+.btn.btn-purple {
+    background: #702b82;
+}
+
+.btn.btn-blue {
+    background: #123156;
+}
+
+.btn.btn-yellow {
+    background: #fec211;
+}
+
+
+.open.atto_title_button.atto_menu .dropdown-menu>li>a:hover {
+    background-image: none;
+}
+
+.dropdownlogin {
+ padding-top:15px;   
+}
 
 /* Custom CSS Settings
 -------------------------*/

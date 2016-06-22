@@ -42,10 +42,30 @@ require_once(dirname(__FILE__) . '/includes/header.php');
             <?php
             echo $OUTPUT->course_content_header();
             echo $OUTPUT->main_content();
+
+
+
             echo $OUTPUT->course_content_footer();
             ?>
         </section>
+        
+        
+        
+        
     </div>
 </div></div>
+
+
+<div class="container dropdownlogin" align="center">
+  <p>To access this page on our website you need to be logged in to Nord Anglia University.</p>
+    <h2>If you work in a School</h2>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click Here</button>
+  <div id="demo" class="collapse" style="padding-top:15px;">
+   <?php echo $OUTPUT->get_setting('footerdropdown', 'format_html'); ?>
+  </div>
+</div>
+
+
+
 <?php
 require_once(dirname(__FILE__) . '/includes/footer.php');

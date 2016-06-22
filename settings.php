@@ -168,6 +168,15 @@ if (is_siteadmin()) {
     $setting = new admin_setting_configcolourpicker($name, $title, $description, '#4fb7c7', $previewconfig);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
+    
+    $name = 'theme_nau/calloutbgcolor';
+    $title = get_string('calloutbgcolor', 'theme_nau');
+    $description = get_string('calloutbgcolordesc', 'theme_nau');
+    $previewconfig = null;
+    $default ='#722975';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#4fb7c7', $previewconfig);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
 
     $ADMIN->add('theme_nau', $temp);
 
@@ -1224,6 +1233,13 @@ if (is_siteadmin()) {
     $name = 'theme_nau/footnote';
     $title = get_string('footnote', 'theme_nau');
     $description = get_string('footnotedesc', 'theme_nau');
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $temp->add($setting);
+    
+    $name = 'theme_nau/footerdropdown';
+    $title = get_string('footerdropdown', 'theme_nau');
+    $description = get_string('footerdropdowndesc', 'theme_nau');
+    $default = '';
     $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
     $temp->add($setting);
 

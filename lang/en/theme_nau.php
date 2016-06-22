@@ -128,8 +128,16 @@ $string['frontpageblockhovercolordesc'] = 'Set the hover color of the tile when 
 $string['megamenuhoverbgcolor'] = 'Background Color of mega menu on rolliver/hover';
 $string['megamenuhoverbgcolordesc'] = 'Set the hover color of the mega menu.';
 
+$string['footerdropdown'] = 'Text for the dropdown panel on the login page ';
+$string['footerdropdowndesc'] = 'Set the text for the dropdown on the lgoin page.';
+
 $string['megamenuhoverlicolor'] = 'Background Color of hover of li objects inside mega menu';
 $string['megamenuhoverlicolordesc'] = 'Set the hover color of the li links within mega menu.';
+
+
+$string['calloutbgcolor'] = 'Background Color of callout';
+$string['calloutbgcolordesc'] = 'Set the background colour of the call out.';
+
 
 $string['customalertbg'] = 'Background Color of the custom alerts box';
 $string['customalertbgdesc'] = 'Set the background color of the custom alert box.';
