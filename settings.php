@@ -1236,6 +1236,15 @@ if (is_siteadmin()) {
     $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
     $temp->add($setting);
     
+    
+    $name = 'theme_nau/footerabovedropdown';
+    $title = get_string('footerabovedropdown', 'theme_nau');
+    $description = get_string('footerabovedropdowndesc', 'theme_nau');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $temp->add($setting);
+    
+    
     $name = 'theme_nau/footerdropdown';
     $title = get_string('footerdropdown', 'theme_nau');
     $description = get_string('footerdropdowndesc', 'theme_nau');

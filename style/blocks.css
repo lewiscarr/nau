@@ -37,7 +37,7 @@
 .block .header .title h2:after {
 	content: "";
     background: url([[pix:theme|footerborder]]) repeat-x;
-    height:30px;
+    height:5px;
     display:block;
     margin-right:10px;
     margin-top: 7px;

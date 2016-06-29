@@ -57,8 +57,7 @@ require_once(dirname(__FILE__) . '/includes/header.php');
 
 
 <div class="container dropdownlogin" align="center">
-  <p>To access this page on our website you need to be logged in to Nord Anglia University.</p>
-    <h2>If you work in a School</h2>
+   <?php echo $OUTPUT->get_setting('footerabovedropdown', 'format_html'); ?>
   <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click Here</button>
   <div id="demo" class="collapse" style="padding-top:15px;">
    <?php echo $OUTPUT->get_setting('footerdropdown', 'format_html'); ?>

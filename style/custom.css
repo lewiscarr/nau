@@ -497,11 +497,11 @@ div#intro div.no-overflow{
 div#intro:after {
     content: " ";
     
-    background: transparent url([[pix:theme|captionbase]]) no-repeat 100% 0;
+     background: [[setting:calloutbgcolor]] url([[pix:theme|newgroove]]) no-repeat 100% 0;
     background-position: center top;
     
     
-    height: 50px;
+    height: 19px;
     width: 100%;
     display: block;
     left: 0px;
@@ -1597,9 +1597,9 @@ body#page-calendar-view .calendarmonth th {
 
 #page-course-index-category .generalbox.info:after {
     content: " ";
-    background: transparent url([[pix:theme|captionbase]]) no-repeat 100% 0;
+     background: [[setting:calloutbgcolor]] url([[pix:theme|newgroove]]) no-repeat 100% 0;
     background-position: center top;
-    height: 50px;
+    height: 19px;
     width: 100%;
     display: block;
     left: 0px;
@@ -2122,7 +2122,7 @@ body#page-my-index #page-content {
 
 
 h1.cyan {
-   background: url([[pix:theme|cyan]]) no-repeat;
+   background: url([[pix:theme|cyan2]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
     color: #fff;
@@ -2136,28 +2136,32 @@ h1.cyan {
 @media (max-width: 1200px) {
  h1.cyan {
    font-size: 1.9em;  
-     padding-top:40px
+     padding-top:40px;
+       height:110px;
  }
 }
 
 @media (max-width: 980px) {
  h1.cyan {
    font-size: 1.9em;  
-     padding-top:30px
+     padding-top:30px;
+      height:110px;
  }
 }
 
 @media (max-width: 520px) {
  h1.cyan {
    font-size: 1.9em;  
-     padding-top:20px
+     padding-top:20px;
+      height:70px;
  }
 }
 
 @media (max-width: 440px) {
  h1.cyan {
    font-size: 1.7em;  
-     padding-top:10px
+     padding-top:10px;
+      height:70px;
  }
 }
 
@@ -2177,7 +2181,8 @@ h1.orange {
 @media (max-width: 1200px) {
  h1.orange {
    font-size: 1.9em;  
-     padding-top:40px
+     padding-top:40px;
+     height:110px;
  }
 }
 
@@ -2191,14 +2196,16 @@ h1.orange {
 @media (max-width: 520px) {
  h1.orange {
    font-size: 1.9em;  
-     padding-top:20px
+     padding-top:20px;
+     height:70px;
  }
 }
 
 @media (max-width: 440px) {
  h1.orange {
    font-size: 1.7em;  
-     padding-top:10px
+     padding-top:10px;
+     height:70px;
  }
 }
 
@@ -2218,28 +2225,32 @@ h1.red {
 @media (max-width: 1200px) {
  h1.red {
    font-size: 1.9em;  
-     padding-top:40px
+     padding-top:40px;
+     height:110px;
  }
 }
 
 @media (max-width: 980px) {
  h1.red {
    font-size: 1.9em;  
-     padding-top:30px
+     padding-top:30px;
+     height:110px;
  }
 }
 
 @media (max-width: 520px) {
  h1.red {
    font-size: 1.9em;  
-     padding-top:20px
+     padding-top:20px;
+     height:70px;
  }
 }
 
 @media (max-width: 440px) {
  h1.red {
    font-size: 1.7em;  
-     padding-top:10px
+     padding-top:10px;
+     height:70px;
  }
 }
 
@@ -2258,28 +2269,32 @@ h1.purple {
 @media (max-width: 1200px) {
  h1.purple {
    font-size: 1.9em;  
-     padding-top:40px
+     padding-top:40px;
+     height:110px;
  }
 }
 
 @media (max-width: 980px) {
  h1.purple {
    font-size: 1.9em;  
-     padding-top:30px
+     padding-top:30px;
+     height:110px;
  }
 }
 
 @media (max-width: 520px) {
  h1.purple {
    font-size: 1.9em;  
-     padding-top:20px
+     padding-top:20px;
+     height:70px;
  }
 }
 
 @media (max-width: 440px) {
  h1.purple {
    font-size: 1.7em;  
-     padding-top:10px
+     padding-top:10px;
+     height:70px;
  }
 }
 
@@ -2298,28 +2313,32 @@ h1.yellow {
 @media (max-width: 1200px) {
  h1.yellow {
    font-size: 1.9em;  
-     padding-top:40px
+     padding-top:40px;
+     height:110px;
  }
 }
 
 @media (max-width: 980px) {
  h1.yellow {
    font-size: 1.9em;  
-     padding-top:30px
+     padding-top:30px;
+     height:110px;
  }
 }
 
 @media (max-width: 520px) {
  h1.yellow {
    font-size: 1.9em;  
-     padding-top:20px
+     padding-top:20px;
+     height:70px;
  }
 }
 
 @media (max-width: 440px) {
  h1.yellow {
    font-size: 1.7em;  
-     padding-top:10px
+     padding-top:10px;
+     height:70px;
  }
 }
 
@@ -2338,35 +2357,39 @@ h1.blue {
 @media (max-width: 1200px) {
  h1.blue {
    font-size: 1.9em;  
-     padding-top:40px
+     padding-top:40px;
+     height:110px;
  }
 }
 
 @media (max-width: 980px) {
  h1.blie {
    font-size: 1.9em;  
-     padding-top:30px
+     padding-top:30px;
+     height:110px;
  }
 }
 
 @media (max-width: 520px) {
  h1.blue {
    font-size: 1.9em;  
-     padding-top:20px
+     padding-top:20px;
+     height:70px;
  }
 }
 
 @media (max-width: 440px) {
  h1.blue {
    font-size: 1.7em;  
-     padding-top:10px
+     padding-top:10px;
+     height:70px;
  }
 }
 
 
 
 .cyan {
-   background: url([[pix:theme|cyan]]) no-repeat;
+   background: url([[pix:theme|cyan2]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
     color: #fff;
@@ -2380,28 +2403,32 @@ h1.blue {
 @media (max-width: 1200px) {
  .cyan {
    font-size: 1.9em;  
-     padding-top:40px
+     padding-top:40px;
+        height:110px;
  }
 }
 
 @media (max-width: 980px) {
  .cyan {
    font-size: 1.9em;  
-     padding-top:30px
+     padding-top:30px;
+         height:110px;
  }
 }
 
 @media (max-width: 520px) {
  .cyan {
    font-size: 1.9em;  
-     padding-top:20px
+     padding-top:20px;
+       height:70px;
  }
 }
 
 @media (max-width: 440px) {
  .cyan {
    font-size: 1.7em;  
-     padding-top:10px
+     padding-top:10px;
+      height:70px;
  }
 }
 
@@ -2422,28 +2449,32 @@ h1.blue {
 @media (max-width: 1200px) {
  .orange {
    font-size: 1.9em;  
-     padding-top:40px
+     padding-top:40px;
+     height:110px;
  }
 }
 
 @media (max-width: 980px) {
  .orange {
    font-size: 1.9em;  
-     padding-top:30px
+     padding-top:30px;
+     height:110px;
  }
 }
 
 @media (max-width: 520px) {
  .orange {
    font-size: 1.9em;  
-     padding-top:20px
+     padding-top:20px;
+     height:70px;
  }
 }
 
 @media (max-width: 440px) {
  .orange {
    font-size: 1.7em;  
-     padding-top:10px
+     padding-top:10px;
+     height:70px;
  }
 }
 
@@ -2463,28 +2494,32 @@ h1.blue {
 @media (max-width: 1200px) {
  .red {
    font-size: 1.9em;  
-     padding-top:40px
+     padding-top:40px;
+     height:110px;
  }
 }
 
 @media (max-width: 980px) {
  .red {
    font-size: 1.9em;  
-     padding-top:30px
+     padding-top:30px;
+     height:110px;
  }
 }
 
 @media (max-width: 520px) {
  .red {
    font-size: 1.9em;  
-     padding-top:20px
+     padding-top:20px;
+     height:70px;
  }
 }
 
 @media (max-width: 440px) {
  .red {
    font-size: 1.7em;  
-     padding-top:10px
+     padding-top:10px;
+     height:70px;
  }
 }
 
@@ -2503,28 +2538,32 @@ h1.blue {
 @media (max-width: 1200px) {
  .purple {
    font-size: 1.9em;  
-     padding-top:40px
+     padding-top:40px;
+     height:110px;
  }
 }
 
 @media (max-width: 980px) {
  .purple {
    font-size: 1.9em;  
-     padding-top:30px
+     padding-top:30px;
+     height:110px;
  }
 }
 
 @media (max-width: 520px) {
  .purple {
    font-size: 1.9em;  
-     padding-top:20px
+     padding-top:20px;
+     height:70px;
  }
 }
 
 @media (max-width: 440px) {
  .purple {
    font-size: 1.7em;  
-     padding-top:10px
+     padding-top:10px;
+     height:70px;
  }
 }
 
@@ -2543,28 +2582,32 @@ h1.blue {
 @media (max-width: 1200px) {
 .yellow {
    font-size: 1.9em;  
-     padding-top:40px
+     padding-top:40px;
+    height:110px;
  }
 }
 
 @media (max-width: 980px) {
  .yellow {
    font-size: 1.9em;  
-     padding-top:30px
+     padding-top:30px;
+     height:110px;
  }
 }
 
 @media (max-width: 520px) {
  .yellow {
    font-size: 1.9em;  
-     padding-top:20px
+     padding-top:20px;
+     height:70px;
  }
 }
 
 @media (max-width: 440px) {
  .yellow {
    font-size: 1.7em;  
-     padding-top:10px
+     padding-top:10px;
+     height:70px;
  }
 }
 
@@ -2590,21 +2633,24 @@ h1.blue {
 @media (max-width: 980px) {
  .blue {
    font-size: 1.9em;  
-     padding-top:30px
+     padding-top:30px;
+     height:110px;
  }
 }
 
 @media (max-width: 520px) {
  .blue {
    font-size: 1.9em;  
-     padding-top:20px
+     padding-top:20px;
+     height:70px;
  }
 }
 
 @media (max-width: 440px) {
  .blue {
    font-size: 1.7em;  
-     padding-top:10px
+     padding-top:10px;
+     height:70px;
  }
 }
 

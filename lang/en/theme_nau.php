@@ -105,7 +105,7 @@ $string['logodesc'] = 'Change the logo of this theme by entering the URL to a ne
 
 
 $string['pageheader'] = 'Header Image';
-$string['pageheaderdesc'] = 'The default page headr whe na course summar yfile is not used). A wide image works best.';
+$string['pageheaderdesc'] = 'The default page header when a course summary file is not used). A wide image works best.';
 
 $string['linkcolor'] = 'Link Color';
 $string['linkcolordesc'] = 'Set the color of all the body text hyperlinks across Moodle.';
@@ -128,8 +128,12 @@ $string['frontpageblockhovercolordesc'] = 'Set the hover color of the tile when 
 $string['megamenuhoverbgcolor'] = 'Background Color of mega menu on rolliver/hover';
 $string['megamenuhoverbgcolordesc'] = 'Set the hover color of the mega menu.';
 
+
+$string['footerabovedropdown'] = 'Text above the dropdown on the login page ';
+$string['footerabovedropdowndesc'] = 'Set the text that sits above the dropdown on the login page.';
+
 $string['footerdropdown'] = 'Text for the dropdown panel on the login page ';
-$string['footerdropdowndesc'] = 'Set the text for the dropdown on the lgoin page.';
+$string['footerdropdowndesc'] = 'Set the text for the dropdown on the login page.';
 
 $string['megamenuhoverlicolor'] = 'Background Color of hover of li objects inside mega menu';
 $string['megamenuhoverlicolordesc'] = 'Set the hover color of the li links within mega menu.';
