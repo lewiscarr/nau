@@ -1,6 +1,6 @@
 /*buttons */
 input[type="submit"], input[type="button"], #searchform_button, a.submit, #notice .singlebutton + .singlebutton input, .submit.buttons input[name="cancel"], #page-login-index2 .forgetpass a, .btn, input.form-submit, input#id_submitbutton, input#id_submitbutton2, .path-admin .buttons input[type="submit"], td.submit input {
-    background: #272f38;
+    background: [[setting:buttoncolour]];
     text-shadow: none;
     
     border: 0px;
@@ -29,7 +29,7 @@ input[type="submit"], input[type="button"], #searchform_button, a.submit, #notic
     text-shadow: none;
     vertical-align: middle;
     cursor: pointer;
-    background-color: #272f38;
+    background: [[setting:buttoncolour]];
    
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -39,7 +39,7 @@ input[type="submit"], input[type="button"], #searchform_button, a.submit, #notic
 }
 
 #notice .singlebutton + .singlebutton input, .submit.buttons input[name="cancel"] {
-	background: #0084C2 !important;
+	background: [[setting:buttoncolour]];!important;
 	text-shadow: none;
 }
 
@@ -76,7 +76,7 @@ input.form-submit:hover, input#id_submitbutton:hover, input#id_submitbutton2:hov
 
 
 .btn.btn-primary {
-    background:#337ab7;
+   background: [[setting:buttoncolour]];
 }
 
 

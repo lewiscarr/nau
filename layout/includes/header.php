@@ -120,13 +120,13 @@ echo $OUTPUT->doctype();
   <li class="first">
     <?php echo $USER->firstname; ?> <?php echo $USER->lastname; ?>
     <ul>
-       <?php if (!empty($PAGE->theme->settings->enablemy  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/my"><li>Dashboard</li></a> <?php } ?>
-      <?php if (!empty($PAGE->theme->settings->enableprofile  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/user/profile.php"><li>View Profile</li></a> <?php } ?>
-      <?php if (!empty($PAGE->theme->settings->enableeditprofile  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/user/edit.php"><li>Edit Profile</li></a> <?php } ?>
-      <?php if (!empty($PAGE->theme->settings->enablebadges  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/badges/mybadges.php"><li>Badges</li></a> <?php } ?>
-    <?php if (!empty($PAGE->theme->settings->enablecalendar  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/calendar/view.php"><li>Calendar</li></a> <?php } ?>
-         <?php if (!empty($PAGE->theme->settings->enableprivatefiles   )) { ?><a href="<?php echo $CFG->wwwroot; ?>/user/files.php"> <li>Private Files</li> </a><?php } ?>
-      <a href="<?php echo $CFG->wwwroot; ?>/login/logout.php"><li>Logout</li></a>
+       <?php if (!empty($PAGE->theme->settings->enablemy  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/my"><li><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</li></a> <?php } ?>
+      <?php if (!empty($PAGE->theme->settings->enableprofile  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/user/profile.php"><li><i class="fa fa-user" aria-hidden="true"></i> View Profile</li></a> <?php } ?>
+      <?php if (!empty($PAGE->theme->settings->enableeditprofile  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/user/edit.php"><li><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Profile</li></a> <?php } ?>
+      <?php if (!empty($PAGE->theme->settings->enablebadges  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/badges/mybadges.php"><li><i class="fa fa-shield" aria-hidden="true"></i> Badges</li></a> <?php } ?>
+    <?php if (!empty($PAGE->theme->settings->enablecalendar  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/calendar/view.php"><li><i class="fa fa-calendar-o" aria-hidden="true"></i> Calendar</li></a> <?php } ?>
+         <?php if (!empty($PAGE->theme->settings->enableprivatefiles   )) { ?><a href="<?php echo $CFG->wwwroot; ?>/user/files.php"> <li><i class="fa fa-file-image-o" aria-hidden="true"></i> Private Files</li> </a><?php } ?>
+      <a href="<?php echo $CFG->wwwroot; ?>/login/logout.php"><li><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</li></a>
     </ul>
   </li>
  

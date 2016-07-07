@@ -1773,6 +1773,9 @@ img.userpicture.defaultuserpic {
   color:#fff;
   overflow: hidden;
   z-index: 99999;
+    -webkit-box-shadow: 10px 10px 5px -8px rgba(66,65,66,1);
+-moz-box-shadow: 10px 10px 5px -8px rgba(66,65,66,1);
+box-shadow: 10px 10px 5px -8px rgba(66,65,66,1);
 }
 
 
@@ -2684,6 +2687,7 @@ div#titlewrap {
     padding-top:12px;
     padding-bottom:12px;
     text-align:center;
+    font-weight:bold;
 }
 
 
@@ -2700,7 +2704,7 @@ height: 250px;
     height:203px;
      background: [[setting:frontpageblockhovercolor]];
     color:#fff;
-    text-align:center;
+    text-align:left;
     padding:5px;
 }
 
@@ -2863,6 +2867,58 @@ body#page-badges-mybadges .box.boxwidthwide.boxaligncenter {
 .dropdownlogin {
  padding-top:15px;   
 }
+
+
+.gridimg:hover img {
+    -webkit-filter: brightness(70%);
+        -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.searchbox i.fa {
+    margin-right: 10px;
+}
+
+footer#page-footer h1, h2, h3, h4, h5, h6 {
+    font-family: arial;
+}
+
+.teal {
+   
+   background: url([[pix:theme|teal]]) no-repeat;
+    font-family: 'dearjoe3';
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+    line-height: 130px;
+    background-size: 100%;
+    height: 120px;
+}
+
+@media (max-width: 1200px) {
+ .teal {
+   font-size: 2em;  
+     line-height: 100px;
+         height: 100px;
+ }
+}
+
+@media (max-width: 980px) {
+ .teal {
+   font-size: 1.5em;  
+     line-height: 80px;
+         height:80px;
+ }
+}
+
+@media (max-width: 580px) {
+ .teal {
+   font-size: 1.5em;  
+     line-height: 70px;
+         height:80px;
+ }
+}
+
 
 /* Custom CSS Settings
 -------------------------*/

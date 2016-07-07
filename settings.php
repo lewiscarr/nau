@@ -206,6 +206,15 @@ if (is_siteadmin()) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
     
+    
+     $name = 'theme_nau/pageheaderbgcolor';
+    $title = get_string('pageheaderbgcolor', 'theme_nau');
+    $description = get_string('pageheaderbgcolordesc', 'theme_nau');
+    $default = 'rgba(39, 44, 44, 0.6)';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $temp->add($setting);
+    
 
     $name = 'theme_nau/alertbox';
     $title = get_string('alertbox', 'theme_nau');
@@ -1164,6 +1173,39 @@ if (is_siteadmin()) {
 
     $ADMIN->add('theme_nau', $temp);
 
+    
+     $temp = new admin_settingpage('theme_nau_login', get_string('loginsettings', 'theme_nau'));
+    
+    $name = 'theme_nau/loginbuttondropdown';
+    $title = get_string('loginbuttondropdown', 'theme_nau');
+    $description = get_string('loginbuttondropdowndesc', 'theme_nau');
+    $default = 'Click here';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_nau/footerabovedropdown';
+    $title = get_string('footerabovedropdown', 'theme_nau');
+    $description = get_string('footerabovedropdowndesc', 'theme_nau');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    
+    $name = 'theme_nau/footerdropdown';
+    $title = get_string('footerdropdown', 'theme_nau');
+    $description = get_string('footerdropdowndesc', 'theme_nau');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    
+    
+    $ADMIN->add('theme_nau', $temp);
+    
+    
     $temp = new admin_settingpage('theme_nau_footer', get_string('footersettings', 'theme_nau'));
     $temp->add(new admin_setting_heading('theme_nau_footer', get_string('footersettingsheading', 'theme_nau'),
         format_text(get_string('footerdesc', 'theme_nau'), FORMAT_MARKDOWN)));
@@ -1236,21 +1278,13 @@ if (is_siteadmin()) {
     $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
     $temp->add($setting);
     
-    
-    $name = 'theme_nau/footerabovedropdown';
-    $title = get_string('footerabovedropdown', 'theme_nau');
-    $description = get_string('footerabovedropdowndesc', 'theme_nau');
-    $default = '';
-    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $name = 'theme_nau/footerlogo';
+    $title = get_string('footerlogo', 'theme_nau');
+    $description = get_string('footerlogodesc', 'theme_nau');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'footerlogo');
+    $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
     
-    
-    $name = 'theme_nau/footerdropdown';
-    $title = get_string('footerdropdown', 'theme_nau');
-    $description = get_string('footerdropdowndesc', 'theme_nau');
-    $default = '';
-    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
-    $temp->add($setting);
 
     $ADMIN->add('theme_nau', $temp);
 

@@ -66,6 +66,7 @@ function theme_nau_process_css($css, $theme) {
         '[[setting:megamenuhoverlicolor]]' => '#3da0aa',
         '[[setting:customalertbg]]' => '#4fb7c7',
         '[[setting:calloutbgcolor]]' => '#722975',
+        '[[setting:pageheaderbgcolor]]' => 'rgba(39, 44, 44, 0.6)',
     );
 
     // Get all the defined settings for the theme and replace defaults.

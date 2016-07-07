@@ -58,7 +58,7 @@ require_once(dirname(__FILE__) . '/includes/header.php');
 
 <div class="container dropdownlogin" align="center">
    <?php echo $OUTPUT->get_setting('footerabovedropdown', 'format_html'); ?>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click Here</button>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"> <?php echo $OUTPUT->get_setting('loginbuttondropdown', 'format_text'); ?></button>
   <div id="demo" class="collapse" style="padding-top:15px;">
    <?php echo $OUTPUT->get_setting('footerdropdown', 'format_html'); ?>
   </div>

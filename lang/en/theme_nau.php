@@ -113,6 +113,18 @@ $string['linkcolordesc'] = 'Set the color of all the body text hyperlinks across
 $string['linkhover'] = 'Link Hover Color';
 $string['linkhoverdesc'] = 'Set the hovber color of all the body links across Moodle.';
 
+$string['loginsettings'] = 'Login';
+$string['loginsettingsdesc'] = 'Login Settings.';
+
+$string['footerlogo'] = 'Footer Logo';
+$string['footerlogodesc'] = 'Upload a logo image for the footer.';
+
+$string['pageheaderbgcolor'] = 'Page Heading Background Colour';
+$string['pageheaderbgcolordesc'] = 'Change the background colour of the page heading (initially transparent).';
+
+$string['loginbuttondropdown'] = 'Dropdown button text';
+$string['loginbuttondropdowndesc'] = 'Change the tex tof the dropdown button on the login page.';
+
 $string['backcolor'] = 'Background Color';
 $string['backcolordesc'] = 'Set the background color.';
 
