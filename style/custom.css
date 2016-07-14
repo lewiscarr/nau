@@ -789,8 +789,9 @@ span2.mceEditor iframe, table.mceLayout2 iframe {
 
 @media (max-width: 1100px) {
 #search-1 {
-    
+    font-size:12px;
     width: 120px;
+   
 }
 }
     
@@ -1040,6 +1041,12 @@ div.no-overflow, .yui3-datatable {
     color: #000;
 }
 
+
+.searchbox li.first:before {
+    content: "\f0d7";
+    font-family: FontAwesome;
+}
+
 .searchbox ul {
   text-align: left;
   display: inline;
@@ -1145,14 +1152,15 @@ div.no-overflow, .yui3-datatable {
 }
 
 #search-1 {
-	padding: 5px 3px !important;
+	padding: 7px 3px 7px 10px;
 	margin: 0 !important;
 	font-size: 14px;
 	color: #444;
+    border-radius: 20px;
 }
 
 #search-1:focus {
-	border: none !important;
+	border: 1px solid #fff;
 	box-shadow: none;
 	-webkit-box-shadow: none;
 }
@@ -1170,6 +1178,7 @@ div.no-overflow, .yui3-datatable {
 	}
 	#search-1 {
             width: calc(100% - 39px);
+        font-size:10px;
 	}
 
         div#coursetitle {
@@ -1515,14 +1524,19 @@ aside#block-region-side-post {
 .nav_search_box input[type="text"]+button {
  margin-top: 10px;  
     float:none;
+    margin-left: -50px;
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    color: #000;
 }
 
 @media (max-width: 979px) {
 .nav_search_box input[type="text"]+button {
- margin-top: -30px;
-    float: right;
-    margin-left: 20px;
-    margin-right: -20px;
+ margin-top: 5px;
+    
+   
+   
 }
     
     .nav_search_box {
@@ -1531,6 +1545,7 @@ max-width:260px;
 } 
     
 }
+
 
 
 .headermenubox {
@@ -1555,7 +1570,7 @@ box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
 .fa-search:before {
- color:#fff;   
+ color:#000;   
 }
 
 
@@ -2124,538 +2139,6 @@ body#page-my-index #page-content {
 
 
 
-h1.cyan {
-   background: url([[pix:theme|cyan2]]) no-repeat;
-    font-family: 'dearjoe3';
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
-    font-size: 3em;
-    line-height: 60px;
-    background-size: 100%;
-    height: 110px;
-}
-
-@media (max-width: 1200px) {
- h1.cyan {
-   font-size: 1.9em;  
-     padding-top:40px;
-       height:110px;
- }
-}
-
-@media (max-width: 980px) {
- h1.cyan {
-   font-size: 1.9em;  
-     padding-top:30px;
-      height:110px;
- }
-}
-
-@media (max-width: 520px) {
- h1.cyan {
-   font-size: 1.9em;  
-     padding-top:20px;
-      height:70px;
- }
-}
-
-@media (max-width: 440px) {
- h1.cyan {
-   font-size: 1.7em;  
-     padding-top:10px;
-      height:70px;
- }
-}
-
-
-h1.orange {
-    background: url([[pix:theme|orange]]) no-repeat;
-    font-family: 'dearjoe3';
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
-    font-size: 3em;
-    line-height: 60px;
-    background-size: 100%;
-    height: 110px;
-}
-
-@media (max-width: 1200px) {
- h1.orange {
-   font-size: 1.9em;  
-     padding-top:40px;
-     height:110px;
- }
-}
-
-@media (max-width: 980px) {
- h1.orange {
-   font-size: 1.9em;  
-     padding-top:30px
- }
-}
-
-@media (max-width: 520px) {
- h1.orange {
-   font-size: 1.9em;  
-     padding-top:20px;
-     height:70px;
- }
-}
-
-@media (max-width: 440px) {
- h1.orange {
-   font-size: 1.7em;  
-     padding-top:10px;
-     height:70px;
- }
-}
-
-
-h1.red {
-   background: url([[pix:theme|red]]) no-repeat;
-    font-family: 'dearjoe3';
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
-    font-size: 3em;
-    line-height: 60px;
-    background-size: 100%;
-    height: 110px;
-}
-
-@media (max-width: 1200px) {
- h1.red {
-   font-size: 1.9em;  
-     padding-top:40px;
-     height:110px;
- }
-}
-
-@media (max-width: 980px) {
- h1.red {
-   font-size: 1.9em;  
-     padding-top:30px;
-     height:110px;
- }
-}
-
-@media (max-width: 520px) {
- h1.red {
-   font-size: 1.9em;  
-     padding-top:20px;
-     height:70px;
- }
-}
-
-@media (max-width: 440px) {
- h1.red {
-   font-size: 1.7em;  
-     padding-top:10px;
-     height:70px;
- }
-}
-
-h1.purple {
-   background: url([[pix:theme|purple]]) no-repeat;
-    font-family: 'dearjoe3';
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
-    font-size: 3em;
-    line-height: 60px;
-    background-size: 100%;
-    height: 110px;
-}
-
-@media (max-width: 1200px) {
- h1.purple {
-   font-size: 1.9em;  
-     padding-top:40px;
-     height:110px;
- }
-}
-
-@media (max-width: 980px) {
- h1.purple {
-   font-size: 1.9em;  
-     padding-top:30px;
-     height:110px;
- }
-}
-
-@media (max-width: 520px) {
- h1.purple {
-   font-size: 1.9em;  
-     padding-top:20px;
-     height:70px;
- }
-}
-
-@media (max-width: 440px) {
- h1.purple {
-   font-size: 1.7em;  
-     padding-top:10px;
-     height:70px;
- }
-}
-
-h1.yellow {
-    background: url([[pix:theme|yellow]]) no-repeat;
-    font-family: 'dearjoe3';
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
-    font-size: 3em;
-    line-height: 60px;
-    background-size: 100%;
-    height: 110px;
-}
-
-@media (max-width: 1200px) {
- h1.yellow {
-   font-size: 1.9em;  
-     padding-top:40px;
-     height:110px;
- }
-}
-
-@media (max-width: 980px) {
- h1.yellow {
-   font-size: 1.9em;  
-     padding-top:30px;
-     height:110px;
- }
-}
-
-@media (max-width: 520px) {
- h1.yellow {
-   font-size: 1.9em;  
-     padding-top:20px;
-     height:70px;
- }
-}
-
-@media (max-width: 440px) {
- h1.yellow {
-   font-size: 1.7em;  
-     padding-top:10px;
-     height:70px;
- }
-}
-
-h1.blue {
-   background: url([[pix:theme|blue]]) no-repeat;
-    font-family: 'dearjoe3';
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
-    font-size: 3em;
-    line-height: 60px;
-    background-size: 100%;
-    height: 110px;
-}
-
-@media (max-width: 1200px) {
- h1.blue {
-   font-size: 1.9em;  
-     padding-top:40px;
-     height:110px;
- }
-}
-
-@media (max-width: 980px) {
- h1.blie {
-   font-size: 1.9em;  
-     padding-top:30px;
-     height:110px;
- }
-}
-
-@media (max-width: 520px) {
- h1.blue {
-   font-size: 1.9em;  
-     padding-top:20px;
-     height:70px;
- }
-}
-
-@media (max-width: 440px) {
- h1.blue {
-   font-size: 1.7em;  
-     padding-top:10px;
-     height:70px;
- }
-}
-
-
-
-.cyan {
-   background: url([[pix:theme|cyan2]]) no-repeat;
-    font-family: 'dearjoe3';
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
-    font-size: 3em;
-    line-height: 60px;
-    background-size: 100%;
-    height: 110px;
-}
-
-@media (max-width: 1200px) {
- .cyan {
-   font-size: 1.9em;  
-     padding-top:40px;
-        height:110px;
- }
-}
-
-@media (max-width: 980px) {
- .cyan {
-   font-size: 1.9em;  
-     padding-top:30px;
-         height:110px;
- }
-}
-
-@media (max-width: 520px) {
- .cyan {
-   font-size: 1.9em;  
-     padding-top:20px;
-       height:70px;
- }
-}
-
-@media (max-width: 440px) {
- .cyan {
-   font-size: 1.7em;  
-     padding-top:10px;
-      height:70px;
- }
-}
-
-
-
-.orange {
-    background: url([[pix:theme|orange]]) no-repeat;
-    font-family: 'dearjoe3';
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
-    font-size: 3em;
-    line-height: 60px;
-    background-size: 100%;
-    height: 110px;
-}
-
-@media (max-width: 1200px) {
- .orange {
-   font-size: 1.9em;  
-     padding-top:40px;
-     height:110px;
- }
-}
-
-@media (max-width: 980px) {
- .orange {
-   font-size: 1.9em;  
-     padding-top:30px;
-     height:110px;
- }
-}
-
-@media (max-width: 520px) {
- .orange {
-   font-size: 1.9em;  
-     padding-top:20px;
-     height:70px;
- }
-}
-
-@media (max-width: 440px) {
- .orange {
-   font-size: 1.7em;  
-     padding-top:10px;
-     height:70px;
- }
-}
-
-
-.red {
-   background: url([[pix:theme|red]]) no-repeat;
-    font-family: 'dearjoe3';
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
-    font-size: 3em;
-    line-height: 60px;
-    background-size: 100%;
-    height: 110px;
-}
-
-@media (max-width: 1200px) {
- .red {
-   font-size: 1.9em;  
-     padding-top:40px;
-     height:110px;
- }
-}
-
-@media (max-width: 980px) {
- .red {
-   font-size: 1.9em;  
-     padding-top:30px;
-     height:110px;
- }
-}
-
-@media (max-width: 520px) {
- .red {
-   font-size: 1.9em;  
-     padding-top:20px;
-     height:70px;
- }
-}
-
-@media (max-width: 440px) {
- .red {
-   font-size: 1.7em;  
-     padding-top:10px;
-     height:70px;
- }
-}
-
-.purple {
-   background: url([[pix:theme|purple]]) no-repeat;
-    font-family: 'dearjoe3';
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
-    font-size: 3em;
-    line-height: 60px;
-    background-size: 100%;
-    height: 110px;
-}
-
-@media (max-width: 1200px) {
- .purple {
-   font-size: 1.9em;  
-     padding-top:40px;
-     height:110px;
- }
-}
-
-@media (max-width: 980px) {
- .purple {
-   font-size: 1.9em;  
-     padding-top:30px;
-     height:110px;
- }
-}
-
-@media (max-width: 520px) {
- .purple {
-   font-size: 1.9em;  
-     padding-top:20px;
-     height:70px;
- }
-}
-
-@media (max-width: 440px) {
- .purple {
-   font-size: 1.7em;  
-     padding-top:10px;
-     height:70px;
- }
-}
-
-.yellow {
-    background: url([[pix:theme|yellow]]) no-repeat;
-    font-family: 'dearjoe3';
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
-    font-size: 3em;
-    line-height: 60px;
-    background-size: 100%;
-    height: 110px;
-}
-
-@media (max-width: 1200px) {
-.yellow {
-   font-size: 1.9em;  
-     padding-top:40px;
-    height:110px;
- }
-}
-
-@media (max-width: 980px) {
- .yellow {
-   font-size: 1.9em;  
-     padding-top:30px;
-     height:110px;
- }
-}
-
-@media (max-width: 520px) {
- .yellow {
-   font-size: 1.9em;  
-     padding-top:20px;
-     height:70px;
- }
-}
-
-@media (max-width: 440px) {
- .yellow {
-   font-size: 1.7em;  
-     padding-top:10px;
-     height:70px;
- }
-}
-
-.blue {
-   background: url([[pix:theme|blue]]) no-repeat;
-    font-family: 'dearjoe3';
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
-    font-size: 3em;
-    line-height: 60px;
-    background-size: 100%;
-    height: 110px;
-}
-
-@media (max-width: 1200px) {
- .blue {
-   font-size: 1.9em;  
-     padding-top:40px
- }
-}
-
-@media (max-width: 980px) {
- .blue {
-   font-size: 1.9em;  
-     padding-top:30px;
-     height:110px;
- }
-}
-
-@media (max-width: 520px) {
- .blue {
-   font-size: 1.9em;  
-     padding-top:20px;
-     height:70px;
- }
-}
-
-@media (max-width: 440px) {
- .blue {
-   font-size: 1.7em;  
-     padding-top:10px;
-     height:70px;
- }
-}
 
 
 
@@ -2884,40 +2367,323 @@ footer#page-footer h1, h2, h3, h4, h5, h6 {
 }
 
 .teal {
-   
-   background: url([[pix:theme|teal]]) no-repeat;
+     background: url([[pix:theme|brushstroke-810x120-teal]]) no-repeat;
     font-family: 'dearjoe3';
     text-align: center;
     color: #fff;
     font-size: 3em;
     line-height: 130px;
     background-size: 100%;
-    height: 120px;
+  
 }
 
 @media (max-width: 1200px) {
  .teal {
    font-size: 2em;  
      line-height: 100px;
-         height: 100px;
+        
  }
 }
 
 @media (max-width: 980px) {
  .teal {
    font-size: 1.5em;  
-     line-height: 80px;
-         height:80px;
+     line-height: 70px;
+       
  }
 }
 
 @media (max-width: 580px) {
  .teal {
    font-size: 1.5em;  
-     line-height: 70px;
-         height:80px;
+     line-height: 50px;
+        
  }
 }
+
+
+.nav_search_box input[type="text"]+button {
+    background: #fff;
+}
+
+
+
+
+div#gridholder {
+    float: left;
+    width: 100%;
+   
+}
+
+.gridheader {
+    background: [[setting:maincolor]];
+    color: #fff;
+    padding: 10px;
+text-align:center;
+}
+
+.gridimg {
+   
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  
+    margin-top: -5px;
+}
+
+
+div#intro div.no-overflow a{
+   text-decoration: underline;
+    color: #fff;
+   
+}
+
+
+div#google_translate_element {
+    
+   
+    float: left;
+    margin-left: 30px;
+}
+
+
+@media (max-width: 990px) {
+div#google_translate_element {
+   width:100%;
+    display:block;
+   text-align:center;
+}
+}
+
+
+
+.cyan {
+     background: url([[pix:theme|brushstroke-810x120-teal]]) no-repeat;
+    font-family: 'dearjoe3';
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+    line-height: 130px;
+    background-size: 100%;
+  
+}
+
+@media (max-width: 1200px) {
+ .cyan {
+   font-size: 2em;  
+     line-height: 100px;
+        
+ }
+}
+
+@media (max-width: 980px) {
+ .cyan {
+   font-size: 1.5em;  
+     line-height: 70px;
+       
+ }
+}
+
+@media (max-width: 580px) {
+ .cyan {
+   font-size: 1.5em;  
+     line-height: 50px;
+        
+ }
+}
+
+
+.orange {
+     background: url([[pix:theme|brushstroke-810x120-orange]]) no-repeat;
+    font-family: 'dearjoe3';
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+    line-height: 130px;
+    background-size: 100%;
+  
+}
+
+@media (max-width: 1200px) {
+ .orange {
+   font-size: 2em;  
+     line-height: 100px;
+        
+ }
+}
+
+@media (max-width: 980px) {
+ .orange {
+   font-size: 1.5em;  
+     line-height: 70px;
+       
+ }
+}
+
+@media (max-width: 580px) {
+ .orange {
+   font-size: 1.5em;  
+     line-height: 50px;
+        
+ }
+}
+
+.red {
+     background: url([[pix:theme|brushstroke-810x120-red]]) no-repeat;
+    font-family: 'dearjoe3';
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+    line-height: 130px;
+    background-size: 100%;
+  
+}
+
+@media (max-width: 1200px) {
+ .red {
+   font-size: 2em;  
+     line-height: 100px;
+        
+ }
+}
+
+@media (max-width: 980px) {
+ .red {
+   font-size: 1.5em;  
+     line-height: 70px;
+       
+ }
+}
+
+@media (max-width: 580px) {
+ .red {
+   font-size: 1.5em;  
+     line-height: 50px;
+        
+ }
+}
+
+
+
+
+.purple {
+     background: url([[pix:theme|brushstroke-810x120-purple]]) no-repeat;
+    font-family: 'dearjoe3';
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+    line-height: 130px;
+    background-size: 100%;
+  
+}
+
+@media (max-width: 1200px) {
+ .purple {
+   font-size: 2em;  
+     line-height: 100px;
+        
+ }
+}
+
+@media (max-width: 980px) {
+ .purple {
+   font-size: 1.5em;  
+     line-height: 70px;
+       
+ }
+}
+
+@media (max-width: 580px) {
+ .purple {
+   font-size: 1.5em;  
+     line-height: 50px;
+        
+ }
+}
+
+
+
+
+.yellow {
+     background: url([[pix:theme|brushstroke-810x120-yellow]]) no-repeat;
+    font-family: 'dearjoe3';
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+    line-height: 130px;
+    background-size: 100%;
+  
+}
+
+@media (max-width: 1200px) {
+ .yellow {
+   font-size: 2em;  
+     line-height: 100px;
+        
+ }
+}
+
+@media (max-width: 980px) {
+ .yellow {
+   font-size: 1.5em;  
+     line-height: 70px;
+       
+ }
+}
+
+@media (max-width: 580px) {
+ .yellow {
+   font-size: 1.5em;  
+     line-height: 50px;
+        
+ }
+}
+
+
+
+
+.blue {
+     background: url([[pix:theme|brushstroke-810x120-navy]]) no-repeat;
+    font-family: 'dearjoe3';
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+    line-height: 130px;
+    background-size: 100%;
+  
+}
+
+@media (max-width: 1200px) {
+ .blue {
+   font-size: 2em;  
+     line-height: 100px;
+        
+ }
+}
+
+@media (max-width: 980px) {
+ .blue {
+   font-size: 1.5em;  
+     line-height: 70px;
+       
+ }
+}
+
+@media (max-width: 580px) {
+ .blue {
+   font-size: 1.5em;  
+     line-height: 50px;
+        
+ }
+}
+
+
+
+
+
+
+
+
 
 
 /* Custom CSS Settings

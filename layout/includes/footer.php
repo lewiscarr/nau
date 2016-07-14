@@ -31,19 +31,29 @@
     <?php if($PAGE->theme->settings->showfooterblocks) { ?>
     <div class="container">
         <div class="row-fluid">
-            <?php if (!empty($PAGE->theme->settings->footer1content)) { ?>
+           
+            
+          
+           
             <div class="left-col span3" id="contactdetails">
                 <h3 title="<?php $OUTPUT->get_setting('footer1header', 'format_text'); ?>"><?php echo $OUTPUT->get_setting('footer1header', 'format_text'); ?></h3>
                 <?php echo $OUTPUT->get_setting('footer1content', 'format_html'); ?>
-                 <?php if (!empty($PAGE->theme->settings->footerlogo)) { ?>
+                 
+                
+                
+                
+                
+        <?php if (!empty($PAGE->theme->settings->footerlogo)) { ?>
                <img src="<?php echo $PAGE->theme->setting_file_url('footerlogo', 'footerlogo')?>" id="Footer Logo">
+                 <?php } ?>        
                 
                 
-               
                 
-                 <?php } ?>
+                
             </div>
-            <?php } ?>
+            
+            
+            
             <?php if (!empty($PAGE->theme->settings->footer2content)) { ?>
             <div class="left-col span3" id="footer-faculties">
                 <h3 title="<?php $OUTPUT->get_setting('footer2header', 'format_text'); ?>"><?php echo $OUTPUT->get_setting('footer2header', 'format_text'); ?></h3>

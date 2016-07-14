@@ -47,14 +47,13 @@
 
 /* block titles */
 .block .header .title h2 {
-	font-weight: normal;
+	font-weight: lighter;
 	margin: 0 0;
 	padding: 10px 0px 0px 0px;
 	text-transform: none;
 	font-size: 1.8em;
 	color: #002f67;
 	margin: 0px 0px;
-	font-weight:bold;
 	text-shadow: none;
     font-family: 'dearjoe3', sans-serif;
     line-height:45px;
