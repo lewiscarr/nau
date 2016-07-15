@@ -2442,8 +2442,8 @@ div#intro div.no-overflow a{
 div#google_translate_element {
     
    
-    float: left;
-    margin-left: 30px;
+   text-align: right;
+   
 }
 
 
@@ -2680,8 +2680,12 @@ div#google_translate_element {
 
 
 
-
-
+@media (max-width: 1244px) {
+.searchbox {
+   
+    margin-top: -20px;
+}
+}
 
 
 
