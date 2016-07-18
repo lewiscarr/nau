@@ -1202,6 +1202,20 @@ div.no-overflow, .yui3-datatable {
 	}
 }
 
+
+
+@media (max-width: 979px) {
+	
+	#search-1 {
+            width: 200px;
+        font-size:10px;
+	}
+
+    
+}
+
+
+
 @media (min-width: 767px) {
 	.userprofile dl.list dt {
 		width: 110px !important;
@@ -2694,7 +2708,24 @@ div#google_translate_element {
 }
 
 
+.navbar .btn-navbar, .navbar .btn-navbar:hover, .navbar .btn-navbar:active {
+   
+    margin-bottom: 5px;
+}
 
+select.goog-te-combo {
+    font-size: 10px;
+    height:20px;
+}
+
+.goog-te-gadget {
+    font-family: arial;
+    font-size: 10px;
+    color: #666;
+    white-space: nowrap;
+    height: 25px;
+    overflow-y: hidden;
+}
 
 
 
