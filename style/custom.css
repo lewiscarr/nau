@@ -150,7 +150,7 @@ body#page-login-index .headerlogin {
 #page-header {
 	border-bottom: 0px solid [[setting:maincolor]];
 	clear: both;
-	margin-bottom: 0px;
+	margin-bottom: 10px;
 	background: transparent;
 	padding-top: 20px;
 	min-height: 82px;
@@ -161,7 +161,8 @@ body#page-login-index .headerlogin {
     margin-bottom: 2px;
     margin-left: 20px;
     margin-top: 0px;
-    max-width: 250px;
+    width: 250px;
+    height: 47px;
 }
 
 #moodlelogo {
@@ -1540,7 +1541,7 @@ aside#block-region-side-post {
  padding-top:3px;
  margin-right: 10px;
     margin-left:20px;
-   
+   min-width: 230px;
 } 
 
 
@@ -2715,7 +2716,7 @@ div#google_translate_element {
 
 select.goog-te-combo {
     font-size: 10px;
-    height:20px;
+    margin-bottom:5px;
 }
 
 .goog-te-gadget {
@@ -2723,7 +2724,7 @@ select.goog-te-combo {
     font-size: 10px;
     color: #666;
     white-space: nowrap;
-    height: 25px;
+    height: 40px;
     overflow-y: hidden;
 }
 
