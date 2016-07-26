@@ -65,7 +65,7 @@ html[xmlns] .slides {display: block;}
 /* IE rgba() hack */
 .flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}
  .flex-caption {
-    background-color: #722975;
+    background-color: #003255;
     color: #fff;
     margin: 0;
    padding: 15px 25px 0px 25px;
