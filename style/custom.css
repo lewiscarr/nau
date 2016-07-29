@@ -1594,8 +1594,8 @@ max-width:260px;
 box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
-.fa-search:before {
- color:#000;   
+.nav_search_box .fa {
+ color: #000;   
 }
 
 
