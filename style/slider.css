@@ -74,8 +74,8 @@ html[xmlns] .slides {display: block;}
     left: 20px;
     max-width:450px;
 }
-.flex-caption h3 {color: #fff; letter-spacing: 1px; margin-bottom: 0px;  font-size: 1.5em;}
-.flex-caption p {margin: 0 0 15px;}
+.flex-caption h3 {color: #fff; letter-spacing: 1px; margin-bottom: 15px;  font-size: 2.5em;}
+.flex-caption p {margin: 0 0 15px; font-size:1.2em;}
 
 .flex-caption:after {
     content: "";

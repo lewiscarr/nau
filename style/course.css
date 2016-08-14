@@ -197,6 +197,9 @@ h3.sectionname {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #5bc1d1;
+    max-width:1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

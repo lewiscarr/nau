@@ -495,6 +495,14 @@ div#intro div.no-overflow{
     padding:20px;
 }
 
+
+
+body#page-mod-scorm-view div#intro div.no-overflow{
+    background-color: [[setting:calloutbgcolor]];
+    color: #fff;
+    padding:20px;
+}
+
 div#intro:after {
     content: " ";
     
@@ -2455,10 +2463,10 @@ text-align:center;
 
 .gridimg {
    
-    height: 200px;
+    height: auto;
     overflow-x: hidden;
     overflow-y: hidden;
-  
+    margin-bottom:15px;
     margin-top: -5px;
 }
 
@@ -2738,6 +2746,10 @@ select.goog-te-combo {
     box-shadow: none;
 }
 
+
+h3.sectionname {
+    font-family: 'dearjoe3', sans-serif;
+}
 
 /* Custom CSS Settings
 -------------------------*/
