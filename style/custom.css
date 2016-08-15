@@ -275,7 +275,7 @@ a.usermendrop {
 
 .container.slidewrap {
    
-    width: 100%;
+    max-width:1200px;
 }
 
 #marketblocks {
@@ -2749,6 +2749,26 @@ select.goog-te-combo {
 
 h3.sectionname {
     font-family: 'dearjoe3', sans-serif;
+}
+
+
+body#page-mod-scorm-view #intro.generalbox {
+    margin-top: 10px;
+    padding: 0px;
+    background-color: [[setting:calloutbgcolor]];
+    text-align: center;
+    color: #fff;
+}
+
+body#page-mod-scorm-view #intro.generalbox a{
+    margin:10px;
+    display:block;
+    color: #fff;
+}
+
+
+body#page-mod-scorm-view #intro.generalbox p {
+    background-color: [[setting:calloutbgcolor]];
 }
 
 /* Custom CSS Settings
