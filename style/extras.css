@@ -668,5 +668,8 @@ textarea#page-mod-forum-discuss .discussioncontrols .discussioncontrol.movediscu
 .gridheader {
   background: url([[pix:theme|buttons-brushstroke-40]]) no-repeat top center;
   background-color: transparent;
-  padding-bottom: 13px;
+  overflow: scroll;
+}
+body.pagelayout-course .gridheader {
+  padding-bottom: 15px;
 }
