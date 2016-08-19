@@ -660,7 +660,7 @@ textarea#page-mod-forum-discuss .discussioncontrols .discussioncontrol.movediscu
     font-size: 105%;
 }
 
-/* Majid - Add brushstroke #1553 */
+/* Majid - Add brushstroke #1553 
 .panel-body h3, .tileheader {
   background: url([[pix:theme|buttons-brushstroke]]) no-repeat bottom center;
   background-color: transparent;
@@ -673,3 +673,4 @@ textarea#page-mod-forum-discuss .discussioncontrols .discussioncontrol.movediscu
 body.pagelayout-course .gridheader {
   padding-bottom: 15px;
 }
+*/
