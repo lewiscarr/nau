@@ -1095,7 +1095,7 @@ div.no-overflow, .yui3-datatable {
   padding: 0;
   position: absolute;
   top: 48px;
-  left: 0;
+  left: -15px;
   width: 150px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -2769,6 +2769,15 @@ body#page-mod-scorm-view #intro.generalbox a{
 
 body#page-mod-scorm-view #intro.generalbox p {
     background-color: [[setting:calloutbgcolor]];
+}
+
+/* Hide return to normal role link unless user has switched role */
+.normalrole {
+    display: none;
+}
+
+.userswitchedrole .normalrole {
+    display: inline-block;
 }
 
 /* Custom CSS Settings
