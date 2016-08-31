@@ -26,7 +26,7 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2016083000;
+$plugin->version   = 2016083100;
 $plugin->requires  = 2014050800;
 $plugin->component = 'theme_nau';
 $plugin->release = '1.3.1';
