@@ -97,14 +97,13 @@ $left = theme_nau_get_block_side();
     	<div class="row-fluid">
       	<div class="headinnerwrap">
       	
-      	<div class="span8"><div class="courseheaderinner"><h1><?php echo $COURSE->fullname;?><div class="nau-arrow"></div></h1></div></div>
+      	<div class="span8"><div class="courseheaderinner"><h1><?php echo $COURSE->fullname;?></h1></div></div>
         <div class="span4"><div id="edittingbutton" class="pull-right breadcrumb-button">
                                 <?php echo $OUTPUT->page_heading_button(); ?>
                             </div></div> </div>
       
      
       </div>
-      <div class="ribbon"></div>
     </div>
 
 

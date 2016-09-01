@@ -275,7 +275,7 @@ a.usermendrop {
 
 .container.slidewrap {
    
-    max-width:1200px;
+   width:100%;
 }
 
 #marketblocks {
@@ -1095,7 +1095,7 @@ div.no-overflow, .yui3-datatable {
   padding: 0;
   position: absolute;
   top: 48px;
-  left: -15px;
+  left: 0;
   width: 150px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -2202,7 +2202,10 @@ div#titlewrap {
 }
 
 .tileheader {
- background: [[setting:frontpageblockheadercolor]];
+  /* background-color: [[setting:frontpageblockheadercolor]]; */
+   background-image:url([[pix:theme|buttons-brushstroke]]);
+    background-repeat: no-repeat;
+    background-position: bottom; 
      color: [[setting:frontpageblocktextcolor]];
    padding-left:2px;
     padding-right:2px;
@@ -2211,6 +2214,7 @@ div#titlewrap {
     text-align:center;
     font-weight:bold;
 }
+
 
 
 #tilewrap {
@@ -2228,6 +2232,7 @@ height: 250px;
     color:#fff;
     text-align:left;
     padding:5px;
+    margin-top:-5px;
 }
 
 #tilesummary:hover {
@@ -2455,10 +2460,15 @@ div#gridholder {
 }
 
 .gridheader {
-    background: [[setting:maincolor]];
+    
+     background-image:url([[pix:theme|buttons-brushstroke]]);
+    background-repeat: no-repeat;
+    background-position: bottom; 
     color: #fff;
     padding: 10px;
 text-align:center;
+    z-index:9999;  
+    position:relative;
 }
 
 .gridimg {
@@ -2769,15 +2779,6 @@ body#page-mod-scorm-view #intro.generalbox a{
 
 body#page-mod-scorm-view #intro.generalbox p {
     background-color: [[setting:calloutbgcolor]];
-}
-
-/* Hide return to normal role link unless user has switched role */
-.normalrole {
-    display: none;
-}
-
-.userswitchedrole .normalrole {
-    display: inline-block;
 }
 
 /* Custom CSS Settings

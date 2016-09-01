@@ -136,11 +136,10 @@ echo $OUTPUT->doctype();
       <?php if (!empty($PAGE->theme->settings->enablebadges  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/badges/mybadges.php"><li><i class="fa fa-shield" aria-hidden="true"></i> Badges</li></a> <?php } ?>
     <?php if (!empty($PAGE->theme->settings->enablecalendar  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/calendar/view.php"><li><i class="fa fa-calendar-o" aria-hidden="true"></i> Calendar</li></a> <?php } ?>
          <?php if (!empty($PAGE->theme->settings->enableprivatefiles   )) { ?><a href="<?php echo $CFG->wwwroot; ?>/user/files.php"> <li><i class="fa fa-file-image-o" aria-hidden="true"></i> Private Files</li> </a><?php } ?>
-      <a class="normalrole" href="<?php echo $CFG->wwwroot; ?>/course/switchrole.php?id=<?php echo $COURSE->id; ?>&sesskey=<?php echo $USER->sesskey; ?>&switchrole=0&returnurl=/course/view.php?id=<?php echo $COURSE->id; ?>"><li><i class="fa fa-mail-reply" aria-hidden="true"></i> Return to normal role</li></a>
       <a href="<?php echo $CFG->wwwroot; ?>/login/logout.php"><li><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</li></a>
     </ul>
   </li>
-
+ 
 </ul>
             
 
