@@ -659,3 +659,18 @@ textarea#page-mod-forum-discuss .discussioncontrols .discussioncontrol.movediscu
 .coursebox .panel-heading a {
     font-size: 105%;
 }
+
+/* Majid - Add brushstroke #1553 
+.panel-body h3, .tileheader {
+  background: url([[pix:theme|buttons-brushstroke]]) no-repeat bottom center;
+  background-color: transparent;
+}
+.gridheader {
+  background: url([[pix:theme|buttons-brushstroke-40]]) no-repeat top center;
+  background-color: transparent;
+  overflow: scroll;
+}
+body.pagelayout-course .gridheader {
+  padding-bottom: 15px;
+}
+*/
