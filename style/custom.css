@@ -1,12 +1,4 @@
 @font-face{
-    
-    
-   
-    
-    
-    
-    
-    
     font-family:dearjoe3;
     src:url([[font:theme|dearjoe3.eot]]);
     src:url([[font:theme|dearjoe3.eot]]) format('embedded-opentype'),
@@ -15,6 +7,48 @@
         url([[font:theme|dearjoe3.ttf]]) format('truetype'),
         url([[font:theme|dearjoe3.svg]]) format('svg');
     }
+@font-face{
+    font-family:dearjoe5;
+    src:url([[font:theme|dearjoe3.eot]]);
+    src:url([[font:theme|dearjoe3.eot]]) format('embedded-opentype'),
+        url([[font:theme|dearjoe3.woff2]]) format('woff2'),
+        url([[font:theme|dearjoe3.woff]]) format('woff'),
+        url([[font:theme|dearjoe3.ttf]]) format('truetype'),
+        url([[font:theme|dearjoe3.svg]]) format('svg');
+    }
+
+@font-face {
+	font-family: 'sourcesanspro-bold';	
+	src: url('[[font:theme|sourcesanspro-bold-webfont.eot]]') format('eot');
+	src: url('[[font:theme|sourcesanspro-bold-webfont.eot]]#iefix') format('embedded-opentype'),
+	     url('[[font:theme|sourcesanspro-bold-webfont.woff]]') format('woff'),
+	     url('[[font:theme|sourcesanspro-bold-webfont.ttf]]')  format('truetype'),
+	     url('[[font:theme|sourcesanspro-bold-webfont.svg]]#sourcesanspro-bold-webfont') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'sourcesanspro-regular';	
+	src: url('[[font:theme|sourcesanspro-regular-webfont.eot]]') format('eot');
+	src: url('[[font:theme|sourcesanspro-regular-webfont.eot]]#iefix') format('embedded-opentype'),
+	     url('[[font:theme|sourcesanspro-regular-webfont.woff]]') format('woff'),
+	     url('[[font:theme|sourcesanspro-regular-webfont.ttf]]')  format('truetype'),
+	     url('[[font:theme|sourcesanspro-regular-webfont.svg]]#sourcesanspro-regular-webfont') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'sourcesanspro-semibold';	
+	src: url('[[font:theme|sourcesanspro-semibold-webfont.eot]]') format('eot');
+	src: url('[[font:theme|sourcesanspro-semibold-webfont.eot]]#iefix') format('embedded-opentype'),
+	     url('[[font:theme|sourcesanspro-semibold-webfont.woff]]') format('woff'),
+	     url('[[font:theme|sourcesanspro-semibold-webfont.ttf]]')  format('truetype'),
+	     url('[[font:theme|sourcesanspro-semibold-webfont.svg]]#sourcesanspro-semibold-webfont') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
 
 html,body {
     margin: 0;
