@@ -210,7 +210,7 @@ if (is_siteadmin()) {
      $name = 'theme_nau/pageheaderbgcolor';
     $title = get_string('pageheaderbgcolor', 'theme_nau');
     $description = get_string('pageheaderbgcolordesc', 'theme_nau');
-    $default = 'rgba(39, 44, 44, 0.6)';
+    $default = 'rgba(255, 255, 255, 0.8)';
     $previewconfig = null;
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
     $temp->add($setting);

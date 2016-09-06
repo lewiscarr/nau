@@ -2823,6 +2823,58 @@ body#page-mod-scorm-view #intro.generalbox p {
     display: inline-block;
 }
 
+/* Following CSS taken from theme settings - MH */
+#logo {
+   max-height: 60px;
+}
+
+/* Remove course summary image from search results page */
+#page-course-search .courseimage { display: none }
+
+/* Change page header and slider width from 100% to 1600px */
+#page-header-wrapper, .courseheaderbg {
+width: auto;
+margin: 0 auto;
+max-width: 1600px;
+}
+.container.slidewrap {
+width: auto;
+max-width: 1600px;
+}
+
+/* Accordion styles 26/08/16 MH */
+.accordion-group {
+background: #f2f2f2;
+border: none;
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+border-radius: 0;
+}
+.accordion-heading {
+font-family: 'dearjoe3', sans-serif;
+font-size: 20px;
+background-color: #59cfd8;
+padding: 10px 0 5px;
+}
+.accordion-heading.color-blue { background-color: #003255 }
+.accordion-heading.color-purple { background-color: #702b82 }
+.accordion-heading.color-red { background-color: #ee2c54 }
+.accordion-heading.color-orange { background-color: #f26a34 }
+.accordion-heading.color-yellow { background-color: #fec211 }
+.accordion-heading .accordion-toggle {
+color: #fff;
+}
+.accordion-inner {
+border-top: none;
+padding: 15px;
+}
+.activity.label .contentwithoutlink { padding-right: 0 }
+
+/* Fix negative margin on my moodle page - MH - 2nd Sept 2016 */
+body#page-my-index #page-content { margin-top: 10px }
+
+/* End of CSS taken from theme settings - MH */
+
 /* Custom CSS Settings
 -------------------------*/
 [[setting:customcss]]
