@@ -2500,7 +2500,8 @@ div#gridholder {
     color: #fff;
     padding: 10px;
 text-align:center;
-    z-index:9999;  
+    /*z-index:9999; This was causing the gridheader to overlap certain modal windows */
+    z-index: 3;
     position:relative;
 }
 
@@ -2874,6 +2875,14 @@ padding: 15px;
 body#page-my-index #page-content { margin-top: 10px }
 
 /* End of CSS taken from theme settings - MH */
+
+/* Hide region post when viewing assigment grading screen */
+#page-mod-assign-grading aside#block-region-side-post {
+    display: none;
+}
+#page-mod-assign-grading #region-main.span9 {
+    width: 100%;
+}
 
 /* Custom CSS Settings
 -------------------------*/
