@@ -2877,10 +2877,10 @@ body#page-my-index #page-content { margin-top: 10px }
 /* End of CSS taken from theme settings - MH */
 
 /* Hide region post when viewing assigment grading screen */
-#page-mod-assign-grading aside#block-region-side-post {
+#page-mod-assign-grading aside#block-region-side-post, #page-mod-assign-view aside#block-region-side-post {
     display: none;
 }
-#page-mod-assign-grading #region-main.span9 {
+#page-mod-assign-grading #region-main.span9, #page-mod-assign-view #region-main.span9 {
     width: 100%;
 }
 
