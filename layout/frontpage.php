@@ -198,8 +198,9 @@ if ($hasmarket5 && $hasmarket6 && $hasmarket7 && $hasmarket8) {
  </div>      
  </div>
  
-
-
+<?php
+if ($hasmarket9 || $hasmarket10 || $hasmarket11 || $hasmarket12) {
+?>
 <div id="marketblocks" class="container">
 <div class="row-fluid"> 
 <?php
@@ -259,8 +260,9 @@ if ($hasmarket9 && $hasmarket10 && $hasmarket11 && $hasmarket12) {
     
  </div>      
  </div>
- 
-
+ <?php
+}
+?>
 
 
 
