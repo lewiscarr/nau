@@ -105,3 +105,8 @@ input.form-submit:hover, input#id_submitbutton:hover, input#id_submitbutton2:hov
 .nav_search_box input[type="text"]+button {
     background: #fff;
 }
+
+.headerlogin button {
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
