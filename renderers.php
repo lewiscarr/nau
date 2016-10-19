@@ -26,6 +26,7 @@
 
 require_once($CFG->dirroot.'/blocks/course_overview/locallib.php');
 require_once($CFG->dirroot . "/course/renderer.php");
+require_once($CFG->dirroot.'/mod/forum/renderer.php');
 require_once($CFG->libdir. '/coursecatlib.php');
 
 class theme_nau_core_renderer extends core_renderer {
@@ -999,5 +1000,17 @@ class theme_nau_core_course_renderer extends core_course_renderer {
             $content = html_writer::tag('span', $content, $attributes);
         }
         return $content;
+    }
+}
+
+/**
+ * Override Moodle's mod_forum_renderer.
+ * The constructor is called whenever this renderer is used, so
+ * we can get things to execute on forum-specific pages.
+ */
+class theme_nau_mod_forum_renderer extends mod_forum_renderer {
+    public function __construct(moodle_page $page, $target) {
+        theme_nau_record_view();
+        return parent::__construct($page, $target);
     }
 }

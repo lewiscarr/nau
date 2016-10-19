@@ -26,10 +26,10 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2016091400;
+$plugin->version   = 2016101900;
 $plugin->requires  = 2014050800;
 $plugin->component = 'theme_nau';
-$plugin->release = '1.3.1';
+$plugin->release = '1.3.2';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->dependencies = array(
     'block_course_overview' => ANY_VERSION

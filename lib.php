@@ -284,16 +284,50 @@ function theme_nau_performance_output($param) {
 }
 
 function theme_nau_page_init(moodle_page $page) {
-    global $CFG;
+    global $CFG, $DB;
     $page->requires->jquery();
-    error_log($CFG->version);
+    // error_log($CFG->version); // this is filling up the error log
     if($CFG->version < 2015051100) {
       $page->requires->jquery_plugin('bootstrap', 'theme_nau');
+    }
+
+    // render javascript for displaying views if forum view page
+    if (in_array($page->pagetype, ['mod-forum-view'])) {
+        $records = $DB->get_records('nau_forum_views');
+        $code = "nau_views = {";
+        foreach ($records as $record) {
+            $code .= "{$record->discussion_id}: {$record->views},";
+        }
+        $code .= "}";
+        $page->requires->js_init_code($code);
+        $page->requires->js( new moodle_url('/theme/nau/jquery/forumviews.js') );
     }
 
     $page->requires->jquery_plugin('flexslider', 'theme_nau');
     $page->requires->jquery_plugin('easing', 'theme_nau');
     $page->requires->jquery_plugin('nau', 'theme_nau');
+}
+
+function theme_nau_record_view() {
+    global $DB, $SESSION;
+
+    // get discussion ID
+    $d = optional_param('d', null, PARAM_INT);
+
+    // get the timestamp from the session
+    $now = time();
+    $lastview = isset($SESSION->nau_forum_lastview)? 
+        $SESSION->nau_forum_lastview :
+        null;
+
+    if ($d && ($now - $lastview) > 10) { // only record every 10 seconds
+        $DB->execute("INSERT INTO {nau_forum_views} (discussion_id, views) 
+            VALUES (?, 0)
+            ON DUPLICATE KEY UPDATE views = views + 1", [$d]);
+
+        // set the session timestamp to now
+        $SESSION->nau_forum_lastview = $now;
+    }
 }
 
 function theme_nau_remove_site_fullname($heading) {
