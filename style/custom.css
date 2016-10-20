@@ -2884,6 +2884,10 @@ body#page-my-index #page-content { margin-top: 10px }
     width: 100%;
 }
 
+#page-mod-forum-view th.header.views {
+    text-align: center;
+}
+
 /* Custom CSS Settings
 -------------------------*/
 [[setting:customcss]]
