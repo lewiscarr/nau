@@ -2889,6 +2889,160 @@ body#page-my-index #page-content { margin-top: 10px }
     text-align: center;
 }
 
+/* Customise user profile page #1655 */
+.userprofile .profile_tree section {
+    border: none;
+    border-radius: 0;
+    background-color: rgba(160,218,229,0.6);
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.userprofile .profile_tree section h3 {
+    font-family: 'dearjoe3', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #002f67;
+}
+
+.userprofile .profile_tree section h3, .userprofile .profile_tree section ul {
+    padding: 0 20px;
+}
+
+#page-user-profile #page-navbar {
+    display: none;
+}
+#page-user-profile #page-content {
+    padding-top: 15px;
+}
+
+/* Customise my dashboard page #1655 */
+#page-my-index .block_course_overview h2.title {
+    font-family: 'dearjoe3', sans-serif;
+    font-weight: 900;
+    font-size: 1.8em;
+}
+
+/* Add styles for dashboard anchor tiles */
+.dash-tile-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.dash-tile {
+    float: left;
+    width: 19%;
+    margin-right: 1%;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    background-color: #003255;
+    color: #fff;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.dash-tile:hover {
+    background-color: #0084c2;
+    -o-transition: background 0.3s ease-in;
+    -ms-transition: background 0.3s ease-in;
+    -moz-transition: background 0.3s ease-in;
+    -webkit-transition:  background 0.3s ease-in;
+    transition: background 0.3s ease-in
+}
+
+
+li#block-myjournal:before, li#block-mycerts:before, li#block-mycourses:before, li#block-mybadges:before, li#block-myprogress:before {
+    font-family: 'FontAwesome';
+    font-size: 1.25em;
+    margin-right: 4px;
+}
+
+li#block-myjournal:before { content: '\f02d' }
+li#block-mycerts:before { content: '\f0a3' }
+li#block-mycourses:before { content: '\f115' }
+li#block-mybadges:before { content: '\f132' }
+li#block-myprogress:before { content: '\f080' }
+
+/* Style Twitter block */
+iframe#twitter-widget-0 {
+    width: 100% !important;
+}
+
+div#twitter-wrapper {
+    border: 1px solid #f2f2f2;
+}
+
+#twitter-wrapper h3 {
+    background-image: url([[pix:theme|buttons-brushstroke]]);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 40px;
+    padding: 15px 15px 10px;
+    margin: 0;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'dearjoe3', sans-serif;
+    text-transform: none;
+    text-shadow: 0px 0px 0px;
+}
+
+#twitter-wrapper h3:before {
+    font-family: 'FontAwesome';
+    content: '\f099';
+    padding-right: 10px;
+    color: #55acee;
+}
+
+/* Style big brushstrokes */
+.big-brushstroke {
+    max-width: 800px;
+    height: 125px;
+    padding: 50px 160px 25px 25px;
+    background-size: cover;
+    color: #fff;
+}
+
+.big-brushstroke a {
+    color: #fff;
+}
+
+.big-brushstroke h1, .big-brushstroke h2, .big-brushstroke h3, 
+.big-brushstroke h4, .big-brushstroke h5, .big-brushstroke h6 {
+    font-family: 'dearjoe3', sans-serif;
+}
+
+.big-brushstroke h1 { font-size: 48px; margin-bottom: 15px; }
+.big-brushstroke h2 { font-size: 42px; margin-bottom: 15px; }
+.big-brushstroke h3 { font-size: 36px; margin-bottom: 15px; }
+.big-brushstroke h4 { font-size: 28px }
+.big-brushstroke h5 { font-size: 22px }
+.big-brushstroke h6 { font-size: 16px }
+
+.singleheading {
+    font-size: 48px;
+    margin-top: 50px;
+    font-family: 'dearjoe3';
+}
+
+.mediumtext {
+    font-size: 18px;
+    line-height: 28px;
+    padding: 10px 0 0;
+}
+
+#big-brushstroke-blue { background: url([[pix:theme|left_aligned_brushstroke_blue]]) no-repeat right center; }
+#big-brushstroke-yellow { background: url([[pix:theme|left_aligned_brushstroke_yellow]]) no-repeat right center; }
+#big-brushstroke-teal { background: url([[pix:theme|left_aligned_brushstroke_teal]]) no-repeat right center; }
+#big-brushstroke-red { background: url([[pix:theme|left_aligned_brushstroke_red]]) no-repeat right center; }
+#big-brushstroke-purple { background: url([[pix:theme|left_aligned_brushstroke_purple]]) no-repeat right center; }
+#big-brushstroke-orange { background: url([[pix:theme|left_aligned_brushstroke_orange]]) no-repeat right center; }
+#big-brushstroke-grey { background: url([[pix:theme|left_aligned_brushstroke_grey]]) no-repeat right center; }
+
 /* Custom CSS Settings
 -------------------------*/
 [[setting:customcss]]

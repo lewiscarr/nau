@@ -46,5 +46,5 @@ $plugins = array(
     'bootstrap' => array('files' => array('bootstrap-min.js')),
     'flexslider' => array('files' => array('jquery-flexslider-min.js')),
     'easing' => array('files' => array('jquery-easing-min.js')),
-    'nau' => array('files' => array('custom.js')),
+    'nau' => array('files' => array('custom.js', 'scroll.js')),
 );
