@@ -56,7 +56,7 @@ html,body {
     background: #fff;
     background-size: 100% auto;
     color: #444;
-    font-size: 95%;
+    font-size: 16px;
     
 }
 
@@ -3042,6 +3042,15 @@ div#twitter-wrapper {
 #big-brushstroke-purple { background: url([[pix:theme|left_aligned_brushstroke_purple]]) no-repeat right center; }
 #big-brushstroke-orange { background: url([[pix:theme|left_aligned_brushstroke_orange]]) no-repeat right center; }
 #big-brushstroke-grey { background: url([[pix:theme|left_aligned_brushstroke_grey]]) no-repeat right center; }
+
+.course-content a {
+    color: #4d9ecf;
+    text-decoration: underline;
+}
+
+.course-content a:hover {
+    text-decoration: none;
+}
 
 /* Custom CSS Settings
 -------------------------*/

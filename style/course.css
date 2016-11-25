@@ -246,21 +246,41 @@ h3.sectionname {
 }
 
 
-.glossarydisplay a {
+.glossarydisplay a, .glossarydisplay b {
     border: 1px solid #000;
     padding: 3px 6px 3px 6px;
     border-radius: 7px;
     line-height: 30px;
     background:#272f38;
     color:#fff;
-    font-weight:bold;
-    
+    font-weight:bold;   
+}
+
+.glossarydisplay b {
+    background: #4dc3cf;
+    border-color: #4dc3cf;
 }
 
 .glossarydisplay  {
    color:#fff;
 }
 
+.entrylowersection .comment-message-meta, .entrylowersection .comment-message-meta a {
+    color: #333;
+}
+
+.entrylowersection .comment-message-meta .user {
+    padding-left: 25px;
+}
+
+.entrylowersection .comment-message .text {
+    padding-top: 20px;
+    color: #333;
+}
+
+.entrylowersection .comment-message .text a {
+    color: #333;
+}
 
 body#page-mod-glossary-view td.entry {
    color:#000;
