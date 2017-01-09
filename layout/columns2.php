@@ -100,11 +100,32 @@ $left = theme_nau_get_block_side();
       	<div class="span8"><div class="courseheaderinner"><h1><?php echo $COURSE->fullname;?><div class="nau-arrow"></div></h1></div></div>
         <div class="span4"><div id="edittingbutton" class="pull-right breadcrumb-button">
                                 <?php echo $OUTPUT->page_heading_button(); ?>
-                            </div></div> </div>
-      
-     
-      </div>
-      <div class="ribbon"></div>
+
+                                <!-- #1774 Add edit settings button for teachers -->
+                                <?php
+                                    global $USER;
+                                    global $COURSE;
+
+                                    require_once($CFG->libdir.'/accesslib.php');
+                                    
+                                    $context = context_course::instance($COURSE->id);
+                                    $roles = get_user_roles($context, $USER->id);
+
+                                    $editingteacher = false;
+
+                                    foreach ($roles as $role) {
+                                        if ($editingteacher) continue;
+                                        $editingteacher = ($role->shortname === 'editingteacher');
+                                    }
+                                ?>
+                                <?php if(is_siteadmin() || $editingteacher) { ?>
+                                    <?php if(isset($PAGE->cm->id)) { ?>
+                                        <a class="btn-editsettings" href="<?php echo $CFG->wwwroot . '/course/modedit.php?update='.$PAGE->cm->id.'&return=1' ?>">Edit Settings</a>
+                                    <?php } ?>
+                                <?php } ?>
+                            </div></div></div>
+        </div>
+        <div class="ribbon"></div>
     </div>
 
 

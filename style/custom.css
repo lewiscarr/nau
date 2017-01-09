@@ -2875,6 +2875,21 @@ padding: 15px;
 /* Fix negative margin on my moodle page - MH - 2nd Sept 2016 */
 body#page-my-index #page-content { margin-top: 10px }
 
+/* 7th Oct - Make feedback activity button */
+#page-mod-feedback-view .generalbox:last-child a {
+background-color: #123156;
+color: #fff;
+padding: 10px 15px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+margin-top: 15px
+}
+#page-mod-feedback-view .generalbox:last-child a:hover {
+background-color: #0084c2;
+text-decoration: none
+}
+
 /* End of CSS taken from theme settings - MH */
 
 /* Hide region post when viewing assigment grading screen */
@@ -2955,7 +2970,6 @@ body#page-my-index #page-content { margin-top: 10px }
     transition: background 0.3s ease-in
 }
 
-
 li#block-myjournal:before, li#block-mycerts:before, li#block-mycourses:before, li#block-mybadges:before, li#block-myprogress:before {
     font-family: 'FontAwesome';
     font-size: 1.25em;
@@ -2989,6 +3003,7 @@ div#twitter-wrapper {
     font-family: 'dearjoe3', sans-serif;
     text-transform: none;
     text-shadow: 0px 0px 0px;
+    font-weight: normal;
 }
 
 #twitter-wrapper h3:before {
@@ -3043,6 +3058,13 @@ div#twitter-wrapper {
 #big-brushstroke-orange { background: url([[pix:theme|left_aligned_brushstroke_orange]]) no-repeat right center; }
 #big-brushstroke-grey { background: url([[pix:theme|left_aligned_brushstroke_grey]]) no-repeat right center; }
 
+#big-brushstroke-blue, #big-brushstroke-yellow, #big-brushstroke-teal, 
+#big-brushstroke-red, #big-brushstroke-purple, #big-brushstroke-orange, 
+#big-brushstroke-grey { 
+    background-size: 100%;
+    margin: 0 20px 20px 0
+}
+
 .course-content a {
     color: #4d9ecf;
     text-decoration: underline;
@@ -3050,6 +3072,117 @@ div#twitter-wrapper {
 
 .course-content a:hover {
     text-decoration: none;
+}
+
+/* Remove boldness from slider caption heading */
+.flex-caption h3 { font-weight: 100 }
+
+/* #1826 Fix menu bar in 1280px res */
+@media (max-width: 1280px) {
+    .navbar .nav>li>a {
+        padding: 8px 15px !important;
+    }
+}
+
+/* 1817 Improve tab display */
+div#tabintro {
+    margin-bottom: 10px;
+}
+
+div#tabintro:after {
+    content: " ";
+    background: #702082 url([[pix:theme|newgroove]]) no-repeat 100% 0;
+    background-position: center top;
+    height: 19px;
+    width: 100%;
+    display: block;
+    left: 0;
+}
+
+div#tabintro div.no-overflow {
+    color: #fff;
+    background-color: #702082;
+    padding: 20px;
+}
+
+div#tabintro div.no-overflow a {
+    color: #fff;
+}
+
+.TabbedPanelsTab {
+    padding: 10px 15px !important;
+    border: none !important;
+    background-color: #003255 !important;
+    border-top-left-radius: 3px !important;
+    border-top-left-radius: 3px !important;
+    margin-bottom: 1px;
+}
+
+.TabbedPanelsTabHover {
+    background-color: #004575 !important;
+}
+
+.TabbedPanelsTabSelected {
+    background-color: #4dc3cf !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.TabbedPanelsContentGroup {
+    border: none !important;
+    background-color: #e8eaeb !important;
+    padding: 5px 10px;
+}
+
+/* #1774 Add edit settings button */
+.btn-editsettings, .btn-course {
+    float: right;
+    background-color: #003255;
+    border-radius: 2px;
+    color: #fff !important;
+    padding: 8px 15px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.btn-editsettings:hover, .btn-course:hover {
+    background-color: #0084c2;
+    text-decoration: none;
+}
+
+/* 1738 Recommendations block CSS */
+.block .content .accordion {
+    margin-bottom: 0;
+}
+
+.block .content .accordion-group {
+    background: transparent;
+}
+
+.block .content .accordion-heading {
+    padding: 0;
+}
+
+.block .content .accordion-heading a {
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 10px 10px;
+}
+
+.block .content .accordion-inner {
+    padding: 15px 5px;
+}
+
+.block .content .accordion-inner img {
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.btn-course {
+    float: none;
+    margin: 0;
+    max-width: 100%;
+    display: block;
+    text-align: center;
 }
 
 /* Custom CSS Settings
