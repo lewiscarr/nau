@@ -3173,8 +3173,14 @@ div#tabintro div.no-overflow a {
 }
 
 .block .content .accordion-inner img {
+    float: left;
+    max-width: 45%;
     margin-top: -5px;
-    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.block .content .accordion-inner p {
+    line-height: 25px;
 }
 
 .btn-course {
