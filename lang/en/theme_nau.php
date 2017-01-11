@@ -570,3 +570,6 @@ $string['menu10urldesc'] = 'Enter a URL or leave blank if only used for dropdown
 
 $string['loginbg'] = 'Background Image for login page';
 $string['loginbgdesc'] = 'Upload a big image here, something dark and around 1440px wide';
+
+$string['frontpage_announcement'] = 'Frontpage Announcement';
+$string['frontpage_announcementdesc'] = 'Add a combination of text images and other media which will appear within the frontpage as a modal announcement.';

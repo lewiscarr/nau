@@ -312,6 +312,40 @@ if ($hasmarket9 && $hasmarket10 && $hasmarket11 && $hasmarket12) {
         ?>
     </div>
     </div>
+
+<?php if($PAGE->theme->settings->frontpage_announcement) { ?>
+
+<script>
+//$(function(document.ready) {
+$(document).ready(function() {
+    if (document.cookie.indexOf("ModalShown=true")<0) {
+        $('#myModal').modal('show');
+        document.cookie = "ModalShown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    }
+});
+</script>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Announcement</h4>
+      </div>
+      <div class="modal-body">
+        <?php echo $OUTPUT->get_setting('frontpage_announcement', 'format_html'); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<?php } ?>
+
 <?php 
 require_once(dirname(__FILE__) . '/includes/footer.php');
-
