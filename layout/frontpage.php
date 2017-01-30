@@ -313,14 +313,22 @@ if ($hasmarket9 && $hasmarket10 && $hasmarket11 && $hasmarket12) {
     </div>
     </div>
 
+<?php var_dump($PAGE->theme->settings->frontpage_announcement); ?>
+
 <?php if($PAGE->theme->settings->frontpage_announcement) { ?>
 
 <script>
 //$(function(document.ready) {
 $(document).ready(function() {
-    if (document.cookie.indexOf("ModalShown=true")<0) {
+
+    var hash = nauGetCookie('nau_latest_announcement');
+
+    var currentHash = '<?php echo theme_nau_get_announcement_hash(); ?>';
+
+    if(hash != currentHash) {
         $('#myModal').modal('show');
-        document.cookie = "ModalShown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+
+        nauSetCookie("nau_latest_announcement", currentHash);
     }
 });
 </script>

@@ -286,7 +286,6 @@ function theme_nau_performance_output($param) {
 function theme_nau_page_init(moodle_page $page) {
     global $CFG, $DB;
     $page->requires->jquery();
-    // error_log($CFG->version); // this is filling up the error log
     if($CFG->version < 2015051100) {
       $page->requires->jquery_plugin('bootstrap', 'theme_nau');
     }
@@ -303,9 +302,17 @@ function theme_nau_page_init(moodle_page $page) {
         $page->requires->js( new moodle_url('/theme/nau/jquery/forumviews.js') );
     }
 
+    $page->requires->js( new moodle_url('/theme/nau/jquery/cookie.js') );
+
     $page->requires->jquery_plugin('flexslider', 'theme_nau');
     $page->requires->jquery_plugin('easing', 'theme_nau');
     $page->requires->jquery_plugin('nau', 'theme_nau');
+}
+
+function theme_nau_get_announcement_hash() {
+    $announcement = get_config('theme_nau', 'frontpage_announcement');
+
+    return md5($announcement);
 }
 
 function theme_nau_record_view() {
