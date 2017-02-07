@@ -84,32 +84,11 @@ echo $OUTPUT->doctype();
 }
 ?>
 
-    
-    
-
- 
-    
-    
-    
-    
-    
-    
 <header id="page-header-wrapper">
-   
-    
-    
-    
-    
-    
-    
     <div id="page-header" >
-       
-        
-        
         <div class="container-fluid">
     	<div class="row-fluid">
-      	
-      	
+
       	<div class="span8"> <?php if ($haslogo) { ?>
             <a href="<?php p($CFG->wwwroot) ?>"><?php echo "<img src='".$PAGE->theme->setting_file_url('logo', 'logo')."' alt='logo' id='logo' />"; echo "</a>";
         } else { ?>
@@ -123,74 +102,43 @@ echo $OUTPUT->doctype();
                 echo  '<div class="headerlogin"><a href="'.$CFG->wwwroot.'/login"> <button type="button" class="btn btn-default"> Login </button></a></div>'; } ?>
              <div class="mobhide">
        
-            <?php if (isloggedin() || isguestuser()) { ?>
- <?php global $USER,$PAGE, $user ?>
+                            <?php if (isloggedin() || isguestuser()) { ?>
+                 <?php global $USER,$PAGE, $user ?>
 
-            <ul>
-  <li class="first">
-    <?php echo $USER->firstname; ?> <?php echo $USER->lastname; ?>
-    <ul>
-       <?php if (!empty($PAGE->theme->settings->enablemy  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/my"><li><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</li></a> <?php } ?>
-      <?php if (!empty($PAGE->theme->settings->enableprofile  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/user/profile.php"><li><i class="fa fa-user" aria-hidden="true"></i> View Profile</li></a> <?php } ?>
-      <?php if (!empty($PAGE->theme->settings->enableeditprofile  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/user/edit.php"><li><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Profile</li></a> <?php } ?>
-      <?php if (!empty($PAGE->theme->settings->enablebadges  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/badges/mybadges.php"><li><i class="fa fa-shield" aria-hidden="true"></i> Badges</li></a> <?php } ?>
-    <?php if (!empty($PAGE->theme->settings->enablecalendar  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/calendar/view.php"><li><i class="fa fa-calendar-o" aria-hidden="true"></i> Calendar</li></a> <?php } ?>
-         <?php if (!empty($PAGE->theme->settings->enableprivatefiles   )) { ?><a href="<?php echo $CFG->wwwroot; ?>/user/files.php"> <li><i class="fa fa-file-image-o" aria-hidden="true"></i> Private Files</li> </a><?php } ?>
-      <a href="<?php echo $CFG->wwwroot; ?>/login/logout.php"><li><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</li></a>
-    </ul>
-  </li>
- 
-</ul>
-            
+                            <ul>
+                  <li class="first">
+                    <?php echo $USER->firstname; ?> <?php echo $USER->lastname; ?>
+                    <ul>
+                       <?php if (!empty($PAGE->theme->settings->enablemy  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/my"><li><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</li></a> <?php } ?>
+                      <?php if (!empty($PAGE->theme->settings->enableprofile  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/user/profile.php"><li><i class="fa fa-user" aria-hidden="true"></i> View Profile</li></a> <?php } ?>
+                      <?php if (!empty($PAGE->theme->settings->enableeditprofile  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/user/edit.php"><li><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Profile</li></a> <?php } ?>
+                      <?php if (!empty($PAGE->theme->settings->enablebadges  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/badges/mybadges.php"><li><i class="fa fa-shield" aria-hidden="true"></i> Badges</li></a> <?php } ?>
+                    <?php if (!empty($PAGE->theme->settings->enablecalendar  )) { ?> <a href="<?php echo $CFG->wwwroot; ?>/calendar/view.php"><li><i class="fa fa-calendar-o" aria-hidden="true"></i> Calendar</li></a> <?php } ?>
+                         <?php if (!empty($PAGE->theme->settings->enableprivatefiles   )) { ?><a href="<?php echo $CFG->wwwroot; ?>/user/files.php"> <li><i class="fa fa-file-image-o" aria-hidden="true"></i> Private Files</li> </a><?php } ?>
+                            <a href="<?php echo $PAGE->url; ?>" class="toogle_google_translate" id="toogle_google_translate"><li><i class="fa fa-language" aria-hidden="true"></i> <?php echo $str_translate;?></li></a>
+                      <a href="<?php echo $CFG->wwwroot; ?>/login/logout.php"><li><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</li></a>
+                    </ul>
+                  </li>
+                 
+                </ul>
 
-        <?php global $USER,$PAGE; $user_picture=new user_picture($USER); $src=$user_picture->get_url($PAGE); echo '
-        <a href="'.$CFG->wwwroot.'/user/profile.php "><img src="'.$src.'">
-        </a>'; 
-                                                      
-                                                      
-            
-          
-            
-            ?>
-
-
-
-        <?php } ?>
-                
-                 </div>
-            
+                        <?php global $USER,$PAGE; $user_picture=new user_picture($USER); $src=$user_picture->get_url($PAGE); echo '
+                        <a href="'.$CFG->wwwroot.'/user/profile.php "><img src="'.$src.'">
+                        </a>'; 
+                            ?>
+                        <?php } ?>
+                </div>
+                <?php
+                include(dirname(__FILE__) . '/googletranslate.php');
+                ?>
           </div>
         </div>
-      
-     
       </div>
     </div> 
-        
-        
-        
-        
-       
-     
- 
-        
-   
-     
-     
-                
-                
-                  
         <div id="course-header">
             <?php echo $OUTPUT->course_header(); ?>
         </div>
-                
-                
-                
-                
-                
-                
     </div>
-
-
          <div id="navwrap">
         <div class="container3">
             <div class="navbar">
@@ -205,9 +153,6 @@ echo $OUTPUT->doctype();
                            
                              <nav class="navigation">
                             <ul class="nav shadow clearfix nojs" id="menu">
-                              
-                                
-                                
                                <?php if (!empty($PAGE->theme->settings->menu1title )) { ?>
                                 <li><a href="<?php if (!empty($PAGE->theme->settings->menu1url )) { 
                                 echo $PAGE->theme->settings->menu1url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu1title; ?></a> 
@@ -218,8 +163,6 @@ echo $OUTPUT->doctype();
                                 </li>
                                 
                                 <?php } ?>
-                                
-                                
    <?php if (!empty($PAGE->theme->settings->menu2title )) { ?>
                                 <li><a href="<?php if (!empty($PAGE->theme->settings->menu2url )) { 
                                 echo $PAGE->theme->settings->menu2url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu2title; ?></a> 
@@ -278,7 +221,7 @@ echo $OUTPUT->doctype();
                                 
                                 
                                   <?php if (!empty($PAGE->theme->settings->menu7title )) { ?>
-                                <li><a href="<?php if (!empty($PAGE->theme->settings->menu7url )) { 
+                                <li><a href="<?php if (!empty($PAGE->theme->settings->menu7url )) {
                                 echo $PAGE->theme->settings->menu7url; } else { echo    '#'; }  ?>">  <?php echo $PAGE->theme->settings->menu7title; ?></a> 
                                     <?php if (!empty($PAGE->theme->settings->menu7content )) { ?>
                                     <div class="container-2">

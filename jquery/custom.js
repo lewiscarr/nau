@@ -91,10 +91,16 @@ $(".container.slidewrap").on('transitionend', function() {
         event.preventDefault();
         jQuery('html, body').animate({scrollTop: 0}, duration);
         return false;
-    }) 
+    })
 
-
-
+    jQuery('#toogle_google_translate').click(function(event) {
+        $.ajax({
+            url: '/theme/nau/layout/toggletranslate.php',
+            success: function() {
+                location.reload(true);
+            }
+        });
+    })
 
 });
 

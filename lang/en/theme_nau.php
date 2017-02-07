@@ -570,3 +570,6 @@ $string['menu10urldesc'] = 'Enter a URL or leave blank if only used for dropdown
 
 $string['loginbg'] = 'Background Image for login page';
 $string['loginbgdesc'] = 'Upload a big image here, something dark and around 1440px wide';
+
+$string['translate_on'] = 'Disable Translator';
+$string['translate_off'] = 'Enable Translator';
