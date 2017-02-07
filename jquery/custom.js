@@ -95,7 +95,7 @@ $(".container.slidewrap").on('transitionend', function() {
 
     jQuery('#toogle_google_translate').click(function(event) {
         $.ajax({
-            url: '/theme/nau/layout/toggletranslate.php',
+            url: M.cfg.wwwroot + '/theme/nau/layout/toggletranslate.php',
             success: function() {
                 location.reload(true);
             }
