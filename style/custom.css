@@ -3204,6 +3204,10 @@ div#tabintro div.no-overflow a {
     background: rgba(0,0,0,0.5) !important
 }
 
+.navbar .nav>li {
+    z-index: 1;
+}
+
 /* Custom CSS Settings
 -------------------------*/
 [[setting:customcss]]

@@ -21,4 +21,5 @@ function xmldb_theme_nau_upgrade($oldversion) {
 
     upgrade_plugin_savepoint(true, 2016101900, 'theme', 'nau');
   }
+  return true;
 }
