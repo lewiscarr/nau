@@ -3205,7 +3205,7 @@ div#tabintro div.no-overflow a {
 }
 
 .navbar .nav>li {
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Custom CSS Settings
