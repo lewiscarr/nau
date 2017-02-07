@@ -3191,6 +3191,19 @@ div#tabintro div.no-overflow a {
     text-align: center;
 }
 
+/* Connor: make slider dots bigger */
+.flex-control-nav li { zoom: 2 !Important}
+
+.flex-control-paging li a { background: #003255 !important }
+
+.flex-control-paging li a.flex-active { 
+    background: rgba(0,0,0,0.7) !important
+}
+
+.flex-control-paging li a:hover { 
+    background: rgba(0,0,0,0.5) !important
+}
+
 /* Custom CSS Settings
 -------------------------*/
 [[setting:customcss]]
