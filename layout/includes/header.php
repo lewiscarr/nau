@@ -82,6 +82,14 @@ echo $OUTPUT->doctype();
 </div>
 <?php
 }
+
+$translate_preference = get_user_preferences('theme_nau_googletranslate_on', 0, $USER->id);
+if ($translate_preference) {
+  $str_translate = get_string('translate_off', 'theme_nau');
+} else {
+  $str_translate = get_string('translate_on', 'theme_nau');
+}
+
 ?>
 
 <header id="page-header-wrapper">
