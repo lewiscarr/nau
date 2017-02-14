@@ -113,7 +113,7 @@ echo $OUTPUT->doctype();
       	<div class="span8"> <?php if ($haslogo) { ?>
             <a href="<?php p($CFG->wwwroot) ?>"><?php echo "<img src='".$PAGE->theme->setting_file_url('logo', 'logo')."' alt='logo' id='logo' />"; echo "</a>";
         } else { ?>
-            <a href="<?php p($CFG->wwwroot) ?>"><img src="<?php echo $OUTPUT->pix_url('2xlogo', 'theme')?>" id="logo"></a>
+            <a href="<?php p($CFG->wwwroot) ?>"><img src="<?php echo $OUTPUT->pix_url('nordanglia', 'theme')?>" id="logo"></a>
         <?php } ?></div>
      
         <div class="span4">
