@@ -1,2 +1,2 @@
 # nau
-NAU Moodle Theme
+NAU Moodle Theme -
