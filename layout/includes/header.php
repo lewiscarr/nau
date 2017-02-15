@@ -137,7 +137,9 @@ if ($translate_preference) {
                         <?php } ?>
                 </div>
                 <?php
-                include(dirname(__FILE__) . '/googletranslate.php');
+                if ($translate_preference) {
+                  include(dirname(__FILE__) . '/googletranslate.php');
+                }
                 ?>
           </div>
         </div>
