@@ -85,9 +85,9 @@ echo $OUTPUT->doctype();
 
 $translate_preference = get_user_preferences('theme_nau_googletranslate_on', 0, $USER->id);
 if ($translate_preference) {
-  $str_translate = get_string('translate_off', 'theme_nau');
-} else {
   $str_translate = get_string('translate_on', 'theme_nau');
+} else {
+  $str_translate = get_string('translate_off', 'theme_nau');
 }
 
 ?>
@@ -144,7 +144,7 @@ if ($translate_preference) {
           </div>
         </div>
       </div>
-    </div> 
+    </div>
         <div id="course-header">
             <?php echo $OUTPUT->course_header(); ?>
         </div>
