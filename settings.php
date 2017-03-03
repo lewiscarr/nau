@@ -1149,6 +1149,16 @@ if (is_siteadmin()) {
 
     $ADMIN->add('theme_nau', $temp);
 
+    $temp = new admin_settingpage('theme_nau_announcment', get_string('frontpage_announcement', 'theme_nau'));
+
+    $name = 'theme_nau/frontpage_announcement';
+    $title = get_string('frontpage_announcement', 'theme_nau');
+    $description = get_string('frontpage_announcementdesc', 'theme_nau');
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $temp->add($setting);
+
+    $ADMIN->add('theme_nau', $temp);
+    
     $temp = new admin_settingpage('theme_nau_layout', get_string('layoutsettings', 'theme_nau'));
     $temp->add(new admin_setting_heading('theme_nau_layout', get_string('layoutsettingsheading', 'theme_nau'),
         format_text(get_string('layoutdesc', 'theme_nau'), FORMAT_MARKDOWN)));
@@ -1200,8 +1210,6 @@ if (is_siteadmin()) {
     $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
-    
-    
     
     $ADMIN->add('theme_nau', $temp);
     

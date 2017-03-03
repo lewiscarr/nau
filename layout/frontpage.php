@@ -312,6 +312,48 @@ if ($hasmarket9 && $hasmarket10 && $hasmarket11 && $hasmarket12) {
         ?>
     </div>
     </div>
+
+<?php var_dump($PAGE->theme->settings->frontpage_announcement); ?>
+
+<?php if($PAGE->theme->settings->frontpage_announcement) { ?>
+
+<script>
+//$(function(document.ready) {
+$(document).ready(function() {
+
+    var hash = nauGetCookie('nau_latest_announcement');
+
+    var currentHash = '<?php echo theme_nau_get_announcement_hash(); ?>';
+
+    if(hash != currentHash) {
+        $('#myModal').modal('show');
+
+        nauSetCookie("nau_latest_announcement", currentHash);
+    }
+});
+</script>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Announcement</h4>
+      </div>
+      <div class="modal-body">
+        <?php echo $OUTPUT->get_setting('frontpage_announcement', 'format_html'); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<?php } ?>
+
 <?php 
 require_once(dirname(__FILE__) . '/includes/footer.php');
-
