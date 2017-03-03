@@ -313,8 +313,6 @@ if ($hasmarket9 && $hasmarket10 && $hasmarket11 && $hasmarket12) {
     </div>
     </div>
 
-<?php var_dump($PAGE->theme->settings->frontpage_announcement); ?>
-
 <?php if($PAGE->theme->settings->frontpage_announcement) { ?>
 
 <script>
